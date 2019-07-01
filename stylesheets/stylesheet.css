@@ -232,12 +232,13 @@ img {
   }
 
   figure img {
-    flex: 0 0 40%;
+    max-width: 50%;
+    flex: 1;
   }
 
   figcaption {
     display: flex;
-    flex: 0 0 20%;
+    flex: 1;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
