@@ -55,7 +55,7 @@ body {
   /* border-radius: 5px; */
   /* overflow: auto;  */
 }
-@media screen and (min-width: 960px) {
+@media all and (min-width: 960px) {
   body {
     max-width: 960px;
   }
@@ -101,7 +101,7 @@ h1 {
   margin-bottom: 14px;
   letter-spacing: 1px;
 }
-@media screen and (min-width: 960px) {
+@media all and (min-width: 960px) {
   h1 {
     font-size: 125px;
     margin-top: 0.2em;
@@ -117,7 +117,7 @@ h2 {
 .headlines {
   margin-bottom: 2em;
 }
-@media screen and (min-width: 960px) {
+@media all and (min-width: 960px) {
   .headlines {
     display: flex;
     flex-direction: row;
@@ -183,7 +183,7 @@ img {
   object-position: 0 38%;
 }
 
-@media screen and (min-width: 960px) {
+@media all and (min-width: 960px) {
   .headline {
     flex-grow: 0;
     flex-shrink: 1;
@@ -194,26 +194,26 @@ img {
 .headline img {
   max-height: 100px;
 }
-@media screen and (min-width: 960px) {
+@media all and (min-width: 960px) {
   .headline img {
     max-height: calc(80px * 2);
   }
 }
 
-@media screen and (min-width: 960px) {
+@media all and (min-width: 960px) {
   .headline {
     max-height: none;
   }
 }
 
-@media screen and (min-width: 960px) {
+@media all and (min-width: 960px) {
   .links {
     display: flex;
     justify-content: space-between;
   }
 }
 
-@media screen and (min-width: 960px) {
+@media all and (min-width: 960px) {
   .link {
     flex-grow: 0;
     flex-shrink: 1;
@@ -225,7 +225,7 @@ img {
   font-family: Courier, monospace;
 }
 
-@media screen and (min-width: 960px) {
+@media all and (min-width: 960px) {
   figure {
     display: flex;
     justify-content: space-around;
@@ -253,7 +253,7 @@ footer {
   border-top: solid 1px #eff0f1;
   font-size: 0.8rem;
 }
-@media screen and (min-width: 960px) {
+@media all and (min-width: 960px) {
   footer {
     display: flex;
     justify-content: space-around;
