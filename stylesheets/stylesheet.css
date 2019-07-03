@@ -47,7 +47,8 @@ html {
 
 body {
   font-family: sans-serif;
-  max-width: 320px;
+  box-sizing: border-box;
+  width: 100%;
 
   /* For development / testing */
   /* max-height: 568px; */
@@ -55,8 +56,13 @@ body {
   /* border-radius: 5px; */
   /* overflow: auto;  */
 }
+body.homepage {
+  max-width: 320px;
+  padding: 0px;
+}
 @media all and (min-width: 960px) {
-  body {
+  body,
+  body.homepage {
     max-width: 960px;
   }
 }
@@ -80,7 +86,7 @@ h6 {
 }
 
 nav {
-  padding-top: 10px;
+  padding: 10px;
   font-size: 21px;
   font-weight: bold;
 }
@@ -170,8 +176,12 @@ h2 {
 }
 
 li {
-  list-style: none;
   padding-right: 2em;
+  line-height: 1.8em;
+}
+
+fa-ul > li {
+  list-style: none;
 }
 
 img {
@@ -192,6 +202,7 @@ img {
 }
 
 .headline img {
+  max-width: 320px;
   max-height: 100px;
 }
 @media all and (min-width: 960px) {
@@ -249,13 +260,38 @@ img {
   }
 }
 
+.iframe-container {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.iframe-container-4x3 {
+  padding-top: 75%;
+}
+
+.iframe-container iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+cite {
+  display: block;
+  font-style: normal;
+  text-align: right;
+}
+
 footer {
   margin-top: 2em;
   border-top: solid 1px #eff0f1;
   font-size: 0.8rem;
 }
 @media all and (min-width: 960px) {
-  footer {
+  .homepage footer {
     display: flex;
     justify-content: space-around;
   }
@@ -268,6 +304,9 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+.homepage footer p {
   flex-basis: 30%;
 }
 
