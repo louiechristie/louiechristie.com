@@ -196,6 +196,10 @@ h2 {
   list-style: none;
 }
 
+.label {
+  text-transform: none;
+}
+
 li {
   padding-right: 2em;
   line-height: 1.8em;
@@ -326,6 +330,13 @@ cite {
   display: block;
   font-style: normal;
   text-align: right;
+}
+
+.cta {
+  margin-top: 2em;
+  text-align: center;
+  border: 1px solid grey;
+  border-radius: 5px;
 }
 
 footer {
