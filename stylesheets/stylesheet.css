@@ -14,7 +14,7 @@
   --analogous-color: #0e11b5;
   --complementary-color: #b50e11;
   --triadic-color: #64b50e;
-  --less-saturated-color: #616263;
+  --less-saturated-color: #070707;
   --monochromacy-color: #3b3b3b;
   --black-color: #000000;
 
@@ -255,30 +255,6 @@ img {
 
 .telephone-number {
   font-family: Courier, monospace;
-}
-
-@media all and (min-width: 960px) {
-  figure {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  figure img {
-    max-width: 50%;
-    flex: 1;
-  }
-
-  figcaption {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  figcaption p {
-    flex: 0 0 0;
-  }
 }
 
 .iframe-container {
