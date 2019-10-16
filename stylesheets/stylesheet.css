@@ -39,7 +39,8 @@
 }
 
 html {
-  display: inline-grid;
+  display: flex;
+  flex-direction: column;
   justify-items: center;
   align-items: center;
   min-height: 100vh;
@@ -49,7 +50,6 @@ body {
   font-family: sans-serif;
   box-sizing: border-box;
   width: 100%;
-
   /* For development / testing */
   /* max-height: 568px; */
   /* box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1); */
@@ -57,6 +57,7 @@ body {
   /* overflow: auto;  */
 }
 body.homepage {
+  width: initial;
   max-width: 320px;
   padding: 0px;
 }
@@ -99,7 +100,7 @@ nav a:visited {
 
 h1 {
   font-weight: bold;
-  font-size: 41px;
+  font-size: 44px;
   text-decoration: none;
   text-transform: uppercase;
   margin-top: 10px;
@@ -205,7 +206,7 @@ li {
   line-height: 1.8em;
 }
 
-img {
+.headline img {
   width: 100%;
   object-fit: cover;
 }
