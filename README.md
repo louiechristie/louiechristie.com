@@ -4,9 +4,9 @@
 
 Clone repository
 
-Install globally browser-sync
+Install globally [browser-sync](https://www.browsersync.io/)
 
-Start a local webserver that is live reloading:
+In a console start a local webserver that uses live reloading:
 
 ```console
 browser-sync start --server --files "**/*.css, **/*.html"
