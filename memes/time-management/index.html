@@ -37,22 +37,52 @@
       figcaption {
         margin-top: 2em;
       }
-      figure {
+      p {
+        line-height: 1.6em;
+      }
+      .hero {
         margin-bottom: 4em;
+      }
+      figure {
+        max-width: 100%;
       }
       figcaption {
         text-align: center;
         font-weight: bold;
       }
-      .blockquote-container {
+      .columns {
+        margin-top: 4em;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+      }
+      .columns figure {
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 320px;
+      }
+      .columns figure img {
+        width: 100%;
+      }
+      aside {
+        box-sizing: border-box;
+        margin: 10px;
+        flex-basis: calc(320px - 10px);
+        display: inline-flex;
+        flex-direction: column;
+        padding: 10px;
+        border: 1px solid black;
+        background-color: #eee;
+        font-family: "Courier New", Courier, monospace, sans-serif;
+      }
+      aside figcaption {
+        font-weight: normal;
       }
       blockquote {
-        margin: 10px;
+        flex: 1;
         border: 1px solid black;
-        padding: 10px;
+        /* padding: 10px; */
         background-color: #eee;
         font-family: "Courier New", Courier, monospace, sans-serif;
       }
@@ -70,7 +100,7 @@
     <h1>time management</h1>
 
     <main>
-      <figure>
+      <figure class="hero">
         <div class="iframe-container">
           <iframe
             src="https://www.youtube.com/embed/10zNZD8tIKY?start=591&amp;end=621&amp;rel=0"
@@ -116,30 +146,53 @@
         >
       </p>
 
-      <aside class="blockquote-container">
-        <
-
-        <a
-          href="https://www.nhs.uk/conditions/stress-anxiety-depression/feel-better-and-happy/"
-          ><blockquote
-            cite="https://www.nhs.uk/conditions/stress-anxiety-depression/feel-better-and-happy/"
+      <div class="columns">
+        <figure class="embed">
+          <a
+            href="https://commons.wikimedia.org/wiki/File:MerrillCoveyMatrix.png#/media/File:MerrillCoveyMatrix.png"
           >
-            "6 NHS tips to help you be happier:
-            <strong
-              >1. Manage your stress levels. 2. Enjoy yourself. 3. Boost your
-              self-esteem. 4. Have a healthy lifestyle. 5. Talk and share. 6.
-              Build your resilience.</strong
-            >"<br />
-            -
-            https://www.nhs.uk/conditions/stress-anxiety-depression/feel-better-and-happy/
-            (accessed 9 December 2019)
-          </blockquote></a
-        >
-      </aside>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/3/32/MerrillCoveyMatrix.png"
+              alt="MerrillCoveyMatrix.png"
+            />
+          </a>
+          <figcaption>
+            By
+            <a
+              href="//commons.wikimedia.org/wiki/User:Rorybowman"
+              title="User:Rorybowman"
+              >Rorybowman</a
+            >
+            - <span class="int-own-work" lang="en">Own work</span>, Public
+            Domain,
+            <a href="https://commons.wikimedia.org/w/index.php?curid=2135450"
+              >Link</a
+            >
+          </figcaption>
+        </figure>
 
-      <h2>Time Managment: And Now In 3D</h2>
+        <aside>
+          <a
+            href="https://www.nhs.uk/conditions/stress-anxiety-depression/feel-better-and-happy/"
+          >
+            <figure>
+              6 NHS tips to help you be happier:
+              <strong
+                >1. Manage your stress levels. 2. Enjoy yourself. 3. Boost your
+                self-esteem. 4. Have a healthy lifestyle. 5. Talk and share. 6.
+                Build your resilience.</strong
+              >
+              <figcaption>
+                National Health Service UK (accessed 2019-12-09.)
+              </figcaption>
+            </figure>
+          </a>
+        </aside>
+      </div>
 
-      <figure>
+      <h2>Time Management: And Now In 3D</h2>
+
+      <figure class="embed">
         <img
           class="three-d"
           sizes="(max-width: 1920px) 100vw, 1920px"
@@ -149,16 +202,18 @@
             ../../images/time-management-cube-by-louie-christie-2018_me7fst_c_scale,w_1920.jpg 1920w
           "
           src="../../images/time-management-cube-by-louie-christie-2018_me7fst_c_scale,w_1920.jpg"
-          alt="Hessian cube box with post-it notes on it. A win win post-it note says win-win at the corner of 3 axis: good for me (not bad for me), good for others (not bad for others), good in the future, good now. That's four axis?... Search Results
+          alt="Hessian cube box with post-it notes on it. A win win post-it note says win-win at the corner of 3 axis: good for me (not bad for me), good for others (not bad for others), good in the future, good now. That's four axis?...
         🤔. I'm not sure how it breaks time and space."
-          title="Hessian cube box with post-it notes on it. A win win post-it note says win-win at the corner of 3 axis: good for me (not bad for me), good for others (not bad for others), good in the future, good now. That's four axis?... Search Results
+          title="Hessian cube box with post-it notes on it. A win win post-it note says win-win at the corner of 3 axis: good for me (not bad for me), good for others (not bad for others), good in the future, good now. That's four axis?...
         🤔. I'm not sure how it breaks time and space."
         />
 
         <figcaption>
-          Louie Christie's time management cube, also loosely influenced by Tal
-          Ben-Shahar's Positive Psychology course at Harvard University
+          </p>Time Management Cube - Louie Christie (2018) Croydon</p>
         </figcaption>
+
+        <p>Prior art influences also include Tal Ben-Shahar's Positive Psychology course at Harvard
+            University.</p>
       </figure>
     </main>
     <footer>
