@@ -184,12 +184,6 @@ h2 {
   color: var(--comedy-color);
 }
 
-.labs {
-  margin-top: 2em;
-  text-align: right;
-  list-style: none;
-}
-
 .memes ul {
   display: flex;
   flex-direction: column;
