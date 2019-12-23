@@ -340,3 +340,7 @@ footer a,
 footer a:visited {
   color: var(--grey-color);
 }
+
+.alt-text {
+  font-weight: normal;
+}
