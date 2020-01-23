@@ -1,9 +1,4 @@
 /* Utility */
-
-* {
-  box-sizing: border-box;
-}
-
 .hidden {
   display: none;
 }
@@ -13,7 +8,7 @@
   --main-color: #0e64b5;
   --analogous-color: #0e11b5;
   --complementary-color: #b50e11;
-  --triadic-color: #64b50e;
+  --triadic-color: #00ff00;
   --less-saturated-color: #070707;
   --monochromacy-color: #3b3b3b;
   --black-color: #000000;
@@ -47,7 +42,7 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   width: 100%;
   /* For development / testing */
@@ -80,10 +75,15 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  font-family: "Roboto", sans-serif;
+h6,
+.site-description {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   color: var(--heading-color);
   text-align: center;
+}
+
+p {
+  margin: 10px;
 }
 
 nav {
@@ -98,20 +98,30 @@ nav a:visited {
   color: var(--nav-color);
 }
 
+header {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+@media all and (min-width: 960px) {
+  header {
+    margin-bottom: 3em;
+  }
+}
+
 h1 {
   font-weight: bold;
-  font-size: 44px;
+  font-size: 64px;
   text-decoration: none;
   text-transform: uppercase;
-  margin-top: 10px;
-  margin-bottom: 14px;
   letter-spacing: 1px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
+
 @media all and (min-width: 960px) {
   h1 {
     font-size: 125px;
-    margin-top: 0.2em;
-    margin-bottom: 0.5em;
   }
 }
 
@@ -124,12 +134,20 @@ h2 {
   h2 {
     font-size: 2em;
   }
+
   nav h2 {
     font-size: 19px;
   }
 }
 
+@media all and (min-width: 960px) {
+  .site-description {
+    font-size: 1.2em;
+  }
+}
+
 .headlines {
+  margin-top: 2em;
   margin-bottom: 2em;
 }
 @media all and (min-width: 960px) {
@@ -167,19 +185,24 @@ h2 {
   text-decoration: underline;
 }
 
+.developer {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
 .developer h2,
 .developer a,
 .developer a:visited {
-  font-family: monospace, "Roboto Mono";
+  font-family: "Courier New", Courier, monospace;
   font-weight: bold;
   text-transform: lowercase;
   color: var(--developer-color);
+  text-decoration: underline;
+  text-align: center;
 }
 
 .comedy h2,
 .comedy a,
 .comedy a:visited {
-  font-family: "Roboto", sans-serif;
   font-weight: bold;
   color: var(--comedy-color);
 }
@@ -195,18 +218,26 @@ h2 {
   text-transform: none;
 }
 
+.icon-list {
+  list-style: none;
+  padding-inline-start: 6px;
+}
+
+.icon {
+  position: relative;
+  margin-right: 10px;
+}
+
+.icon-list-note {
+  display: block;
+  padding-left: 40px;
+}
+
 li {
+  margin: 8px;
+  line-height: 2em;
   padding-right: 2em;
-  line-height: 1.8em;
-}
-
-.headline img {
-  width: 100%;
-  object-fit: cover;
-}
-
-.developer img {
-  object-position: 0 38%;
+  /* line-height: 1.8em; */
 }
 
 @media all and (min-width: 960px) {
@@ -214,22 +245,24 @@ li {
     flex-grow: 0;
     flex-shrink: 1;
     flex-basis: 30%;
+    max-height: none;
   }
 }
 
 .headline img {
+  width: 100%;
+  object-fit: cover;
   max-width: 320px;
   max-height: 100px;
 }
-@media all and (min-width: 960px) {
-  .headline img {
-    max-height: calc(80px * 2);
-  }
+
+.developer img {
+  object-position: 0 38%;
 }
 
 @media all and (min-width: 960px) {
-  .headline {
-    max-height: none;
+  .headline img {
+    max-height: calc(80px * 2);
   }
 }
 
@@ -249,7 +282,7 @@ li {
 }
 
 .telephone-number {
-  font-family: Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .iframe-container {
@@ -312,8 +345,9 @@ cite {
 
 footer {
   margin-top: 2em;
+  line-height: 2em;
+  font-size: 0.9em;
   border-top: solid 1px #eff0f1;
-  font-size: 0.8rem;
 }
 @media all and (min-width: 960px) {
   .homepage footer {

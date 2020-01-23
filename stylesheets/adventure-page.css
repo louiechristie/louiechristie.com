@@ -1,5 +1,9 @@
 /* Adventure page */
 
+h1 {
+  font-size: 40px;
+}
+
 .center {
   display: flex;
   flex: 1;
