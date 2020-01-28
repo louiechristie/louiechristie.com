@@ -8,7 +8,7 @@
   --main-color: #0e64b5;
   --analogous-color: #0e11b5;
   --complementary-color: #b50e11;
-  --triadic-color: #00ff00;
+  --tertiary-color: #008400;
   --less-saturated-color: #070707;
   --monochromacy-color: #3b3b3b;
   --black-color: #000000;
@@ -17,12 +17,12 @@
   --grey-color: var(--less-saturated-color);
 
   --link-color: var(--dark-grey-color);
-  --link-visited-color: var(--grey-color);
+  --link-visited-color: var(--dark-grey-color);
   --nav-color: var(--dark-grey-color);
   --heading-color: var(--dark-grey-color);
 
   --adventure-color: var(--main-color);
-  --developer-color: var(--triadic-color);
+  --developer-color: var(--tertiary-color);
   --comedy-color: var(--complementary-color);
 
   /* Breakpoints */
@@ -90,6 +90,9 @@ nav {
   padding: 10px;
   font-size: 21px;
   font-weight: bold;
+  color: var(--heading-color);
+  /* text-transform: uppercase; */
+  /* border-bottom: 2px solid black; */
 }
 
 nav h1,
@@ -100,7 +103,6 @@ nav a:visited {
 
 header {
   margin-bottom: 1em;
-  text-align: center;
 }
 
 @media all and (min-width: 960px) {
@@ -117,6 +119,7 @@ h1 {
   letter-spacing: 1px;
   margin-top: 0;
   margin-bottom: 0;
+  word-break: break-word;
 }
 
 @media all and (min-width: 960px) {
@@ -128,6 +131,7 @@ h1 {
 h2 {
   font-size: 19px;
   text-transform: uppercase;
+  word-break: break-word;
 }
 
 @media all and (min-width: 960px) {
@@ -137,6 +141,7 @@ h2 {
 
   nav h2 {
     font-size: 19px;
+    /* font-weight: bold; */
   }
 }
 
@@ -186,7 +191,7 @@ h2 {
 }
 
 .developer {
-  background-color: rgba(0, 0, 0, 0.9);
+  /* background-color: rgba(0, 0, 0, 0.9); */
 }
 
 .developer h2,
@@ -194,7 +199,6 @@ h2 {
 .developer a:visited {
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
-  text-transform: lowercase;
   color: var(--developer-color);
   text-decoration: underline;
   text-align: center;
@@ -302,6 +306,15 @@ li {
   position: absolute;
   top: 0;
   width: 100%;
+}
+
+figure {
+  margin: 0;
+}
+@media all and (min-width: 960px) {
+  figure {
+    margin: initial;
+  }
 }
 
 .quote {

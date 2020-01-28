@@ -1,7 +1,24 @@
 /* Adventure page */
+:root {
+  --main-color: #0e64b5;
+  --adventure-color: var(--main-color);
+}
 
 h1 {
   font-size: 40px;
+  color: var(--adventure-color);
+}
+
+@media all and (min-width: 960px) {
+  h1 {
+    font-size: 100px;
+    margin-bottom: 0.4em;
+  }
+}
+
+h2 {
+  font-size: 40px;
+  color: var(--adventure-color);
 }
 
 .center {

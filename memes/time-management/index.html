@@ -40,8 +40,9 @@
       p {
         line-height: 1.6em;
       }
-      .hero {
+      figure.hero {
         margin-bottom: 4em;
+        display: initial;
       }
       figure {
         max-width: 100%;
@@ -69,6 +70,22 @@
         box-sizing: border-box;
         margin: 10px;
         flex-basis: calc(320px - 10px);
+        display: inline-flex;
+        flex-direction: column;
+        border: 1px solid rgba(0, 0, 0, 0.75);
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+        padding: 1em;
+        font-family: "Courier New", Courier, monospace, sans-serif;
+      }
+      figure {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      figcaption {
+        box-sizing: border-box;
+        margin: 10px;
         display: inline-flex;
         flex-direction: column;
         border: 1px solid rgba(0, 0, 0, 0.75);
@@ -208,17 +225,12 @@
         🤔. I'm not sure how it breaks time and space."
         />
 
-        <figcaption>
-          <p style="margin-bottom: 3em" >Time Management Cube - Louie Christie (2018) Croydon<sup>[*]</sup></p>
-          
+        <figcaption class="alt-text">          
 
-          <aside class="alt-text">
-            <h3>alt text: </h3>
+          <h3>Time Management Cube <br>- Louie Christie (2018, Croydon<sup>*</sup>) </h3>
           
-            <p>A Hessian cube box with post-it notes on it. A post-it note says win-win at the corner of 3 axis: good for me (not bad for me), good for others (not bad for others), good in the future, good now. That's four axis?...
-            🤔. I'm not sure how it breaks time and space.</p>
-          </aside>
-
+          <p>A Hessian cube box with post-it notes on it.</p><p>A post-it note says win-win at the corner of 3 axis: <ol><li>good for me (not bad for me),</li> <li>good for others (not bad for others),</li> <li>good in the future (not bad in the future),</li> <li>good now (not bad now).</li></ol> That's four axis?...
+            . I'm not sure how it breaks time and space.</p>
           
         </figcaption>
       </figure>
