@@ -26,9 +26,9 @@
   --comedy-color: var(--complementary-color);
 
   /* Breakpoints */
-  --extra-small: 0px;
-  --small: 600px;
-  --medium: 960px;
+  --extra-small: 320px;
+  --small: 490px;
+  --medium: 1024px;
   --large: 1280px;
   --extra-large: 1920px;
 }
@@ -45,21 +45,17 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   width: 100%;
+  max-width: 490px;
   /* For development / testing */
   /* max-height: 568px; */
   /* box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1); */
   /* border-radius: 5px; */
   /* overflow: auto;  */
 }
-body.homepage {
-  width: initial;
-  max-width: 320px;
-  padding: 0px;
-}
-@media all and (min-width: 960px) {
-  body,
-  body.homepage {
-    max-width: 960px;
+
+@media all and (min-width: 1024px) {
+  body {
+    max-width: 1024px;
   }
 }
 
@@ -82,8 +78,14 @@ h6,
   text-align: center;
 }
 
-p {
-  margin: 10px;
+header {
+  margin-bottom: 2em;
+}
+
+@media all and (min-width: 1024px) {
+  header {
+    margin-bottom: 3em;
+  }
 }
 
 nav {
@@ -91,8 +93,6 @@ nav {
   font-size: 21px;
   font-weight: bold;
   color: var(--heading-color);
-  /* text-transform: uppercase; */
-  /* border-bottom: 2px solid black; */
 }
 
 nav h1,
@@ -101,13 +101,19 @@ nav a:visited {
   color: var(--nav-color);
 }
 
-header {
-  margin-bottom: 1em;
+@media all and (min-width: 1024px) {
+  nav h2 {
+    font-size: 19px;
+  }
 }
 
-@media all and (min-width: 960px) {
-  header {
-    margin-bottom: 3em;
+.site-description {
+  margin: 10px;
+}
+
+@media all and (min-width: 1024px) {
+  .site-description {
+    font-size: 1.4rem;
   }
 }
 
@@ -122,64 +128,74 @@ h1 {
   word-break: break-word;
 }
 
-@media all and (min-width: 960px) {
+@media all and (min-width: 1024px) {
   h1 {
-    font-size: 125px;
+    font-size: 135px;
   }
 }
 
-h2 {
-  margin-top: 1.4em;
-  font-size: 28px;
-  text-transform: uppercase;
-  word-break: break-word;
-}
-
-@media all and (min-width: 960px) {
-  h2 {
-    font-size: 2em;
-  }
-
-  nav h2 {
-    font-size: 19px;
-    /* font-weight: bold; */
-  }
-}
-
-@media all and (min-width: 960px) {
-  .site-description {
-    font-size: 1.2em;
-  }
-}
-
-.headlines {
-  margin-top: 2em;
-  margin-bottom: 2em;
-}
-@media all and (min-width: 960px) {
+@media all and (min-width: 1024px) {
   .headlines {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
   }
 }
 
 .headline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media all and (min-width: 1024px) {
+  .headlines {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+}
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media all and (min-width: 1024px) {
+  .headline {
+    max-width: 320px;
+  }
+}
+
+.headline img,
+.headline h2 {
   flex: 1;
 }
 
-.headline h2 {
-  font-size: 28px;
-  line-height: 30px;
-  margin-top: 10px;
-  margin-bottom: 30px;
+.headline img {
+  width: 100%;
+  object-fit: cover;
+  object-position: 0 38%;
+  max-height: 100px;
 }
 
-.adventure h2,
-.adventure a,
-.adventure a:visited {
-  color: var(--black-color);
+@media all and (min-width: 490px) {
+  .headline img {
+    max-height: 180px;
+  }
+}
+
+h2 {
+  text-transform: uppercase;
+  word-break: break-word;
+}
+
+.adventure,
+a.adventure-link,
+a.adventure-link:visited {
   color: var(--adventure-color);
+  position: relative;
+  top: calc(-0.2em / 3);
 }
 
 .bookend {
@@ -195,25 +211,53 @@ h2 {
   text-decoration: underline;
 }
 
-.developer {
-  /* background-color: rgba(0, 0, 0, 0.9); */
+.adventure,
+a.adventure-link,
+a.adventure-link:visited {
+  color: var(--adventure-color);
 }
 
-.developer h2,
-.developer a,
-.developer a:visited {
-  font-family: "Courier New", Courier, monospace;
-  font-weight: bold;
+.developer,
+a.developer-link,
+a.developer-link:visited {
   color: var(--developer-color);
-  text-decoration: underline;
-  text-align: center;
 }
 
-.comedy h2,
-.comedy a,
-.comedy a:visited {
-  font-weight: bold;
+.comedy,
+a.comedy-link,
+a.comedy-link:visited {
   color: var(--comedy-color);
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media all and (min-width: 1024px) {
+  .links {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+}
+
+.links > section {
+  flex: 1;
+  width: 100%;
+  max-width: 320px;
+}
+
+@media all and (min-width: 1024px) {
+  .links > section {
+    flex: 1;
+  }
+}
+
+.links h2 {
+  margin-top: 3rem;
+  margin-bottom: 0.4rem;
 }
 
 .memes ul {
@@ -237,9 +281,15 @@ h2 {
 }
 
 .icon {
-  position: relative;
-  margin-right: 10px;
+  margin-right: 12px;
   font-style: normal;
+}
+
+i > svg {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  top: 4px;
 }
 
 .icon-image {
@@ -252,49 +302,9 @@ h2 {
 }
 
 li {
+  font-size: 1.2rem;
   margin: 8px;
-  line-height: 32px;
-  padding-right: 2em;
-  /* line-height: 1.8em; */
-}
-
-@media all and (min-width: 960px) {
-  .headline {
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: 30%;
-    max-height: none;
-  }
-}
-
-.headline img {
-  width: 100%;
-  object-fit: cover;
-  max-width: 320px;
-  max-height: 100px;
-}
-
-.developer img {
-  object-position: 0 38%;
-}
-
-@media all and (min-width: 960px) {
-  .headline img {
-    max-height: calc(80px * 2);
-  }
-}
-
-@media all and (min-width: 960px) {
-  .links {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-@media all and (min-width: 960px) {
-  .links > section {
-    flex: 1;
-  }
+  line-height: 2.4rem;
 }
 
 .telephone-number {
@@ -323,7 +333,7 @@ li {
 figure {
   margin: 0;
 }
-@media all and (min-width: 960px) {
+@media all and (min-width: 1024px) {
   figure {
     margin: initial;
   }
@@ -349,7 +359,7 @@ cite {
   font-size: 1em;
 }
 
-@media all and (min-width: 960px) {
+@media all and (min-width: 1024px) {
   .quote {
     font-size: 1.5em;
     line-height: 1.5em;
@@ -374,7 +384,7 @@ footer {
   font-size: 0.9em;
   border-top: solid 1px #eff0f1;
 }
-@media all and (min-width: 960px) {
+@media all and (min-width: 1024px) {
   .homepage footer {
     display: flex;
     justify-content: space-between;
@@ -390,7 +400,7 @@ footer p {
   text-align: center;
 }
 
-@media all and (min-width: 960px) {
+@media all and (min-width: 1024px) {
   .homepage > footer p {
     flex: 1;
   }
