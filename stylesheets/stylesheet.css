@@ -231,7 +231,8 @@ a.developer-link:visited {
   margin-bottom: 0;
 }
 .available-to-hire {
-  margin-top: 0.4em;
+  margin-top: 0.2em;
+  margin-bottom: 1.5em;
 }
 @media all and (min-width: 1024px) {
   .developer {
@@ -239,6 +240,7 @@ a.developer-link:visited {
   }
   .available-to-hire {
     margin-top: 1.5em;
+    margin-bottom: 1em;
   }
 }
 
@@ -313,11 +315,6 @@ i > svg {
 
 .icon-image {
   width: 21px;
-}
-
-.icon-list-note {
-  display: block;
-  padding-left: 40px;
 }
 
 li {
