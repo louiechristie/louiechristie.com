@@ -227,6 +227,21 @@ a.developer-link:visited {
   color: var(--developer-color);
 }
 
+.developer {
+  margin-bottom: 0;
+}
+.available-to-hire {
+  margin-top: 0.4em;
+}
+@media all and (min-width: 1024px) {
+  .developer {
+    margin-bottom: inherit;
+  }
+  .available-to-hire {
+    margin-top: 1.5em;
+  }
+}
+
 .comedy,
 a.comedy-link,
 a.comedy-link:visited {
@@ -413,13 +428,15 @@ cite {
 }
 
 footer {
-  margin-top: 2em;
   line-height: 2em;
   font-size: 0.9em;
+}
+.footer-primary {
+  margin-top: 2em;
   border-top: solid 1px #eff0f1;
 }
 @media all and (min-width: 1024px) {
-  .homepage footer {
+  .footer-primary {
     display: flex;
     justify-content: space-between;
   }
