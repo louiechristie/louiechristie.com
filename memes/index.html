@@ -23,6 +23,36 @@
       rel="stylesheet"
       rel="preload"
     />
+    <style>
+      body.memes {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .memes h1 {
+        margin-bottom: 15px;
+      }
+      .blockquote-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      blockquote {
+        box-sizing: border-box;
+        display: inline-flex;
+        flex-direction: column;
+        border: 1px solid rgba(0, 0, 0, 0.75);
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+        padding: 1em;
+        font-family: "Courier New", Courier, monospace, sans-serif;
+      }
+      .memes ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style: none;
+        padding-left: 0;
+      }
+    </style>
   </head>
 
   <body class="memes">
@@ -32,19 +62,21 @@
 
     <h1>memes</h1>
 
-    <blockquote
-      style="margin: auto;"
-      cite="https://en.wiktionary.org/wiki/meme"
-    >
-      <h3 style="text-align: left;">Noun</h3>
+    <div class="blockquote-container" role="presentation">
+      <blockquote
+        style="margin: auto;"
+        cite="https://en.wiktionary.org/wiki/meme"
+      >
+        <h3 style="text-align: left;">Noun</h3>
 
-      <p>
-        <strong>Meme</strong> ... (Internet, slang) Something, usually humorous,
-        which is copied and circulated online with slight adaptations, including
-        quizzes, basic pictures, video templates etc.
-      </p>
-      <footer><cite>Wiktionary (2020-02-20)</cite></footer>
-    </blockquote>
+        <p>
+          <strong>Meme</strong> ... (Internet, slang) Something, usually
+          humorous, which is copied and circulated online with slight
+          adaptations, including quizzes, basic pictures, video templates etc.
+        </p>
+        <footer><cite>- Wiktionary, 2020</cite></footer>
+      </blockquote>
+    </div>
 
     <ul>
       <li>
@@ -86,9 +118,7 @@
       </li>
       <li>
         <h2>
-          <a href="/memes/remote-working/"
-            >remote working <span class="label">[advert]</span>
-          </a>
+          <a href="/memes/remote-working/">remote working </a>
         </h2>
       </li>
       <li>

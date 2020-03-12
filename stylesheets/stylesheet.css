@@ -281,13 +281,6 @@ a.comedy-link:visited {
   margin-bottom: 0.4rem;
 }
 
-.memes ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  list-style: none;
-}
-
 .label {
   text-transform: none;
 }
