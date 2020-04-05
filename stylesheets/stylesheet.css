@@ -299,15 +299,12 @@ a.comedy-link:visited {
   font-style: normal;
 }
 
-i > svg {
+i > svg,
+.icon-image {
   position: relative;
   width: 24px;
   height: 24px;
   top: 4px;
-}
-
-.icon-image {
-  width: 21px;
 }
 
 li {
