@@ -92,17 +92,17 @@
       const [isLoaded, setIsLoaded] = useState(false);
       const [items, setItems] = useState([]);
 
-      useEffect(() => {
-        axios.get('./items.json')
-          .then(response => {
-            console.log(response.data);
-            setIsLoaded(true);
-            setItems(response.data);
-          }, error => {
-            console.log(error);
-            setIsLoaded(true);
-            setError(error);
-          });
+      useEffect(async () => {
+
+        try {
+          const response = await axios.get('./items.json');
+          setIsLoaded(true);
+          setItems(response.data);
+        } catch (error) {
+          console.err(error);
+          setIsLoaded(true);
+          setError(error);
+        }
         // Note: the empty deps array [] means
         // this useEffect will run once
         // similar to componentDidMount()
