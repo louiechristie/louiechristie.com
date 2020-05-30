@@ -83,7 +83,7 @@
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
   <script type="text/babel">
-    function MemesList(props) {
+    function List(props) {
 
 
       const { useState, useEffect } = React;
@@ -115,9 +115,9 @@
       } else {
         return (
           <ul>
-            {items.map(meme => (
-              <li key={meme.url}><h2><a href={`./${meme.url}`}>
-                {meme.title}</a></h2>
+            {items.map(item => (
+              <li key={item.url}><h2><a href={`./${item.url}`}>
+                {item.title}</a></h2>
               </li>
             ))}
           </ul>
@@ -126,7 +126,7 @@
     }
 
     ReactDOM.render(
-      <MemesList />,
+      <List />,
       document.getElementById('root')
     );
 
