@@ -114,11 +114,14 @@
         return <>Loading...</>;
       } else {
         return (
-          <ul>
+          <ul class="memes-list">
             {items.map(item => (
-              <li key={item.url}><h2><a href={`./${item.url}`}>
-                {item.title}</a></h2>
-              </li>
+              <a href={`./${item.url}`}>
+                <li key={item.url}>
+                  <img src={item.image} alt={item.alt} />
+                  <h2>{item.title}</h2>
+                </li>
+              </a>
             ))}
           </ul>
         )

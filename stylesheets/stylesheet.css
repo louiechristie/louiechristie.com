@@ -347,6 +347,23 @@ li {
   }
 }
 
+.memes-list li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.memes-list h2 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.memes-list img {
+  width: 100%;
+  max-width: 480px;
+}
+
 .iframe-container {
   overflow: hidden;
   padding-top: 56.25%;
