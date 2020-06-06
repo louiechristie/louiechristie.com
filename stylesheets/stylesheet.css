@@ -479,6 +479,11 @@ cite {
   text-align: center;
 }
 
+.afterthought {
+  font-size: 0.9em;
+  margin: 0;
+}
+
 footer {
   border-top: 2px solid black;
   line-height: 2em;
@@ -487,7 +492,7 @@ footer {
   border-top: solid 1px #eff0f1;
 }
 @media all and (min-width: 1024px) {
-  .footer-primary {
+  footer {
     display: flex;
     justify-content: space-between;
   }
