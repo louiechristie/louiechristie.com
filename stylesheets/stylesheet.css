@@ -250,6 +250,31 @@ a.comedy-link:visited {
   color: var(--comedy-color);
 }
 
+section,
+.column {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.lead-line {
+  margin-top: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--heading-color);
+}
+
+/* .lead-line-adventure {
+  color: var(--adventure-color);
+}*/
+
+/* .lead-line-coding {
+  color: var(--developer-color);
+}  */
+
+/* .lead-line-comedy {
+  color: var(--comedy-color);
+} */
+
 .links {
   display: flex;
   flex-direction: column;
@@ -264,20 +289,19 @@ a.comedy-link:visited {
   }
 }
 
-.links > section {
+.column {
   flex: 1;
   width: 100%;
   max-width: 320px;
 }
 
 @media all and (min-width: 1024px) {
-  .links > section {
+  .column {
     flex: 1;
   }
 }
 
-.links h2 {
-  margin-top: 3rem;
+.column-title {
   margin-bottom: 0.4rem;
 }
 
@@ -317,33 +341,54 @@ li {
   font-family: "Courier New", Courier, monospace;
 }
 
-.about {
-  margin-top: 2em;
-}
-
-@media all and (min-width: 490px) {
-  .about-title {
-    padding-top: 1em;
-    padding-bottom: 1em;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-    margin-bottom: 1em;
-  }
-}
-
 .bio {
   font-size: 1.2rem;
 }
 
+@media all and (min-width: 1024px) {
+  .bio {
+    columns: 3;
+  }
+}
+
+.bio > p:first-child {
+  margin-top: -1.6rem;
+}
+
+.bio ul {
+  /* list-style: none; */
+  padding-left: 6px;
+  margin: 0;
+  border: 0;
+}
+
 .bio li {
-  line-height: normal;
+  line-height: 1.2;
+}
+
+.bio {
+  line-height: 1.6;
+}
+
+.experiments {
+  border: 1px solid rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
 @media all and (min-width: 1024px) {
-  .bio {
-    column-count: 3;
+  .profiles {
+    order: 1;
   }
-  .bio > p:first-child {
-    margin-top: 0;
+
+  .experiments {
+    order: 2;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+  }
+
+  .contact {
+    order: 3;
   }
 }
 
@@ -431,9 +476,10 @@ cite {
 
 footer {
   line-height: 2em;
-  font-size: 0.9em;
 }
 .footer-primary {
+  font-size: 0.9em;
+
   margin-top: 2em;
   border-top: solid 1px #eff0f1;
 }
