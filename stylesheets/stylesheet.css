@@ -62,9 +62,6 @@ body {
 a {
   color: var(--link-color);
 }
-a:visited {
-  color: var(--link-visited-color);
-}
 
 h1,
 h2,
@@ -93,6 +90,7 @@ nav {
   font-size: 21px;
   font-weight: bold;
   color: var(--heading-color);
+  text-transform: lowercase;
 }
 
 nav h1,
@@ -105,6 +103,13 @@ nav a:visited {
   nav h2 {
     font-size: 19px;
   }
+}
+
+img,
+figure,
+figure > img {
+  max-width: 100vw;
+  object-fit: contain;
 }
 
 .site-description {
@@ -371,7 +376,7 @@ li {
   line-height: 1.6;
 }
 
-.experiments {
+.box-shadow {
   border: 1px solid rgba(0, 0, 0, 0.75);
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
 }
@@ -410,6 +415,19 @@ li {
   max-width: 480px;
 }
 
+.meme-container,
+.meme-container > figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.meme-container > figure {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
 .iframe-container {
   overflow: hidden;
   padding-top: 56.25%;
@@ -429,9 +447,6 @@ li {
   width: 100%;
 }
 
-figure {
-  margin: 0;
-}
 @media all and (min-width: 1024px) {
   figure {
     margin: initial;
@@ -470,13 +485,16 @@ cite {
   text-align: right;
 }
 
-.cta {
-  margin: 2em;
-  font-size: 1.2rem;
+.meme-fig-caption {
+  padding: 30px;
+}
+.light-relief {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  justify-content: center;
+}
+
+.memes-box {
+  padding: 10px;
 }
 
 .afterthought {
