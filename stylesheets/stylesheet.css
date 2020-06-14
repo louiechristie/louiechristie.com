@@ -195,7 +195,6 @@ h6,
 
 h1 {
   font-weight: bold;
-  /* font-size: 64px; */
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -204,28 +203,22 @@ h1 {
   word-break: break-word;
 }
 
-/* @media all and (min-width: 1024px) {
+@media all and (min-width: 490px) {
   h1 {
-    font-size: 135px;
+    font-size: 48px;
   }
-} */
+}
+
+@media all and (min-width: 1024px) {
+  h1 {
+    font-size: 64px;
+  }
+}
 
 @media all and (min-width: 1024px) {
   .headlines {
-    display: flex;
-    flex-direction: row;
     margin: 10px;
-  }
-}
-
-.headline {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@media all and (min-width: 1024px) {
-  .headlines {
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: baseline;
@@ -240,7 +233,7 @@ h1 {
 
 @media all and (min-width: 1024px) {
   .headline {
-    max-width: 320px;
+    width: 320px;
   }
 }
 
