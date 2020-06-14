@@ -3,6 +3,11 @@
   display: none;
 }
 
+.active,
+.active:visited {
+  color: var(--main-color);
+}
+
 :root {
   /* Colors */
   --main-color: #0e64b5;
