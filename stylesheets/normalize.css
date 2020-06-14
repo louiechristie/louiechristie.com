@@ -131,6 +131,7 @@ sup {
 }
 
 sub {
+  font-size: 0.85em;
   bottom: -0.25em;
 }
 

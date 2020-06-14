@@ -9,11 +9,6 @@
   <meta name="description" content="Louie Christie is an adventurous web developer, coding coach,
     underground comedian in his head." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    img {
-      max-width: 100vw;
-    }
-  </style>
   <link rel="stylesheet" type="text/css" href="/stylesheets/normalize.css" media="all" rel="preload" />
   <link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css" media="all" rel="preload" />
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet" rel="preload" />
@@ -32,15 +27,23 @@
 </head>
 
 <body class="homepage">
+
   <header>
-    <h1>Louie Christie</h1>
-    <p class="site-description">
-      Louie Christie is an adventurous web&nbsp;developer, coding&nbsp;coach,
-      underground&nbsp;comedian&nbsp;in&nbsp;his&nbsp;head.
-    </p>
+    <nav><a href="/">home</a> <a href="/adventure/">adventure</a> <a href="/blog/">blog</a> <a
+        href="https://comedy.louiechristie.com">comedy</a> <a href="/#about">about</a> <a
+        href="/#experiments">experiments</a> <a href="/#tech-talks">tech talks</a> <a
+        href="/intro-to-web-dev-course/">coding tutorials</a> <a href="/memes/">memes</a> <a
+        href="/#profiles">profiles</a> <a href="/blog/contact/">contact</a>
+    </nav>
   </header>
 
-  <main>
+  <h1>Louie Christie</h1>
+  <p class="site-description">
+    Adventurous web&nbsp;developer, coding&nbsp;coach,
+    underground&nbsp;comedian&nbsp;in&nbsp;his&nbsp;head.
+  </p>
+
+  <main class="home">
     <section class="headlines">
 
       <a class="adventure-link" href="/adventure/">
@@ -50,7 +53,8 @@
                   /images/louie_christie_surfs_perrenporth_2005_fl4t07_c_scale,w_1351.jpg 1351w,
                   /images/louie_christie_surfs_perrenporth_2005_fl4t07_c_scale,w_1920.jpg 1920w
                 " src="/images/louie_christie_surfs_perrenporth_2005_fl4t07_c_scale,w_1920.jpg"
-            alt="Louie Christie surfing photo 2005" title="Louie Christie surfing photo 2005" />
+            alt="A surfer on a wave. He's crouching, touching the wave with his hand as the wave breaks. The wave is chest high, blue-green color. There are brown-green hills in the background on the land."
+            title="Louie Christie surfing photo" />
           <h2 class="adventure"><span><span class="bookend">A</span><span class="middle">dventurou</span><span
                 class="bookend">s</span></span></h2>
         </div>
@@ -91,7 +95,7 @@
     </section>
 
 
-    <section class="bio">
+    <section class="bio" id="about">
 
       <p class="lead-line lead-line-adventure">Louie Christie has had a varied career including:
       </p>
@@ -103,7 +107,6 @@
         <li>leading youth camps on Kangaroo Island</li>
         <li>pig farming in the desert</li>
       </ul>
-      </p>
 
       <p class="lead-line lead-line-coding">He has masters degree in human-centred computer
         systems.</p>
@@ -114,15 +117,16 @@
 
       <p>And goodness knows, we could all do with a bit of that.</p>
 
-      <p class="lead-line lead-line-comedy">When he’s not coding...</p> He can be
-      found in London performing questionable quality stand-up comedy.</p>
+      <p class="lead-line lead-line-comedy">When he’s not coding...</p>
+      <p>He can be
+        found in London performing questionable quality stand-up comedy.</p>
 
       <p>In small basements below and above pubs.</p>
     </section>
 
-    <section class="links">
+    <section class="links columns">
 
-      <div class="column experiments" role="navigation">
+      <div class="column experiments link-box box-shadow" id="experiments" role="navigation">
         <h2>Experiments</h2>
 
         <ul class="icon-list">
@@ -138,6 +142,13 @@
           </li>
 
           <li>
+            <a href="https://weeks.louiechristie.com/"><i class="icon"><img class="icon-image" role="presentation"
+                  alt="" src="https://weeks.louiechristie.com/favicon.ico"></i>Weeks To Go
+            </a> <sup>(⚠️ may cause
+              angst)</sup>
+          </li>
+
+          <li>
             <a class="icon-link" href="https://louiechristie.github.io/intro-to-web-dev-course/"><i
                 class="icon">🧑🏼‍💻</i></a><a href="https://louiechristie.github.io/intro-to-web-dev-course/">Coding
               Tutorials
@@ -150,19 +161,14 @@
             <a href="https://expo.io/@louiechristie/mood-check-in/">Mood App</a>
           </li>
 
-
           <li>
             <a class="icon-link" href="/blog"><i class="icon">📙</i></a><a href="/blog">Creative Tech Blog
             </a>
           </li>
-
-          <li>
-            <a class="icon-link" href="/memes/"><i class="icon">😬</i><a href="/memes/">Memes</a>
-          </li>
         </ul>
       </div>
 
-      <div class="column profiles" role="navigation">
+      <div class="column profiles" id="profiles" role="navigation">
         <h2>Profiles</h2>
 
         <ul class="icon-list">
@@ -228,7 +234,7 @@
 
       <div class="column contact" role="navigation">
 
-        <h2>Tech talks</h2>
+        <h2 id="tech-talks">Tech talks</h2>
 
         <ul class="icon-list">
           <li>
@@ -279,27 +285,29 @@
       </div>
     </section>
 
-    <div class="meme-container">
+    <section class="meme-container">
 
       <a href="/memes/">
-        <section class="memes box-shadow">
+        <div class="memes column box-shadow">
           <h2>Memes 😬</h2>
 
           <img width="320" src="https://i.imgflip.com/447g00.jpg" alt="Louie in a bubble bath. Title reads: 'I learned a valuable lesson today.
   Don’t eat baked beans before a bath'" />
 
-        </section>
+        </div>
       </a>
 
-      <div class="cta">
-        <p>
-          <a href="/blog/contact/"><span class="want">
-              Want website like this one? *</span>
-          </a>
-        <p class="afterthought">(*other colors are available)</p>
-        </p>
+      <a href="/blog/contact/">
+        <div class="cta link-box">
+
+          <p class="want">
+            <a href="/blog/contact/">Want a website like this one?</a>
+          </p>
+
+          <p class="afterthought">* other colors are available</p>
+        </div>
+      </a>
       </div>
-    </div>
 
   </main>
 

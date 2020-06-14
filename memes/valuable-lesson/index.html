@@ -10,7 +10,9 @@
     humorous, which is copied and circulated online with slight
     adaptations, including quizzes, basic pictures, video templates etc." />
   <meta property="og:image" content="https://www.louiechristie.com/android-chrome-512x512.png" /> -->
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title"
+    content="I learned a valuable lesson today... Don’t eat baked beans, before a bath. 🛁 😬" />
+  <meta name="twitter:card" content="summary" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" type="text/css" href="/stylesheets/normalize.css" media="all" rel="preload" />
@@ -53,6 +55,7 @@
       const Meme = ({ url, title, image, alt, caption }) => {
 
         document.title = title;
+        document.querySelector('meta[property="twitter:title"]').setAttribute("content", title);
         document.querySelector('meta[name="description"]').setAttribute("content", caption);
         document.querySelector('meta[property="og:image"]').setAttribute("content", image);
 
@@ -65,7 +68,9 @@
               <h1>{title}</h1>
 
               <figure>
-                <img src={image} alt={alt} />
+                <div class="image-container">
+                  <img src={image} alt={alt} />
+                </div>
                 <figcaption class="meme-fig-caption">{caption}</figcaption>
               </figure>
             </div>

@@ -10,12 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:700|Roboto:400,900&display=swap" rel="stylesheet"
     rel="preload" />
   <style>
-    body.memes {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-
-    .memes h1 {
+    /* .memes h1 {
       margin-bottom: 15px;
     }
 
@@ -33,39 +28,44 @@
       box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
       padding: 1em;
       font-family: "Courier New", Courier, monospace, sans-serif;
-    }
+    } */
 
-    .memes ul {
+    /* .memes ul {
       display: flex;
       flex-direction: column;
       align-items: center;
       list-style: none;
       padding-left: 0;
-    }
+    } */
   </style>
 </head>
 
 <body class="memes">
   <header>
-    <nav><a href="/">louiechristie.com</a> | memes</nav>
+    <nav><a href="/">home</a> <a href="/adventure/">adventure</a> <a href="/blog/">blog</a> <a
+        href="https://comedy.louiechristie.com">comedy</a> <a href="/#about">about</a> <a
+        href="/#experiments">experiments</a> <a href="/#tech-talks">tech talks</a> <a
+        href="/intro-to-web-dev-course/">coding tutorials</a> <a href="/memes/">memes</a> <a
+        href="/#profiles">profiles</a> <a href="/blog/contact/">contact</a>
+    </nav>
   </header>
 
   <h1>memes</h1>
 
-  <div class="blockquote-container" role="presentation">
-    <blockquote style="margin: auto;" cite="https://en.wiktionary.org/wiki/meme">
-      <h3 style="text-align: left;">Noun</h3>
-
+  <div class="memes-container">
+    <blockquote class="meme-definition" cite="https://en.wiktionary.org/wiki/meme">
       <p>
         <strong>Meme</strong> ... (Internet, slang) Something, usually
         humorous, which is copied and circulated online with slight
         adaptations, including quizzes, basic pictures, video templates etc.
       </p>
-      <footer><cite>- Wiktionary, 2020</cite></footer>
+      <cite>- Wiktionary, 2020</cite>
     </blockquote>
+
+    <main id="root"></main>
+
   </div>
 
-  <main id="root"></main>
 
   <footer>
     <p>Made by <a href="/">Louie Christie</a></p>
@@ -117,7 +117,7 @@
           <ul class="memes-list">
             {items.map(item => (
               <a href={`./${item.url}`}>
-                <li key={item.url}>
+                <li key={item.url} class="box-shadow">
                   <img src={item.image} alt={item.alt} />
                   <h2>{item.title}</h2>
                 </li>
