@@ -5,7 +5,7 @@
 
 .active,
 .active:visited {
-  border-bottom: 1px solid var(--main-color);
+  background-color: var(--main-color);
 }
 
 :root {
@@ -47,12 +47,12 @@
 blockquote,
 .cta,
 .headline {
-  background-color: white;
   padding: 10px;
   margin: 10px;
 
   border: 3px solid var(--grey-color);
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
 }
 
 @media all and (min-width: 490px) {
@@ -101,19 +101,26 @@ footer {
 
 header {
   margin-bottom: 2em;
-  border-bottom: 1px solid #e8eaed;
-  /* border-bottom: 4px solid var(--sunny-yellow); */
+  /* border-bottom: 1px solid #e8eaed; */
+  border-bottom: 4px solid var(--sunny-yellow);
   /* box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.45); */
 }
 
 footer {
   margin-top: 2em;
-  /* border-top: 4px solid var(--sunny-yellow); */
+  border-top: 4px solid var(--sunny-yellow);
   /* box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.45); */
-  border-top: 1px solid #e8eaed;
+  /* border-top: 1px solid #e8eaed; */
 
   font-size: 0.85em;
   text-align: center;
+  color: white;
+  background: var(--grey-color);
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
 }
 
 @media all and (min-with: 1024px) {
@@ -129,28 +136,9 @@ footer {
   }
 }
 
-nav {
-  margin: 10px;
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-nav a,
-footer a {
-  color: #5f6368;
-  margin-right: 20px;
-  text-decoration: none;
-}
-
 main {
   width: 100%;
   max-width: var(--small);
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
 }
 
 @media all and (min-width: 1024px) {
@@ -216,12 +204,6 @@ h6,
   text-align: center;
 }
 
-@media all and (min-width: 1024px) {
-  nav h2 {
-    font-size: 19px;
-  }
-}
-
 .site-description {
   margin: 10px;
 }
@@ -276,19 +258,6 @@ h1 {
   align-items: center;
 }
 
-.headline img,
-.headline h2 {
-}
-
-/* .headline img {
-  width: 288px;
-  height: 203px;
-  object-fit: cover;
-  box-sizing: border-box;
-  border-radius: 10px;
-  max-width: 100%;
-} */
-
 h2 {
   word-break: break-word;
 }
@@ -301,18 +270,6 @@ a.adventure-link:visited {
   top: calc(-0.2em / 3);
   text-decoration: none;
 }
-
-/* .adventure-headline {
-  border-color: var(--main-color);
-  border-width: 4px;
-  border-style: solid;
-}
-
-.adventure-headline {
-  border-color: var(--main-color);
-  border-width: 4px;
-  border-style: solid;
-} */
 
 .bookend {
   position: relative;
@@ -355,18 +312,6 @@ aside {
   font-weight: bold;
   color: var(--heading-color);
 }
-
-/* .lead-line-adventure {
-  color: var(--adventure-color);
-}*/
-
-/* .lead-line-coding {
-  color: var(--developer-color);
-}  */
-
-/* .lead-line-comedy {
-  color: var(--comedy-color);
-} */
 
 .columns {
   display: flex;
@@ -644,4 +589,83 @@ cite {
 
 .instagram-media {
   min-width: 200px !important;
+}
+
+/* Menu */
+
+nav {
+  display: flex;
+  background: var(--grey-color);
+}
+
+#home-button {
+  margin-left: 10px;
+  display: flex;
+}
+
+#home-button a {
+  color: white;
+}
+
+/* [ON BIG SCREEN] */
+/* Wrapper */
+#hamnav {
+  width: 100%;
+}
+
+/* Hide Hamburger */
+#hamnav label,
+#hamburger {
+  display: none;
+}
+
+/* Horizontal Menu Items */
+#hamitems {
+  display: flex;
+}
+#hamitems a {
+  width: 20%; /* 100% / 5 tabs = 20% */
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+#hamitems a:hover {
+  background: var(--analogous-color);
+}
+
+/* [ON SMALL SCREENS] */
+@media screen and (max-width: 768px) {
+  /* Show Hamburger Icon */
+  #hamnav label {
+    display: inline-block;
+    color: white;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
+  /* Break down menu items into vertical */
+  #hamitems a {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-top: 1px solid #333;
+  }
+
+  /* Toggle Show/Hide Menu */
+  #hamitems {
+    display: none;
+  }
+  #hamnav input:checked ~ #hamitems {
+    display: block;
+  }
+}
+
+/* [DOES NOT MATTER] */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: arial, sans-serif;
 }

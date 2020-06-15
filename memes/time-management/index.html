@@ -18,11 +18,31 @@
 
 <body>
   <header>
-    <nav><a href="/">home</a> <a href="/adventure/">adventure</a> <a href="/blog/">blog</a> <a
-        href="https://comedy.louiechristie.com">comedy</a> <a href="/#about">about</a> <a
-        href="/#experiments">experiments</a> <a href="/#tech-talks">tech talks</a> <a
-        href="/intro-to-web-dev-course/">coding tutorials</a> <a href="/memes/" class="active">memes</a> <a
-        href="/#profiles">profiles</a> <a href="/blog/contact/">contact</a>
+
+    <nav>
+      <div id="home-button">
+        <a href="/"><img src="/images/lc-icon.svg" alt="louiechristie.com icon, L C initials handwritten"
+            role="img"></a>
+      </div>
+      <div id="hamnav">
+        <label for="hamburger">&#9776;</label>
+        <input type="checkbox" id="hamburger" />
+        <div id="hamitems">
+          <a href="/">
+            home</a> <a href="/adventure/">adventure</a>
+          <a href="/blog/">blog</a>
+          <a href="https://comedy.louiechristie.com">comedy</a>
+          <a href="/#experiments">experiments</a>
+          <a href="/#tech-talks">talks</a>
+          <a href="/intro-to-web-dev-course/">tutorials</a>
+          <a href="/memes/" class="active">memes</a>
+          <a href="/#profiles">profiles</a>
+          <a href="/#about">about</a>
+          <a href="/blog/contact/">contact</a>
+        </div>
+
+      </div>
+
     </nav>
   </header>
 
@@ -57,12 +77,15 @@
       looks like 80’s Christian Bale in American Psycho.
     </p>
 
-    <p class="box-shadow">
-      <strong>Warning ⚠️</strong>: Tony Robbins does not have all the answers, a
-      lot of self-help is bollocks. A friend of mine spent a lot of money on <a
-        href="https://www.netflix.com/title/80102204">Robbin's conferences</a>,
-      and recently topped himself.
-    </p>
+    <div class="box-shadow">
+      <p><strong>Warning ⚠️</strong>: Tony Robbins does not have all the answers, a
+        lot of self-help is bollocks.</p>
+      <p>
+        <sub>(A guy a knew spent a lot of money on <a href="https://www.netflix.com/title/80102204">Robbin's
+            conferences</a>,
+          and later topped himself.)</sub>
+      </p>
+    </div>
 
     <p>
       But I always thought Robbins’s time management stuff was good, and his
