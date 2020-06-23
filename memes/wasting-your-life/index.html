@@ -3,14 +3,10 @@
 <html>
 
 <head>
-  <title>valuable lesson | memes | louiechristie.com</title>
-  <meta name="description" content="I learned a valuable lesson today... Don’t eat baked beans, before a bath. 🛁 😬" />
-  <meta property="og:image" content="https://i.imgflip.com/447g00.jpg" />
-  <!-- <meta name="description" content="Meme... (Internet, slang) Something, usually
-    humorous, which is copied and circulated online with slight
-    adaptations, including quizzes, basic pictures, video templates etc." />
-  <meta property="og:image" content="https://www.louiechristie.com/android-chrome-512x512.png" /> -->
-  <meta property="twitter:title" content="I learned a valuable lesson today... Don’t eat baked beans, before a bath." />
+  <title>wasting your life | memes | louiechristie.com</title>
+  <meta name="description" content="Alan Partridge talks to his son Fernando." />
+  <meta property="og:image" content="https://img.youtube.com/vi/TVlIbE0dSgQ/hq1.jpg" />
+  <meta property="twitter:title" content="Wasting Your Life" />
   <meta property="twitter:card" content="summary" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -51,7 +47,7 @@
       const [isLoaded, setIsLoaded] = useState(false);
       const [items, setItems] = useState([]);
 
-      const Meme = ({ url, title, image, alt, caption }) => {
+      const Meme = ({ url, title, image, alt, caption = null, youtube = null }) => {
 
         document.title = title;
         document.querySelector('meta[property="twitter:title"]').setAttribute("content", title);
@@ -90,12 +86,20 @@
             <div class="meme-container">
               <h1>{title}</h1>
 
-              <figure>
+              {!youtube && <figure>
                 <div class="image-container">
                   <img src={image} alt={alt} />
                 </div>
                 <figcaption class="meme-fig-caption">{caption}</figcaption>
-              </figure>
+              </figure>}
+
+              {youtube && <figure>
+                <div class="iframe-container">
+                  <iframe src={`https://www.youtube.com/embed/${youtube.v}?start=${youtube.start}&amp;end=${youtube.end}&amp;rel=0`} frameborder="0"
+                    allow="autoplay; encrypted-media" allowfullscreen title={alt}></iframe>
+                </div>
+                <figcaption class="meme-fig-caption">{caption}</figcaption>
+              </figure>}
             </div>
           </>
         )
@@ -205,11 +209,11 @@
         // const { url, image, alt, caption } = meme;
 
         const memes = [...items]
-        const meme = { ...memes.find(({ url }) => url === "valuable-lesson") };
-        const { url, image, alt, title, caption } = meme;
+        const meme = { ...memes.find(({ url }) => url === "wasting-your-life") };
+        const { url, title } = meme;
         return (
           <>
-            <Meme url={url} title={title} image={image} alt={alt} caption={caption} />
+            <Meme {...meme} />
 
             <SharingButtons url={url} title={title} />
           </>
