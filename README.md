@@ -2,12 +2,18 @@
 
 ## Setup local development
 
-Clone repository
+Clone repository.
 
-Install globally [browser-sync](https://www.browsersync.io/)
+In a console start your favorite local webserver that uses live reloading.
 
-In a console start a local webserver that uses live reloading:
+For example:
 
 ```console
-browser-sync start --server --files "**/*.css, **/*.html, **/.js"
+npx serve
+```
+
+Or:
+
+```console
+npx browser-sync start --server --files "**/*.css, **/*.html, **/.js"
 ```

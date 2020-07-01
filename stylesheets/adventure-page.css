@@ -100,8 +100,26 @@ figure {
   align-items: center;
 }
 
-figcaption p {
+figcaption {
   text-align: left;
+}
+
+blockquote {
+  padding: 0;
+  margin: 20px 0;
+
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+@media all and (min-width: 490px) {
+  blockquote {
+    padding: 0;
+  }
+}
+
+figcaption p {
   margin-right: 10px;
   margin-left: 10px;
   line-height: 2em;
@@ -117,4 +135,24 @@ figcaption p sub {
   max-width: 100% !important;
 }
 
+.first-person:before {
+  content: "❝";
+  font-size: 44px;
+  padding-top: 1em;
+}
+
+.first-person > p:first-of-type {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.first-person > p:last-of-type {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.first-person:after {
+  content: "❞";
+  font-size: 44px;
+}
 /* End adventure page */
