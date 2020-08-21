@@ -131,28 +131,11 @@ figcaption p sub {
   margin-bottom: 3em;
 }
 
+.fast {
+  transform:scale(1,0.96); /* W3C */
+}
+
 .adventure-page .instagram-media {
   max-width: 100% !important;
-}
-
-.first-person:before {
-  content: "❝";
-  font-size: 44px;
-  padding-top: 1em;
-}
-
-.first-person > p:first-of-type {
-  padding-top: 0;
-  margin-top: 0;
-}
-
-.first-person > p:last-of-type {
-  padding-bottom: 0;
-  margin-bottom: 0;
-}
-
-.first-person:after {
-  content: "❞";
-  font-size: 44px;
 }
 /* End adventure page */
