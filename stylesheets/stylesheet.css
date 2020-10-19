@@ -497,23 +497,25 @@ i > svg,
 }
 
 .iframe-container {
-  max-width: var(--medium);
-  overflow: hidden;
-  padding-top: 56.25%;
   position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  max-width: var(--medium);
+}
+.iframe-container iframe,
+.iframe-container object,
+.iframe-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .iframe-container-4x3 {
   padding-top: 75%;
-}
-
-.iframe-container iframe {
-  border: 0;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
 }
 
 .quote {
@@ -524,6 +526,7 @@ i > svg,
 
 blockquote {
   max-width: 640px;
+  line-height: 1.8em;
 }
 
 @media all and (min-width: 490px) {
@@ -663,11 +666,20 @@ nav {
 }
 
 .footnotes {
-  padding-bottom: 20px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footnotes > h5 {
+  text-align: center;
 }
 
 .footnote {
   font-size: 0.8em;
+  max-width: var(--medium);
+
 }
 
 /* [DOES NOT MATTER] */

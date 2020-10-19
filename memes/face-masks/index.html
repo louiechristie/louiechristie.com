@@ -19,11 +19,9 @@
 </head>
 
 <body class="memes">
-
   <main id="root"></main>
 
   <footer>
-
     <p>Made by <a href="/">Louie Christie</a></p>
 
     <p>
@@ -91,30 +89,37 @@
                 <div class="image-container">
                   <img src={image} alt={alt} />
                 </div>
-                <figcaption class="meme-fig-caption">{caption}</figcaption>
+                {caption && <figcaption><blockquote>{caption}</blockquote></figcaption>}
               </figure>}
 
-              {youtube && <figure>
-                <div class="iframe-container">
-                  <iframe src={`https://www.youtube.com/embed/${youtube.v}?start=${youtube.start}&amp;end=${youtube.end}&amp;rel=0`} frameborder="0"
-                    allow="autoplay; encrypted-media" allowfullscreen title={alt}></iframe>
-                </div>
-                <figcaption class="meme-fig-caption">{caption}</figcaption>
-              </figure>}
+              {youtube && <center>
+                <figure>
+
+                  <div class='iframe-container'>
+                    <iframe src={`https://www.youtube.com/embed/${youtube.v}?start=${youtube.start}&amp;end=${youtube.end}&amp;rel=0`} frameborder='0' allowfullscreen>
+                    </iframe>
+                  </div>
+
+                  {caption && <figcaption><blockquote>{caption}</blockquote></figcaption>}
+
+                </figure>
+              </center>}
             </div>
 
-            {footnotes && footnotes.map((footnote, index) => {
-              const number = index + 1;
-              return (
-                <section class="footnotes">
-                  <h5>Footnotes</h5>
-                  <div class="footnote">#{number}&nbsp;-&nbsp;
-                  {footnote.text || null}
-                    {footnote.link && <a class="ref" href={footnote.link || null}>[{number}]</a>}
-                  </div>
-                </section>
-              )
-            })}
+            {
+              footnotes && footnotes.map((footnote, index) => {
+                const number = index + 1;
+                return (
+                  <section class="footnotes">
+                    <h5>Footnotes</h5>
+                    <div class="footnote">#{number}&nbsp;-&nbsp;
+                    {footnote.text || null}
+                      {footnote.link && <a class="ref" href={footnote.link || null}>[{number}]</a>}
+                    </div>
+                  </section>
+                )
+              })
+            }
           </>
         )
       };
@@ -239,7 +244,6 @@
       <List />,
       document.getElementById('root')
     );
-
   </script>
 </body>
 
