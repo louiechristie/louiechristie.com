@@ -236,8 +236,8 @@
         const { url, title } = meme;
         let { caption } = meme;
 
-        if (caption && caption.length > 90) {
-          caption = `${caption.substring(0, 87)} ...`;
+        if (caption && caption.length > 56) {
+          caption = `${caption.substring(0, 54)} ...`;
         };
 
         return (
