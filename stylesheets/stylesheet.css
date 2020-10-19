@@ -12,12 +12,11 @@
   /* Colors */
   --main-color: #0e64b5;
   --analogous-color: #0e11b5;
-  --complementary-color: #b50e11;
+  --complementary-color: #E02828;
   --tertiary-color: #008400;
   --less-saturated-color: #070707;
   --monochromacy-color: #3b3b3b;
   --black-color: #000000;
-  --sunny-yellow: rgba(255, 255, 0, 1);
 
   --dark-grey-color: var(--monochromacy-color);
   --grey-color: var(--less-saturated-color);
@@ -102,13 +101,13 @@ footer {
 header {
   margin-bottom: 2em;
   /* border-bottom: 1px solid #e8eaed; */
-  border-bottom: 4px solid var(--sunny-yellow);
+  border-bottom: 4px solid var(--complementary-color);
   /* box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.45); */
 }
 
 footer {
   margin-top: 2em;
-  border-top: 4px solid var(--sunny-yellow);
+  border-top: 4px solid var(--complementary-color);
   /* box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.45); */
   /* border-top: 1px solid #e8eaed; */
 
@@ -260,6 +259,10 @@ h1 {
 
 h2 {
   word-break: break-word;
+}
+
+.home h2.adventure {
+  padding: 0 20%;
 }
 
 .adventure,
