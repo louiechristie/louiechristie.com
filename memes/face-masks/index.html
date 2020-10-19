@@ -110,12 +110,14 @@
               footnotes && footnotes.map((footnote, index) => {
                 const number = index + 1;
                 return (
-                  <section class="footnotes">
+                  <section class="footnotes-container">
                     <h5>Footnotes</h5>
-                    <div class="footnote">#{number}&nbsp;-&nbsp;
-                    {footnote.text || null}
-                      {footnote.link && <a class="ref" href={footnote.link || null}>[{number}]</a>}
-                    </div>
+                    <ol class="footnotes">
+                      <li class="footnote">
+                        {footnote.text || noll}&nbsp;
+                        {footnote.link && <a class="ref" href={footnote.link || null}>[{number}]</a>}
+                      </li>
+                    </ol>
                   </section>
                 )
               })

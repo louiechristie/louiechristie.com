@@ -665,11 +665,15 @@ nav {
   }
 }
 
-.footnotes {
-  padding-bottom: 40px;
+.footnotes-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+}
+
+.footnotes {
+  padding-bottom: 40px;
+  max-width: var(--small);
 }
 
 .footnotes > h5 {
@@ -678,8 +682,6 @@ nav {
 
 .footnote {
   font-size: 0.8em;
-  max-width: var(--medium);
-
 }
 
 /* [DOES NOT MATTER] */
