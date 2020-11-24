@@ -12,7 +12,6 @@
   <link rel="stylesheet" type="text/css" href="/stylesheets/normalize.css" media="all" rel="preload" />
   <link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css" media="all" rel="preload" />
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet" rel="preload" />
-
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -24,6 +23,16 @@
   <link rel="icon" type="image/png" href="/favicon.ico" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="mask-icon" href="/favicon.svg" color="black" />
+  <script>
+    // this object must follow the MailgoConfig type
+    window.mailgoConfig = {
+      showFooter: false,
+      actions: {
+        whatsapp: false,
+      },
+    };
+  </script>
+  <script src="https://unpkg.com/mailgo@0.11.1/dist/mailgo.min.js" defer></script>
 </head>
 
 <body class="homepage">
@@ -293,8 +302,8 @@
 
         <ul class="icon-list">
           <li>
-            <a href="mailto:hello@louiechristie.com"><i class="icon"><svg style="width:24px; height:24px"
-                  viewBox="0 0 24 24">
+            <a href="#mailgo" data-address="hello" data-domain="louiechristie.com"><i class="icon"><svg
+                  style="width:24px; height:24px" viewBox="0 0 24 24">
                   <title>Email icon</title>
                   <path fill="currentColor"
                     d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
@@ -305,11 +314,11 @@
                       </rdf:Description>
                     </rdf:RDF>
                   </metadata>
-                </svg></i>Email: hello@louiechristie.com
+                </svg></i>Email
             </a>
           </li>
           <li>
-            <a href="tel:+442032396932">
+            <a href="#mailgo" data-tel="+442032396932">
               <i class="icon">
                 <svg viewBox="0 0 24 24">
                   <title>Voicemail icon</title>
@@ -322,7 +331,7 @@
                       </rdf:Description>
                     </rdf:RDF>
                   </metadata>
-                </svg></i>Voicemail: +442032396932</a>
+                </svg></i>Voicemail</a>
           </li>
         </ul>
       </div>
