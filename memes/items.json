@@ -39,7 +39,7 @@
   {
     "url": "bob-monkhouses-joke-book",
     "title": "Bob Monkhouse's Joke Book",
-    "image": "https://img.youtube.com/vi/oQPzj_GWw3g/hq3.jpg",
+    "image": "https://img.youtube.com/vi/hhUwpMSUKDQ/hq3.jpg",
     "alt": "Black and white photo of young Bob Monkhouse and a woman. Bob is wearing a 1950's suit"
   },
   {
@@ -68,9 +68,10 @@
   },
   {
     "url": "leave",
-    "title": "Leave",
+    "title": "Live video feed to brexit negotiations",
     "image": "https://img.youtube.com/vi/M62SnbNizIM/hqdefault.jpg",
-    "alt": "'Zippy' puppet from TV show Rainbow"
+    "alt": "'Zippy' puppet from TV show Rainbow",
+    "caption": "Live video feed to brexit negotiations"
   },
   {
     "url": "crazy",
