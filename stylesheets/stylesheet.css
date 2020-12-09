@@ -42,6 +42,10 @@
   font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
+.headline-link {
+  flex: 1;
+}
+
 .box-shadow,
 blockquote,
 .cta,
