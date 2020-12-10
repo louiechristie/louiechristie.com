@@ -263,17 +263,16 @@ h2 {
   word-break: break-word;
 }
 
-.home h2.adventure {
-  padding: 0 20%;
+.adventure-title {
+  height: 1.4em;
+  width: 100%;
+  object-fit: contain;
 }
 
 .adventure,
 a.adventure-link,
 a.adventure-link:visited {
   color: var(--adventure-color);
-  position: relative;
-  top: calc(-0.2em / 3);
-  text-decoration: none;
 }
 
 .bookend {

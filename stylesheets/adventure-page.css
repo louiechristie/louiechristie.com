@@ -50,6 +50,10 @@ h2 {
   margin: 0;
 }
 
+h2.adventure {
+  padding: 10px;
+}
+
 @media all and (min-width: 960px) {
   h2 {
     font-size: 40px;
@@ -138,4 +142,5 @@ figcaption p sub {
 .adventure-page .instagram-media {
   max-width: 100% !important;
 }
+
 /* End adventure page */
