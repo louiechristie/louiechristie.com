@@ -139,8 +139,12 @@ figcaption p sub {
   transform:scale(1,0.96); /* W3C */
 }
 
-.adventure-page .instagram-media {
+.instagram-media {
   max-width: 100% !important;
+}
+
+.title {
+  max-width: 100%;
 }
 
 /* End adventure page */

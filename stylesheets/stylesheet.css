@@ -269,7 +269,7 @@ h2.adventure {
 
 .adventure-title {
   height: 1.4em;
-  width: 100%;
+  max-width: 100%;
   object-fit: contain;
 }
 
