@@ -168,7 +168,6 @@ figure {
 .image-container img {
   width: 100%;
   object-fit: cover;
-  overflow: hidden;
   border-radius: 5px;
 }
 
