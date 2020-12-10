@@ -420,18 +420,6 @@ i > svg,
   padding: 0;
 }
 
-.bio li {
-  padding: 0;
-  margin-left: 20px;
-  line-height: 1.2;
-}
-
-@media all and (min-width: 1024px) {
-  .bio li {
-    line-height: 1.2;
-  }
-}
-
 @media all and (min-width: 1024px) {
   .profiles {
     order: 1;
