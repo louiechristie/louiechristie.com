@@ -263,6 +263,10 @@ h2 {
   word-break: break-word;
 }
 
+h2.adventure {
+  margin-bottom: 0.4em;
+}
+
 .adventure-title {
   height: 1.4em;
   width: 100%;
