@@ -412,13 +412,6 @@ i > svg,
     columns: 3;
   }
 }
-.bio > p:first-child {
-  margin-top: 0;
-}
-.bio ul {
-  margin: 0;
-  padding: 0;
-}
 
 @media all and (min-width: 1024px) {
   .profiles {
