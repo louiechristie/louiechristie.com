@@ -1,0 +1,7 @@
+# Redirects from what the browser requests to what we serve
+/blog              https://www.louiechristie.com/blog
+/comedy            https://undergroundcomedian.wordpress.com/
+/weather           https://weather.louiechristie.com/
+/weeks/to/go       https://weeks.louiechristie.com/
+/tutorials/intro-to-web-dev-course  https://www.louiechristie.com/intro-to-web-dev-course/
+/comedy/guide/london/south https://www.newcrossities.com/
