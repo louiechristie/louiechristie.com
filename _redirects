@@ -1,7 +1,7 @@
 # Redirects from what the browser requests to what we serve
-/blog              https://www.louiechristie.com/blog
-/comedy            https://undergroundcomedian.wordpress.com/
-/weather           https://weather.louiechristie.com/
-/weeks/to/go       https://weeks.louiechristie.com/
-/tutorials/intro-to-web-dev-course  https://www.louiechristie.com/intro-to-web-dev-course/
-/comedy/guide/london/south https://www.newcrossities.com/
+/blog              https://www.louiechristie.com/blog 200
+/comedy            https://undergroundcomedian.wordpress.com/ 200
+/weather           https://weather.louiechristie.com/ 200
+/weeks/to/go       https://weeks.louiechristie.com/ 200
+/tutorials/intro-to-web-dev-course  https://www.louiechristie.com/intro-to-web-dev-course/ 200
+/comedy/guide/london/south https://www.newcrossities.com/ 200
