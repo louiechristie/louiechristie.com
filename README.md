@@ -4,7 +4,7 @@
 
 Clone repository.
 
-In a console start your favorite local webserver that uses live reloading.
+In a console start your favorite local web server that uses live reloading.
 
 For example:
 
