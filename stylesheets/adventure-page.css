@@ -147,4 +147,8 @@ figcaption p sub {
   max-width: 100%;
 }
 
+.middle {
+  text-decoration: none;
+}
+
 /* End adventure page */
