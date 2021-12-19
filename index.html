@@ -50,6 +50,10 @@
     .hoopla {
       background-image: url("data:image/svg+xml;charset=utf8,%3C!--?xml version='1.0' standalone='no'?--%3E%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.2' baseProfile='tiny' width='480' height='270'%3E [%3Crect x='0' y='0' width='479' height='269' fill='rgb(7,5,4)' fill-opacity='1'%3E%3C/rect%3E,%3Ccircle cx='305' cy='123' r='36' fill='rgb(246,183,157)' fill-opacity='0.5019607843137255'%3E%3C/circle%3E,%3Ccircle cx='283' cy='125' r='22' fill='rgb(173,140,150)' fill-opacity='0.5019607843137255'%3E%3C/circle%3E,%3Ccircle cx='313' cy='168' r='31' fill='rgb(60,46,50)' fill-opacity='0.5019607843137255'%3E%3C/circle%3E,%3Ccircle cx='345' cy='108' r='20' fill='rgb(145,105,73)' fill-opacity='0.5019607843137255'%3E%3C/circle%3E,%3Ccircle cx='227' cy='38' r='6' fill='rgb(255,255,251)' fill-opacity='0.5019607843137255'%3E%3C/circle%3E,%3Ccircle cx='307' cy='68' r='29' fill='rgb(6,2,3)' fill-opacity='0.5019607843137255'%3E%3C/circle%3E,%3Ccircle cx='269' cy='156' r='23' fill='rgb(36,15,17)' fill-opacity='0.5019607843137255'%3E%3C/circle%3E,%3Ccircle cx='361' cy='146' r='32' fill='rgb(21,11,14)' fill-opacity='0.5019607843137255'%3E%3C/circle%3E,%3Ccircle cx='374' cy='113' r='20' fill='rgb(45,29,26)' fill-opacity='0.5019607843137255'%3E%3C/circle%3E,%3Ccircle cx='231' cy='242' r='55' fill='rgb(0,0,0)' fill-opacity='0.5019607843137255'%3E%3C/circle%3E,%3Ccircle cx='219' cy='57' r='19' fill='rgb(0,0,0)' fill-opacity='0.5019607843137255'%3E%3C/circle%3E,%3Ccircle cx='205' cy='187' r='7' fill='rgb(238,75,66)' fill-opacity='0.5019607843137255'%3E%3C/circle%3E,%3Ccircle cx='336' cy='112' r='18' fill='rgb(135,96,60)' fill-opacity='0.5019607843137255'%3E%3C/circle%3E,%3Ccircle cx='310' cy='187' r='11' fill='rgb(121,137,145)' fill-opacity='0.5019607843137255'%3E%3C/circle%3E,%3Ccircle cx='292' cy='140' r='9' fill='rgb(52,118,218)' fill-opacity='0.5019607843137255'%3E%3C/circle%3E,%3Ccircle cx='428' cy='214' r='98' fill='rgb(0,0,0)' fill-opacity='0.5019607843137255'%3E%3C/circle%3E,%3Ccircle cx='284' cy='124' r='9' fill='rgb(230,200,205)' fill-opacity='0.5019607843137255'%3E%3C/circle%3E,%3Ccircle cx='33' cy='102' r='177' fill='rgb(0,0,0)' fill-opacity='0.5019607843137255'%3E%3C/circle%3E,%3Ccircle cx='436' cy='43' r='80' fill='rgb(0,0,0)' fill-opacity='0.5019607843137255'%3E%3C/circle%3E]%3C/svg%3E");
     }
+
+    .quiz-show {
+      background-image: url("images/wheel-of-cheese-studio_viqpnh_c_geometrized_LQIP");
+    }
   </style>
 </head>
 
@@ -175,13 +179,27 @@
       <center><strong>=</strong></center>
     </div>
 
-    <section class="highlight">
+    <section class="highlight" style="border-width: 0; margin: 10px; border-radius: 10px;">
       <center>
-        <iframe width="560" height="315"
-          src="https://www.youtube.com/embed/videoseries?start=136&amp;list=PLKhdPqmp9xC9pYNnlu7sn6RG5X2UfweG7"
-          title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
+
+        <div onclick="this.nextElementSibling.style.display='block'; this.style.display='none'">
+          <img width="560" height="315" sizes="(max-width: 1920px) 100vw, 1920px" srcset="
+          images/wheel-of-cheese-studio_viqpnh_c_scale,w_320.jpg 320w,
+          images/wheel-of-cheese-studio_viqpnh_c_scale,w_1327.jpg 1327w,
+          images/wheel-of-cheese-studio_viqpnh_c_scale,w_1920.jpg 1920w"
+            src="images/wheel-of-cheese-studio_viqpnh_c_scale,w_1920.jpg"
+            alt="Panel quiz show studio. A host and four contestants laughing. Louie Christie is on the far right. They are all sat behind a long desk that forms part of a colourful colourful set. A neon sign reads 'Wheel of Cheese'."
+            style="cursor:pointer; object-fit: cover; width: 100%; border-radius: 10px; object-position: center 33%;" />
+        </div>
+        <div style="display:none">
+          <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/videoseries?autoplay=1&start=138&amp;list=PLKhdPqmp9xC9pYNnlu7sn6RG5X2UfweG7"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen style="width: 100%; object-fit: contain; border-radius: 10px;">
+          </iframe>
+        </div>
+
       </center>
     </section>
 
@@ -192,9 +210,7 @@
       <ul>
         <li><a
             href="https://www.youtube.com/watch?v=LrPHVoq1jxc&list=PLKhdPqmp9xC9pYNnlu7sn6RG5X2UfweG7"><strong>panelist</strong>
-            on a
-            comedy panel show</a>
-          about video games
+            on a comedy quiz show</a> about video games
         </li>
         <li><strong><a href="https://comedy.louiechristie.com/tech-event-host/">hosting tech events</a></strong> but I
           can't do a <a href="images/forced-fun-on-zoom.png">forced fun face</a>
