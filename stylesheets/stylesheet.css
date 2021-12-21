@@ -39,7 +39,7 @@
 }
 
 * {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 .headline-link {
@@ -52,21 +52,9 @@ blockquote,
 .headline {
   padding: 10px;
   margin: 10px;
-
   border: 3px solid var(--grey-color);
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
   border-radius: 20px;
-}
-
-@media all and (min-width: 490px) {
-  .bio {
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
-
-    border: 3px solid var(--grey-color);
-    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
-  }
 }
 
 @media all and (min-width: 490px) {
@@ -200,7 +188,7 @@ h4,
 h5,
 h6,
 .site-description {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
   color: var(--heading-color);
   text-align: center;
 }
@@ -382,13 +370,25 @@ i > svg,
 } */
 
 .telephone-number {
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.highlight {
+  border-width: 0;
+  margin: 1rem 10px 1rem 10px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+@media all and (min-width: 1024px) {
+  .highlight {
+    margin-bottom: 3rem;
+  }
 }
 
 .bio {
   line-height: 1.6;
   padding: 10px;
-  margin: 10px;
 }
 
 .bio::first-line {
@@ -399,6 +399,10 @@ i > svg,
 @media all and (min-width: 490px) {
   .bio {
     padding: 30px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 3px solid var(--grey-color);
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
   }
 }
 
