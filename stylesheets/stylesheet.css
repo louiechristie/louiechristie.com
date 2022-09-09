@@ -297,7 +297,7 @@ a.comedy-link:visited {
 
 section,
 .column {
-  margin-top: 1em;
+  padding-top: 1em;
 }
 
 aside {
@@ -342,9 +342,16 @@ aside {
 }
 
 .icon-list {
-  list-style: none;
-  padding-inline-start: 6px;
-  line-height: 2.4em;
+  /* list-style: none; */
+  /* padding-inline-start: 6px;
+  line-height: 2.4em; */
+}
+
+.icon-list li {
+  list-style-type: none;
+
+  margin: 8px;
+  line-height: 2.4rem;
 }
 
 .icon-link {
@@ -363,11 +370,6 @@ i > svg,
   height: 24px;
   top: 4px;
 }
-
-/* li {
-  margin: 8px;
-  line-height: 2.4rem;
-} */
 
 .telephone-number {
   font-family: 'Courier New', Courier, monospace;
