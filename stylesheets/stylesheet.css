@@ -327,6 +327,13 @@ aside {
   flex: 1;
 }
 
+@media all and (min-width: 1024px) {
+  .column {
+    flex-grow: 1;
+    max-width: 420px;
+  }
+}
+
 .column-title {
   margin-bottom: 0.4rem;
 }
