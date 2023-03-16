@@ -51,6 +51,13 @@
   flex: 1;
 }
 
+.media-descripton {
+  display: grid;
+  justify-content: center;
+  padding-top: 6px;
+  padding-bottom: 4px;
+}
+
 .box-shadow,
 blockquote,
 .cta,
@@ -235,6 +242,7 @@ h1 {
     grid-template-rows: 1fr 1em 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 10px;
+    align-content: center;
   }
 }
 
