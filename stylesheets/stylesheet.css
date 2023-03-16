@@ -225,22 +225,15 @@ h1 {
 
 @media all and (min-width: 1024px) {
   .headlines {
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: baseline;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
   }
 }
 
 .headline {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.headline-inner {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
