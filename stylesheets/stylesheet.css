@@ -2,6 +2,11 @@
 .hidden {
   display: none;
 }
+.center {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
 
 .active,
 .active:visited {
@@ -226,9 +231,9 @@ h1 {
 @media all and (min-width: 1024px) {
   .headlines {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 10px;
+    grid-template-columns: 1fr 1em 1fr 1em 1fr;
+    grid-template-rows: 1fr 1em 1fr;
+    grid-column-gap: 0px;
     grid-row-gap: 10px;
   }
 }
