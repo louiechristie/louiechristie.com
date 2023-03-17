@@ -7,17 +7,19 @@
   align-items: center;
   justify-items: center;
 }
-.memes {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 10px 10px;
-  justify-content: stretch;
-  align-content: stretch;
-  justify-items: stretch;
-  align-items: stretch;
-}
 
+@media all and (min-width: 1024px) {
+  .memes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px 10px;
+    justify-content: stretch;
+    align-content: stretch;
+    justify-items: stretch;
+    align-items: stretch;
+  }
+}
 .active,
 .active:visited {
   background-color: var(--main-color);
