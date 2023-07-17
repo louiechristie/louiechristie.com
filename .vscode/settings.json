@@ -16,6 +16,7 @@
     "editor.formatOnSave": true
   },
   "htmlhint.options": {
-    "tagname-lowercase": false,
-  }
-} 
+    "tagname-lowercase": false
+  },
+  "editor.formatOnSave": true
+}
