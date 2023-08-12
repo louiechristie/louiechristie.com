@@ -361,20 +361,23 @@ aside {
 }
 
 .icon-list {
-  /* list-style: none; */
-  /* padding-inline-start: 6px;
-  line-height: 2.4em; */
+  padding-inline-start: 0;
 }
 
 .icon-list li {
   list-style-type: none;
-
-  margin: 8px;
+  padding-left: 12px;
   line-height: 2.4rem;
+  padding-bottom: 1rem;
+}
+
+.icon-list li:last-of-type {
+  padding-bottom: 0;
 }
 
 .icon-link {
-  text-decoration: none;
+  /* text-decoration: none; */
+  /* padding-left: 0; */
 }
 
 .icon {
