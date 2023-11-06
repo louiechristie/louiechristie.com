@@ -251,10 +251,11 @@ h1 {
   .headlines {
     display: grid;
     grid-template-columns: 1fr 1em 1fr 1em 1fr;
-    grid-template-rows: 1fr 1em 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 10px;
     align-content: center;
+    padding-bottom: 1em;
   }
 }
 
