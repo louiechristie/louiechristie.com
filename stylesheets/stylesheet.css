@@ -151,15 +151,40 @@ figure {
 
 .image-container {
   width: 100%;
-  aspect-ratio: 4 / 3;
   overflow: hidden;
   border-radius: 10px;
+}
+
+@media all and (min-width: 1024px) {
+  .image-container {
+    aspect-ratio: 4 / 3;
+  }
 }
 
 .image-container img {
   width: 100%;
   object-fit: cover;
   max-height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.feature-container {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.feature-container img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.feature-container iframe {
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
 }
 
@@ -173,12 +198,6 @@ figcaption li {
   text-align: left;
   margin-right: 10px;
   margin-left: 10px;
-}
-
-.memes > img {
-  max-width: 100%;
-  object-fit: contain;
-  border-radius: 10px;
 }
 
 a {
@@ -425,13 +444,21 @@ i > svg,
   }
 }
 
-.bio {
-  line-height: 1.6;
+.blue-button {
+  margin: 1rem;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background-color: #4299e1;
+  border-radius: 50px;
+  padding: 0.6rem 1.2rem;
+  color: white;
+  line-height: 26px;
 }
 
-.bio p,
-.bio ul {
-  max-width: 360px;
+.bio {
+  line-height: 1.6;
 }
 
 @media all and (min-width: 1024px) {
