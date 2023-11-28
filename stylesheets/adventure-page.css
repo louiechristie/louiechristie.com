@@ -86,12 +86,6 @@ h2.first-aid {
   margin: 10px;
 }
 
-@media all and (min-width: 490px) {
-  .box-shadow {
-    padding: 30px;
-  }
-}
-
 .date {
   margin-top: 0;
   text-align: center;
@@ -136,7 +130,7 @@ figcaption p sub {
 }
 
 .fast {
-  transform:scale(1,0.96); /* W3C */
+  transform: scale(1, 0.96); /* W3C */
 }
 
 .instagram-media {
