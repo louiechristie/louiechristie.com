@@ -151,18 +151,13 @@ figure {
 
 .image-container {
   width: 100%;
-  overflow: hidden;
   border-radius: 10px;
-}
-
-@media all and (min-width: 1024px) {
-  .image-container {
-    aspect-ratio: 4 / 3;
-  }
 }
 
 .image-container img {
   width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   max-height: 100%;
   border-radius: 10px;
