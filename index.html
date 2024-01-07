@@ -22,16 +22,6 @@
   <link rel="icon" type="image/png" href="favicon.ico" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="mask-icon" href="favicon.svg" color="black" />
-  <script>
-    // this object must follow the MailgoConfig type
-    window.mailgoConfig = {
-      showFooter: false,
-      actions: {
-        whatsapp: false,
-      },
-    };
-  </script>
-  <script src="https://unpkg.com/mailgo@0.12.2/dist/mailgo.min.js" defer></script>
   <meta name="monetization" content="$ilp.gatehub.net/484331722">
   <link rel="canonical" href="https://www.louiechristie.com" />
   <style>
@@ -263,7 +253,16 @@
 
         <p>
           <sub>[1] more <a href="https://bpspsychub.onlinelibrary.wiley.com/doi/full/10.1111/papt.12377">evidence
-              based</a> than <a href="https://www.youtube.com/watch?v=wtDaP18OGfw">Theranos</a></sub>
+              based</a> than <a href="https://www.youtube.com/watch?v=wtDaP18OGfw"
+              onClick="revealTheranosTrailer(event);">Theranos</a>
+
+            <div id="theranos-trailer" style="display: none;">
+              <iframe src="https://www.youtube.com/embed/wtDaP18OGfw?si=9FqPTdh-kzJ65OL7?rel=0"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+          </sub>
         </p>
 
       </div>
@@ -622,5 +621,24 @@ https://www.louiechristie.com/blog/static/5e9fcc39807d7973a67fbddcc17e177d/50d7b
     </p>
   </footer>
 </body>
+
+<script>
+  // this object must follow the MailgoConfig type
+  window.mailgoConfig = {
+    showFooter: false,
+    actions: {
+      whatsapp: false,
+    },
+  };
+</script>
+<script src="https://unpkg.com/mailgo@0.12.2/dist/mailgo.min.js" defer></script>
+
+<script>function revealTheranosTrailer(event) {
+    event.preventDefault()
+    var x = document.getElementById("theranos-trailer");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    }
+  }</script>
 
 </html>
