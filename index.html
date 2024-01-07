@@ -253,7 +253,7 @@
 
         <p id="evidence-based">
           <sub>[1] more <a href="https://bpspsychub.onlinelibrary.wiley.com/doi/full/10.1111/papt.12377">evidence
-              based</a> than <a href="https://www.youtube.com/watch?v=wtDaP18OGfw"
+              based</a> than <a id="theranos-trailer-link" href="https://www.youtube.com/watch?v=wtDaP18OGfw"
               onClick="revealTheranosTrailer(event);">Theranos</a>
 
             <div id="theranos-trailer" style="display: none;">
@@ -635,9 +635,16 @@ https://www.louiechristie.com/blog/static/5e9fcc39807d7973a67fbddcc17e177d/50d7b
 
 <script>function revealTheranosTrailer(event) {
     event.preventDefault()
-    var x = document.getElementById("theranos-trailer");
-    if (x.style.display === "none") {
-      x.style.display = "block";
+    const theranosTrailer = document.getElementById("theranos-trailer");
+    const theranosTrailerLink = document.getElementById("theranos-trailer-link");
+
+    if (theranosTrailer.style.display === "none") {
+      // Show video. Stopping the video once it is playing is non-trivial, so remove link (instead of having it clickable to hide the video.)
+      // Being able to reverse the action would be preferable, but the use can just refresh the page, and it's only an easter egg.
+      theranosTrailer.style.display = "block";
+      const theranosTrailerText = document.createElement('span');
+      theranosTrailerText.innerHTML = theranosTrailerLink.innerHTML;
+      theranosTrailerLink.parentNode.replaceChild(theranosTrailerText, theranosTrailerLink);
     }
   }</script>
 
