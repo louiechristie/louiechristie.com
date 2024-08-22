@@ -420,7 +420,10 @@ i > svg,
   width: 24px;
   height: 24px;
   top: 4px;
-  filter: url('../#monochrome');
+}
+
+.colorized .icon-image {
+  filter: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg"><defs><filter id="colorize" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 0.0549019608 0 0 0 0 0.3921568627 0 0 0 0 0.7098039216 0 0 0 1 0"/></filter></defs></svg>#colorize');
 }
 
 .telephone-number {
