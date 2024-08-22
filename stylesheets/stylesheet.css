@@ -420,7 +420,7 @@ i > svg,
   width: 24px;
   height: 24px;
   top: 4px;
-  filter: url(#monochrome);
+  filter: url('../#monochrome');
 }
 
 .telephone-number {
