@@ -420,6 +420,15 @@ i > svg,
   width: 24px;
   height: 24px;
   top: 4px;
+  filter: url(#monochrome);
+}
+
+.defs-only {
+  position: absolute;
+  height: 0;
+  width: 0;
+  overflow: none;
+  left: -100%;
 }
 
 .telephone-number {
