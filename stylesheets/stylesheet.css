@@ -422,12 +422,12 @@ i > svg,
   top: 4px;
 }
 
-.colorized .icon-image {
+.colorized img {
   /* https://stackoverflow.com/a/72369382/3469524 */
-  filter: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg"><defs><filter id="colorize" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 0.0549019608 0 0 0 0 0.3921568627 0 0 0 0 0.7098039216 0 0 0 1 0"/></filter></defs></svg>#colorize');
-  /* Workaround for webkit bug https://bugs.webkit.org/show_bug.cgi?id=104169 */
-  -webkit-filter: invert(20%) sepia(99%) saturate(2441%) hue-rotate(197deg)
-    brightness(93%) contrast(89%);
+  /* filter: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg"><defs><filter id="colorize" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 0.0549019608 0 0 0 0 0.3921568627 0 0 0 0 0.7098039216 0 0 0 1 0"/></filter></defs></svg>#colorize'); */
+  /* Workaround for Safari bug https://bugs.webkit.org/show_bug.cgi?id=104169 */
+  filter: brightness(0) saturate(100%) invert(25%) sepia(75%) saturate(1591%)
+    hue-rotate(190deg) brightness(101%) contrast(94%);
 }
 
 .telephone-number {
