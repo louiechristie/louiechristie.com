@@ -423,14 +423,6 @@ i > svg,
   filter: url(#monochrome);
 }
 
-.defs-only {
-  position: absolute;
-  height: 0;
-  width: 0;
-  overflow: none;
-  left: -100%;
-}
-
 .telephone-number {
   font-family: 'Courier New', Courier, monospace;
 }
