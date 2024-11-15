@@ -1,0 +1,19 @@
+{
+  "name": "louiechristie.com",
+  "version": "0.1.0",
+  "description": "## Setup local development",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "watch": "eleventy --serve",
+    "build": "eleventy",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compare": "diff $INIT_CWD/_bak $INIT_CWD/_site --color --recursive --exclude={.*,README*,readme*} --ignore-all-space --strip-trailing-cr"
+  },
+  "keywords": [],
+  "author": "Louie Christie",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

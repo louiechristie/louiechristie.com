@@ -1,1 +1,4 @@
-deploy
+_site
+_bak
+.wrangler/tmp
+node_modules
