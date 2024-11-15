@@ -10,7 +10,6 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     '_tmp/bak/intro-to-web-dev-course': 'intro-to-web-dev-course',
   });
-  eleventyConfig.addPassthroughCopy({ '_tmp/bak/blog': 'blog' });
   eleventyConfig.addPassthroughCopy({
     '_tmp/bak/trivia-trundle': 'trivia-trundle',
   });
