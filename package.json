@@ -8,7 +8,8 @@
     "watch": "eleventy --serve",
     "build": "eleventy",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compare": "diff $INIT_CWD/_tmp/bak $INIT_CWD/_site --color --recursive --exclude={.*,README*,readme*,start,deploy,shower-of-comedy,travel-guide} --ignore-all-space --strip-trailing-cr"
+    "compare": "diff $INIT_CWD/_tmp/bak $INIT_CWD/_site --color --recursive --exclude={.*,README*,readme*,start,deploy,shower-of-comedy,travel-guide} --ignore-all-space --strip-trailing-cr",
+    "deploy": "npx wrangler pages deploy _site"
   },
   "keywords": [],
   "author": "Louie Christie",
