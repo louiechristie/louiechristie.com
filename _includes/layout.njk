@@ -26,7 +26,10 @@
     <header>
       {% include "nav.njk" %}
     </header>
+
     {{ content | safe }}
+
+    {% block footer %}
     <footer>
       <p>
         <a href="https://help.github.com/articles/github-privacy-statement/#information-from-website-browsers">Privacy statement</a>
@@ -40,5 +43,6 @@
         </a>
       </p>
     </footer>
+    {% endblock %}
   </body>
 </html>
