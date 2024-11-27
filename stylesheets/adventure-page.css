@@ -62,7 +62,8 @@ h2.adventure {
 
 @media all and (min-width: 960px) {
   h2 {
-    min-height: 3em;
+    padding-top: 1em;
+    padding-bottom: 1em;
   }
 }
 

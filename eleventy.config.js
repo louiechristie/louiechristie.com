@@ -1,4 +1,5 @@
 export default async function (eleventyConfig) {
+  eleventyConfig.addPassthroughCopy('stylesheets');
   eleventyConfig.addPassthroughCopy('mstile-*.png');
   eleventyConfig.addPassthroughCopy('favicon*');
   eleventyConfig.addPassthroughCopy('android-chrome*');
