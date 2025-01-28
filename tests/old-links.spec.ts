@@ -3,12 +3,12 @@ import { test, expect } from "@playwright/test";
 const redirects = [
   {
     from: "https://www.louiechristie.com/comedy/",
-    to: "https://comedy.louiechristie.com/",
+    to: "https://undergroundcomedian.wordpress.com/",
     h1: "Underground Comedian",
   },
   {
     from: "https://www.louiechristie.com/comedy/improv/",
-    to: "https://comedy.louiechristie.com/improv/",
+    to: "https://undergroundcomedian.wordpress.com/improv/",
     h1: "Improv",
   },
   {
@@ -100,5 +100,22 @@ redirects.forEach((redirect) => {
         await expect(page).toHaveURL(to);
       });
     });
+  });
+});
+
+test.describe('navigation comedy link', () => {
+  test('should redirect to Underground Comedian blog', async ({ page }) => {
+    await page.goto('https://www.louiechristie.com');
+    
+    // Click the comedy link in the navigation
+    await page.click('nav a[href="https://www.louiechristie.com/comedy"]');
+    
+    // Check the URL
+    await expect(page).toHaveURL('https://undergroundcomedian.wordpress.com/');
+    
+    // Check the h1 heading
+    await expect(
+      page.getByRole('heading', { level: 1, name: 'Underground Comedian' })
+    ).toBeVisible();
   });
 });
