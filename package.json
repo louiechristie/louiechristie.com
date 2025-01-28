@@ -9,7 +9,7 @@
     "build": "eleventy",
     "test": "npx playwright test",
     "compare": "diff $INIT_CWD/_tmp/bak $INIT_CWD/_site --color --recursive --exclude={.*,README*,readme*,start,deploy,shower-of-comedy,travel-guide} --ignore-all-space --strip-trailing-cr",
-    "deploy": "npx wrangler pages deploy _site"
+    "deploy": "$INIT_CWD/node_modules/wrangler/bin/wrangler.js pages deploy _site"
   },
   "keywords": [],
   "author": "Louie Christie",
@@ -17,6 +17,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@playwright/test": "^1.48.1",
-    "@types/node": "^22.7.7"
+    "@types/node": "^22.7.7",
+    "wrangler": "^3.106.0"
   }
 }
