@@ -104,11 +104,11 @@ redirects.forEach((redirect) => {
 });
 
 test.describe('navigation comedy link', () => {
-  test('should redirect to Underground Comedian blog', async ({ page }) => {
+  test.only('should redirect to Underground Comedian website', async ({ page }) => {
     await page.goto('https://www.louiechristie.com');
     
-    // Click the comedy link in the navigation
-    await page.click('nav a[href="https://www.louiechristie.com/comedy"]');
+    // Click the comedy link by its text
+    await page.getByRole('link', { name: 'comedy', exact: true }).click()
     
     // Check the URL
     await expect(page).toHaveURL('https://undergroundcomedian.wordpress.com/');
