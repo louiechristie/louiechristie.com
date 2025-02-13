@@ -3,6 +3,10 @@
     "editor.defaultFormatter": "vscode.html-language-features",
     "editor.formatOnSave": true
   },
+  "[njk]": {
+    "editor.defaultFormatter": "eseom.nunjucks-template",
+    "editor.formatOnSave": true
+  },
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
@@ -14,9 +18,6 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
-  },
-  "htmlhint.options": {
-    "tagname-lowercase": false
   },
   "editor.formatOnSave": true
 }
