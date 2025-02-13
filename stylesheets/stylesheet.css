@@ -343,12 +343,7 @@ h1 {
   padding-bottom: 0.4rem;
 }
 
-.headline {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
+
 
 h2 {
   word-break: break-word;
@@ -713,8 +708,6 @@ l.lite-youtube-fallback {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	gap: 1em;
-	padding: 1em;
 	background-color: #000;
 	color: #fff;
 	text-decoration: none;
