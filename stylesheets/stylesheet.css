@@ -255,35 +255,82 @@ h1 {
   grid-template-columns: 1fr;
 }
 
-.column-filler {
-  display: none;
-}
-
 @media all and (min-width: 1024px) {
+  .adventure-headline {
+    grid-area: adventure-headline;
+  }
+
+  .it-headline {
+    grid-area: it-headline;
+  }
+
+  .comedy-headline {
+    grid-area: comedy-headline;
+  }
+
+  .apple-quote {
+    grid-area: apple-quote;
+  }
+
+  .about {
+    grid-area: about;
+  }
+
+  .vr-comedy-feature {
+    grid-area: vr-comedy-feature;
+  }
+
+  .podcast-feature {
+    grid-area: podcast-feature;
+  }
+
+  .meme-feature {
+    grid-area: meme-feature;
+  }
+
+  .experiments {
+    grid-area: experiments;
+  }
+
+  .tech-talks {
+    grid-area: tech-talks;
+  }
+
+  .profiles {
+    grid-area: profiles;
+  }
+
+  .profiles {
+    grid-area: profiles;
+  }
+
+  .cta {
+    grid-area: bottom_cta;
+  }
+
+  .contact {
+    grid-area: contact;
+  }
+
   .grid {
     display: grid;
     grid-column-gap: 2rem;
-    grid-row-gap: 2rem;
+    grid-row-gap: 5rem;
     align-content: center;
     grid-template-columns: repeat(3, 1fr);
-  }
-  .column-filler {
-    display: block;
+    grid-template-areas: 
+      "adventure-headline it-headline comedy-headline"
+       "apple-quote        apple-quote apple-quote"
+       "about              about       about"
+       "vr-comedy-feature podcast-feature meme-feature"
+       "experiments        experiments tech-talks"
+       "profiles           bottom_cta  contact"
   }
 }
 
 /* .headlines div {
   border: 1px dotted var(--grey-color);
 } */
-
-@media all and (min-width: 1024px) {
-  .full-width {
-    grid-column: span 3;
-  }
-  .two-thirds {
-    grid-column: 1 / span 2;
-  }
-}
 
 .text-box {
   display: flex;
@@ -314,12 +361,6 @@ h2 {
 .apple-quote {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   line-height: 2em;
-}
-
-@media all and (min-width: 1024px) {
-  .apple-quote {
-    padding: 1rem;
-  }
 }
 
 .apple-quote cite {
@@ -654,11 +695,16 @@ nav {
 }
 
 .headline-youtube-container {
-  min-height: 262px; /* @TODO remove this magic number */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+@media all and (min-width: 490px) {
+  .headline-youtube-container {
+    min-height: 262px; /* @TODO remove this magic number */
+  }
 }
 
 l.lite-youtube-fallback {
