@@ -110,13 +110,13 @@ figure {
 .feature-container {
   width: 100%;
   aspect-ratio: 1 / 1;
-  overflow: hidden;
   border-radius: 10px;
 }
 
 .feature-container img {
   width: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   border-radius: 10px;
 }
 
