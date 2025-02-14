@@ -152,7 +152,7 @@ module.exports = function (eleventyConfig) {
     let data = await Cache(
       `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?${params.toString()}`,
       {
-        duration: '30s',
+        duration: '1d',
         type: 'json',
       }
     );
