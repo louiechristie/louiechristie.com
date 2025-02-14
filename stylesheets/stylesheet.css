@@ -575,6 +575,16 @@ l.lite-youtube-fallback {
   text-decoration: none;
 }
 
+.it-headline lite-youtube {
+  aspect-ratio: 4 / 3;
+}
+
+
+.vr-comedy-feature lite-youtube,
+.podcast-feature lite-youtube {
+  --lite-youtube-aspect-ratio: 1 / 1;
+}
+
 /* right-facing triangle "Play" icon */
 .lite-youtube-fallback::before {
   display: block;
