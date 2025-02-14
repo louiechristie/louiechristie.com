@@ -6,3 +6,6 @@ test-results
 playwright-report
 .cache
 img
+.env
+.env.*
+websites-analytics-53bb3f4eaf55.json

@@ -1,0 +1,92 @@
+.lighthouse-scores {
+  /* border: 1px dotted orange; */
+  border-radius: 8px;
+  margin-top: 40px;
+}
+
+.lighthouse-grid-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.lighthouse-scores-grid {
+  /* border: 1px dotted yellow; */
+  display: grid;
+  grid-template-columns: repeat(4, min-content);
+  grid-template-rows: auto auto;
+  gap: 1em;
+}
+
+.score-container {
+  position: relative;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Derived from https://css-shape.com/arc/ */
+.arc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px;
+  width: 50px;
+  aspect-ratio: 1;
+  padding: 4px;
+  /* the border thickness */
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+/* Style scores based on performance */
+.lighthouse-scores .good {
+  background-color: green;
+}
+
+.lighthouse-scores .ok {
+  background-color: orange;
+}
+
+.lighthouse-scores .bad {
+  background-color: red;
+}
+
+.overlay {
+  border-radius: 0.2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1e2328;
+  /* for lighthouse */
+  color: white;
+  z-index: 1000;
+}
+
+.category-title {
+  text-align: center;
+}
+
+.analytics-stats-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.analytics-stats {
+  display: grid;
+  gap: 0 10px;
+  grid-template-rows: repeat(2, fit-content(100%));
+  grid-template-columns: repeat(2, fit-content(100%));
+}
+
+.analytics-stats-key {
+  text-align: right;
+}
+
+.analytics-stats-value {
+  text-align: left;
+}
