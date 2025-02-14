@@ -276,22 +276,19 @@ h1 {
   padding-bottom: 0.4rem;
 }
 
-
-
 h2 {
   word-break: break-word;
-  font-weight: bold;
-}
-
-h2 {
   font-size: 1.5em;
-  margin: .75em 0
+  margin: .75em 0;
+  font-weight: bold;
 }
 
 h3 {
   font-size: 1.17em;
+  margin: .83em 0;
   font-weight: bold;
 }
+
 
 .headline h2 {
   line-height: 1.4em;
