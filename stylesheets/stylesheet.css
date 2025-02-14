@@ -288,6 +288,10 @@ h2 {
   margin: .75em 0
 }
 
+h3 {
+  font-size: 1.17em;
+  font-weight: bold;
+}
 
 .headline h2 {
   line-height: 1.4em;
@@ -370,7 +374,7 @@ aside {
 }
 
 .icon-link {
-  /* text-decoration: none; */
+  text-decoration: none;
   /* padding-left: 0; */
 }
 
@@ -379,12 +383,12 @@ aside {
   font-style: normal;
 }
 
-i>svg,
+.icon svg,
 .icon-image {
   position: relative;
   width: 24px;
   height: 24px;
-  top: 4px;
+  top: -4px;
 }
 
 .colorized img {
