@@ -560,31 +560,27 @@ cite {
   }
 }
 
-.lite-youtube-fallback-link {
+.lite-youtube-fallback {
   aspect-ratio: 4 / 3;
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
+}
+
+.lite-youtube-fallback-link {
+  background-color: #000;
   color: #fff;
   text-decoration: none;
 }
 
-.it-headline lite-youtube {
-  aspect-ratio: 4 / 3;
-}
-
-
-.vr-comedy-feature lite-youtube,
-.podcast-feature lite-youtube {
-  --lite-youtube-aspect-ratio: 1 / 1;
-}
-
 /* right-facing triangle "Play" icon */
-.lite-youtube-fallback-link::before {
+.lite-youtube-fallback-link-play-icon {
   display: block;
+  width: 68px;
+  height: 48px;
   content: '';
   border: solid transparent;
   border-width: 2em 0 2em 3em;
@@ -601,4 +597,14 @@ cite {
 
 lite-youtube {
   border-radius: 10px;
+}
+
+
+.it-headline lite-youtube {
+  aspect-ratio: 4 / 3;
+}
+
+.vr-comedy-feature lite-youtube,
+.podcast-feature lite-youtube {
+  --lite-youtube-aspect-ratio: 1 / 1;
 }
