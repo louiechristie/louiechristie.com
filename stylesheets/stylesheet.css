@@ -560,14 +560,14 @@ cite {
   }
 }
 
-l.lite-youtube-fallback {
-  aspect-ratio: 16 / 9;
-  /* matches YouTube player */
+.lite-youtube-fallback-link {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #000;
   color: #fff;
   text-decoration: none;
 }
@@ -583,7 +583,7 @@ l.lite-youtube-fallback {
 }
 
 /* right-facing triangle "Play" icon */
-.lite-youtube-fallback::before {
+.lite-youtube-fallback-link::before {
   display: block;
   content: '';
   border: solid transparent;
