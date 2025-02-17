@@ -5,6 +5,7 @@ import Cache from '@11ty/eleventy-cache-assets';
 import { Temporal } from 'temporal-polyfill';
 import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
 import { EleventyHtmlBasePlugin } from '@11ty/eleventy';
+import eleventyAutoCacheBuster from 'eleventy-auto-cache-buster';
 
 const isProduction = process.env.ELEVENTY_RUN_MODE === 'build';
 
@@ -50,6 +51,8 @@ export default function (eleventyConfig) {
     baseHref: isProduction ? baseUrl : config.pathPrefix,
     extensions: 'html',
   });
+
+  eleventyConfig.addPlugin(eleventyAutoCacheBuster);
 
   eleventyConfig.addShortcode('analytics', async function () {
     const humanReadableTime = (seconds) => {
