@@ -608,3 +608,20 @@ lite-youtube {
 .podcast-feature lite-youtube {
   --lite-youtube-aspect-ratio: 1 / 1;
 }
+
+footer,
+.visitors-currently {
+  font-size: 0.85em;
+}
+
+footer {
+  /* border: 1px dotted red; */
+  background-color: #1e2328;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+.dark-mode {
+  color: white;
+  color-scheme: dark;
+}

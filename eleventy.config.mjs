@@ -240,10 +240,12 @@ export default function (eleventyConfig) {
         </div>
       </div>
 
-      <p>Last checked: ${Temporal.Instant.from(data.lighthouseResult.fetchTime)
+      <p><center>Last checked: ${Temporal.Instant.from(
+        data.lighthouseResult.fetchTime
+      )
         .toZonedDateTimeISO('Europe/London')
         .toPlainDate()}
-        | <a href="https://developers.google.com/speed/pagespeed/insights/?url=${fullUrl}">check</a></p>
+        | <a href="https://developers.google.com/speed/pagespeed/insights/?url=${fullUrl}">check</a><center></p>
     </div>
   `;
   });
