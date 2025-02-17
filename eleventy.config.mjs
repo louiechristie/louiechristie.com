@@ -1,12 +1,20 @@
-require('dotenv').config();
+import 'dotenv/config';
+import analytics from './analytics.cjs';
+import Image from '@11ty/eleventy-img';
+import Cache from '@11ty/eleventy-cache-assets';
+import { Temporal } from 'temporal-polyfill';
+import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
+import { EleventyHtmlBasePlugin } from '@11ty/eleventy';
 
-const analytics = require('./analytics.cjs');
-const Image = require('@11ty/eleventy-img');
-const Cache = require('@11ty/eleventy-cache-assets');
-const { Temporal } = require('temporal-polyfill');
-const { eleventyImageTransformPlugin } = require('@11ty/eleventy-img');
+const isProduction = process.env.ELEVENTY_RUN_MODE === 'build';
 
-module.exports = function (eleventyConfig) {
+const baseUrl = 'https://www.louiechristie.com';
+
+export const config = {
+  pathPrefix: '/',
+};
+
+export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('stylesheets');
   eleventyConfig.addPassthroughCopy('mstile-*.png');
   eleventyConfig.addPassthroughCopy('favicon*');
@@ -23,22 +31,28 @@ module.exports = function (eleventyConfig) {
     '_tmp/bak/trivia-trundle': 'trivia-trundle',
   });
   eleventyConfig.addPassthroughCopy({ '_tmp/bak/weeks-to-go': 'weeks-to-go' });
+
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     formats: ['avif', 'webp', 'svg'],
     svgShortCircuit: true,
-    outputDir: "/img/",
+    outputDir: '/img/',
     failOnError: true,
     transformOnRequest: false,
-    widths: ["auto", 400, 800, 1200],
+    widths: ['auto', 400, 800, 1200],
     htmlOptions: {
-			imgAttributes: {
-				sizes: "(min-width: 1024em) 400px, 100vw"
-			},
-		},
+      imgAttributes: {
+        sizes: '(min-width: 1024em) 400px, 100vw',
+      },
+    },
+  });
+
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin, {
+    baseHref: isProduction ? baseUrl : config.pathPrefix,
+    extensions: 'html',
   });
 
   eleventyConfig.addShortcode('analytics', async function () {
-    const humanReadableTime = seconds => {
+    const humanReadableTime = (seconds) => {
       const duration = Temporal.Duration.from({ seconds });
 
       // More than an hour
@@ -115,9 +129,13 @@ module.exports = function (eleventyConfig) {
          <div class="analytics-stats-container">
           <div class="analytics-stats">
               <div class="analytics-stats-key">Website:</div>
-              <div class="analytics-stats-value">${humanReadableTime(siteEngagementTime)}</div> 
+              <div class="analytics-stats-value">${humanReadableTime(
+                siteEngagementTime
+              )}</div> 
               <div class="analytics-stats-key">Webpage: </div>
-              <div class="analytics-stats-value">${humanReadableTime(pageEngagementTime)}</div>
+              <div class="analytics-stats-value">${humanReadableTime(
+                pageEngagementTime
+              )}</div>
           </div>
         </div>
         
@@ -127,7 +145,7 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addShortcode('performance', async function () {
-    const fullUrl = `https://www.louiechristie.com${this.page.url}`;
+    const fullUrl = `${baseUrl}${this.page.url}`;
 
     const params = new URLSearchParams();
     params.append('url', fullUrl);
@@ -152,12 +170,12 @@ module.exports = function (eleventyConfig) {
     let data = await Cache(
       `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?${params.toString()}`,
       {
-        duration: '1m',
+        duration: '1h',
         type: 'json',
       }
     );
 
-    categoriesObject = data.lighthouseResult.categories;
+    const categoriesObject = data.lighthouseResult.categories;
 
     const getGrade = function (score) {
       if (score < 0.5) {
@@ -209,20 +227,22 @@ module.exports = function (eleventyConfig) {
       <div class='lighthouse-grid-container'>
         <div class='lighthouse-scores-grid'>
           ${categories
-            .map(category => {
+            .map((category) => {
               return renderCategory(category);
             })
             .join('')}
 
           ${categories
-            .map(category => {
+            .map((category) => {
               return `<div class='category-title'>${category.title}</div>`;
             })
             .join('')}    
         </div>
       </div>
 
-      <p>Last checked: ${Temporal.Instant.from(data.lighthouseResult.fetchTime).toZonedDateTimeISO('Europe/London').toPlainDate()}
+      <p>Last checked: ${Temporal.Instant.from(data.lighthouseResult.fetchTime)
+        .toZonedDateTimeISO('Europe/London')
+        .toPlainDate()}
         | <a href="https://developers.google.com/speed/pagespeed/insights/?url=${fullUrl}">check</a></p>
     </div>
   `;
