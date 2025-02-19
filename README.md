@@ -1,5 +1,7 @@
 # louiechristie.com
 
+[![Playwright Tests](https://github.com/louiechristie/louiechristie.github.io/actions/workflows/playwright.yml/badge.svg)](https://github.com/louiechristie/louiechristie.github.io/actions/workflows/playwright.yml)
+
 ## Setup local development
 
 Clone repository.

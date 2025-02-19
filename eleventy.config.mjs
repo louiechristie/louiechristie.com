@@ -128,7 +128,14 @@ export default function (eleventyConfig) {
     return `
       <div>
         <p><img src="https://www.google.com/s2/favicons?sz=16&domain_url=https%3A%2F%2Fanalytics.google.com%2F" alt="Google Analytics Logo"> Analytics</p>
-        <div>Total humans' lives squandered browsing (last month):</div>
+        <div>Total humans' lives squandered browsing ${
+          Temporal.PlainDate.compare(
+            today,
+            Temporal.PlainDate.from({ year: today.year, month: 3, day: 14 })
+          ) > 0
+            ? '(last month)'
+            : '(since 14 Feb)'
+        }:</div>
          <div class="analytics-stats-container">
           <div class="analytics-stats">
               <div class="analytics-stats-key">Website:</div>
