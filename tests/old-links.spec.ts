@@ -103,20 +103,19 @@ redirects.forEach((redirect) => {
   });
 });
 
-// @TODO Replace nav with something more accessible like bootstrap nav and then fix this test.
-// test.describe('navigation comedy link', () => {
-//   test('should redirect to Underground Comedian website', async ({ page }) => {
-//     await page.goto('https://www.louiechristie.com');    
-
-//     await page.getByLabel('menu').check()    
-
-//     // Click the comedy link by its text
-//     await page.getByText('comedy', { exact: true }).click()
-//     await page.waitForURL('https://undergroundcomedian.wordpress.com/')
+test.describe('navigation comedy link', () => {
+  test('should redirect to Underground Comedian website', async ({ page }) => {
+    await page.goto('https://www.louiechristie.com');
     
-//     // Check the h1 heading
-//     await expect(
-//       page.getByRole('heading', { level: 1, name: 'Underground Comedian' })
-//     ).toBeVisible();
-//   });
-// });
+    const toggler = page.getByLabel('Toggle navigation');
+
+    // Ensure the button is visible
+    await expect(toggler).toBeVisible();
+
+    // Click the navbar toggler
+    await toggler.click();
+
+    // Click the comedy link by its text
+    await expect(page.getByText('call as default', { exact: true })).toBeVisible
+  });
+});

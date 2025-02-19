@@ -20,30 +20,3 @@ title: Louie Christie - Adventurous | Tech Geek | Underground Comedian in my own
     {% include 'homepage/contact.njk' %}
   </section>
 </main>
-<script>
-  // this object must follow the MailgoConfig type
-  window.mailgoConfig = {
-    showFooter: false,
-    actions: {
-      whatsapp: false
-    }
-  };
-</script>
-<script src="https://unpkg.com/mailgo@0.12.2/dist/mailgo.min.js" defer="defer"></script>
-<script>
-  function revealTheranosTrailer(event) {
-    event.preventDefault()
-    const theranosTrailer = document.getElementById("theranos-trailer");
-    const theranosTrailerLink = document.getElementById("theranos-trailer-link");
-    if (theranosTrailer.style.display === "none") {
-      // Show video. Stopping the video once it is playing is non-trivial, so remove link (instead of having it clickable to
-      // hide the video.) Being able to reverse the action would be preferable, but the use can just refresh the page, and
-      // it's only an easter egg.
-      theranosTrailer.style.display = "block";
-      const theranosTrailerText = document.createElement('span');
-      theranosTrailerText.innerHTML = theranosTrailerLink.innerHTML;
-      theranosTrailerLink.parentNode.replaceChild(theranosTrailerText, theranosTrailerLink);
-    }
-  }
-</script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js"></script>

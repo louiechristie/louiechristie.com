@@ -252,4 +252,10 @@ export default function (eleventyConfig) {
     </div>
   `;
   });
+
+  return {
+    markdownTemplateEngine: 'njk',
+    htmlTemplateEngine: 'njk',
+    dataTemplateEngine: 'njk',
+  };
 }
