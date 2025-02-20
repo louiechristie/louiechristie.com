@@ -11,14 +11,10 @@ test.describe('mailgo script', () => {
 
     // Click the navbar toggler
     await toggler.click();
-
-    // Click the comedy link by its text
-    await page.getByText('comedy', { exact: true }).click()
-    await page.waitForURL('https://undergroundcomedian.wordpress.com/')
     
-    // Check the h1 heading
+    // Check the popup heading
     await expect(
-      page.getByRole('heading', { level: 1, name: 'Underground Comedian' })
+      page.getByText('call as default')
     ).toBeVisible();
   });
 });
