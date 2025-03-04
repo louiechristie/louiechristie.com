@@ -7,7 +7,8 @@
   "scripts": {
     "watch": "eleventy --serve",
     "build": "eleventy",
-    "test": "npx playwright test",
+    "test": "npx playwright test --headed",
+    "test:debug": "npx playwright test --ui",
     "compare": "diff $INIT_CWD/_tmp/bak $INIT_CWD/_site --color --recursive --exclude={.*,README*,readme*,start,deploy,shower-of-comedy,travel-guide} --ignore-all-space --strip-trailing-cr",
     "deploy": "$INIT_CWD/node_modules/wrangler/bin/wrangler.js pages deploy _site"
   },
