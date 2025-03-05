@@ -9,6 +9,7 @@
     "build": "eleventy",
     "serve": "cd _site && npx serve && cd ..",
     "test": "npx playwright test",
+    "debug": "npx playwright test --ui",
     "compare": "diff $INIT_CWD/_tmp/bak $INIT_CWD/_site --color --recursive --exclude={.*,README*,readme*,start,deploy,shower-of-comedy,travel-guide} --ignore-all-space --strip-trailing-cr",
     "deploy": "$INIT_CWD/node_modules/wrangler/bin/wrangler.js pages deploy _site"
   },
@@ -26,7 +27,6 @@
     "@11ty/eleventy-cache-assets": "^2.3.0",
     "@11ty/eleventy-img": "^6.0.0",
     "@google-analytics/data": "^4.12.0",
-    "@justinribeiro/lite-youtube": "^1.7.1",
     "dotenv": "^16.4.7",
     "temporal-polyfill": "^0.2.5"
   }
