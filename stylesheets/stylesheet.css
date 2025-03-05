@@ -575,20 +575,6 @@ cite {
   flex-direction: column;
 }
 
-.lite-youtube-fallback-link {
-  background-color: #000;
-  color: #fff;
-  text-decoration: none;
-}
-
-.lite-youtube-fallback:hover::before {
-  border-left-color: #fff;
-}
-
-.lite-youtube-fallback:focus {
-  outline: 2px solid red;
-}
-
 lite-youtube {
   border-radius: 10px;
 }
