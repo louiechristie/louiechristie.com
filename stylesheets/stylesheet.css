@@ -581,17 +581,6 @@ cite {
   text-decoration: none;
 }
 
-/* right-facing triangle "Play" icon */
-.lite-youtube-fallback-link-play-icon {
-  display: block;
-  width: 68px;
-  height: 48px;
-  content: '';
-  border: solid transparent;
-  border-width: 2em 0 2em 3em;
-  border-left-color: red;
-}
-
 .lite-youtube-fallback:hover::before {
   border-left-color: #fff;
 }
