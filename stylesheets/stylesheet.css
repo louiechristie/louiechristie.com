@@ -304,7 +304,7 @@ h3 {
 }
 
 h2.adventure {
-  margin-bottom: 0.4em;
+  margin-bottom: 0.75em;
 }
 
 .adventure-title {
@@ -525,6 +525,10 @@ cite {
 
 .instagram-media {
   min-width: 200px !important;
+}
+
+.testimonials {
+  width: 100%;
 }
 
 .footnotes-container {

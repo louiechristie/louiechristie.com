@@ -49,19 +49,3 @@
   </style>
 {% endblock %}
 {{ content }}
-<script>
-  function revealTheranosTrailer(event) {
-    event.preventDefault()
-    const theranosTrailer = document.getElementById("theranos-trailer");
-    const theranosTrailerLink = document.getElementById("theranos-trailer-link");
-    if (theranosTrailer.style.display === "none") {
-      // Show video. Stopping the video once it is playing is non-trivial, so remove link (instead of having it clickable to
-      // hide the video.) Being able to reverse the action would be preferable, but the use can just refresh the page, and
-      // it's only an easter egg.
-      theranosTrailer.style.display = "block";
-      const theranosTrailerText = document.createElement('span');
-      theranosTrailerText.innerHTML = theranosTrailerLink.innerHTML;
-      theranosTrailerLink.parentNode.replaceChild(theranosTrailerText, theranosTrailerLink);
-    }
-  }
-</script>
