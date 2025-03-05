@@ -47,5 +47,12 @@
       background-image: url("/images/wheel-of-cheese-studio_viqpnh_c_geometrized_LQIP.svg");
     }
   </style>
-{% endblock %}
-{{ content }}
+  <!-- Preload the LCP image with a high fetchpriority so it starts loading with the stylesheet. -->
+  <link
+    rel="preload"
+    fetchpriority="high"
+    as="image"
+    href="https://i.ytimg.com/vi_webp/psBMnmz1G_Y/hqdefault.webp"
+    type="image/webp">
+  {% endblock %}
+  {{ content }}
