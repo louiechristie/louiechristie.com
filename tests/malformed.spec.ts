@@ -24,8 +24,8 @@ if (process.env.CI) {
       baseURL,
     }) => {
       const response = await page.goto(`${path}`);
+      await page.waitForURL(`${baseURL}multiple-slashes`);
 
-      await page.waitForURL(`${baseURL}/multiple-slashes`);
       expect(response?.status()).toBe(404);
     });
   });
@@ -37,7 +37,7 @@ if (process.env.CI) {
       baseURL,
     }) => {
       const response = await page.goto(`${path}`);
-      await page.waitForURL(`${baseURL}/invalid`);
+      await page.waitForURL(`${baseURL}invalid`);
 
       expect(response?.status()).toBe(404);
     });
