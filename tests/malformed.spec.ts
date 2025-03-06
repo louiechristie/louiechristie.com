@@ -19,19 +19,25 @@ if (process.env.CI) {
 
   test.describe('malformed url paths should be Not Found', () => {
     const path = '/////multiple-slashes';
-    test(`should return 404 for malformed URL ${path}`, async ({ page }) => {
+    test(`should return 404 for malformed URL ${path}`, async ({
+      page,
+      baseURL,
+    }) => {
       const response = await page.goto(`${path}`);
 
-      await page.waitForURL('/multiple-slashes');
+      await page.waitForURL(`${baseURL}/multiple-slashes`);
       expect(response?.status()).toBe(404);
     });
   });
 
   test.describe('malformed url paths should be Not Found', () => {
     const path = '/./dot-segments/../invalid';
-    test(`should return 404 for malformed URL ${path}`, async ({ page }) => {
+    test(`should return 404 for malformed URL ${path}`, async ({
+      page,
+      baseURL,
+    }) => {
       const response = await page.goto(`${path}`);
-      await page.waitForURL('/invalid');
+      await page.waitForURL(`${baseURL}/invalid`);
 
       expect(response?.status()).toBe(404);
     });
