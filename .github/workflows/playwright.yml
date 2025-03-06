@@ -3,15 +3,59 @@ name: Playwright Tests
 on:
   push:
     branches: [main, master]
+
 jobs:
-  run-e2es:
+  test:
+    strategy:
+      matrix:
+        shard: [1, 2, 3, 4]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: lts/*
+
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.npm
+            node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-playwright-
+
       - name: Install dependencies
-        run: npm i && npx playwright install --with-deps webkit
-      - name: Run tests
+        run: npm ci
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: Run Playwright tests
         run: npx playwright test
+        env:
+          SHARD: ${{ matrix.shard }}
+          TOTAL_SHARDS: 4
+
+      - name: Merge test reports
+        if: always()
+        run: npx playwright merge-reports ./test-results
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30

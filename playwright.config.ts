@@ -22,7 +22,10 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: [
+    ['html'],
+    ['json', { outputFile: 'test-results/test-results.json' }],
+  ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
@@ -80,4 +83,10 @@ export default defineConfig({
         url: 'http://127.0.0.1:8080',
         reuseExistingServer: !process.env.CI,
       },
+
+  // Enable sharding
+  shard: {
+    current: Number(process.env.SHARD) || 1,
+    total: Number(process.env.TOTAL_SHARDS) || 1,
+  },
 });
