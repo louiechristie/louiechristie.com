@@ -73,6 +73,7 @@ redirects.forEach((redirect) => {
     test.describe(testGroup, () => {
       test.beforeEach(async ({ page }) => {
         await page.goto(from);
+        await page.waitForURL(to);
       });
 
       expect(!!(title || h1 || h2)).toBe(true);
