@@ -26,7 +26,7 @@ const urls = [
 ];
 
 addresses.forEach((address) => {
-  test.describe(() => {
+  test.describe('variations', () => {
     test.beforeEach(async ({ page }) => {
       await page.goto(address);
     });
