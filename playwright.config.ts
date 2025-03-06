@@ -83,10 +83,4 @@ export default defineConfig({
         url: 'http://127.0.0.1:8080',
         reuseExistingServer: !process.env.CI,
       },
-
-  // Enable sharding
-  shard: {
-    current: Number(process.env.SHARD) || 1,
-    total: Number(process.env.TOTAL_SHARDS) || 1,
-  },
 });
