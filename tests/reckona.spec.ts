@@ -48,7 +48,7 @@ const redirectFromes = [
 ];
 
 redirectFromes.forEach((redirectFrom) => {
-  test.describe(() => {
+  test.describe('variations', () => {
     test.beforeEach(async ({ page }) => {
       await page.goto(redirectFrom);
     });
