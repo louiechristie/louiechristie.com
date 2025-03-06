@@ -48,6 +48,21 @@
   color: white;
 }
 
+html {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  max-width: 490px;
+}
+
+@media all and (min-width: 1024px) {
+  body {
+    max-width: initial
+  }
+}
+
 .headline-link,
 .headline-no-link {
   flex: 1;
