@@ -104,7 +104,12 @@ redirects.forEach((redirect) => {
 });
 
 test.describe('navigation comedy link', () => {
-  test('should redirect to Underground Comedian website', async ({ page }) => {
+  test('should redirect to Underground Comedian website on mobile', async ({
+    page,
+  }) => {
+    // Set viewport to mobile size
+    await page.setViewportSize({ width: 375, height: 667 }); // iPhone SE dimensions
+
     await page.goto('https://www.louiechristie.com');
 
     const toggler = page.getByLabel('Toggle navigation');
@@ -120,7 +125,30 @@ test.describe('navigation comedy link', () => {
     // Click the comedy link by its text
     await expect(comedyLink).toBeVisible();
 
-    comedyLink.click();
+    await comedyLink.click();
+
+    await page.waitForURL('https://undergroundcomedian.wordpress.com/');
+
+    // Check the h1 heading
+    await expect(
+      page.getByRole('heading', { level: 1, name: 'Underground Comedian' })
+    ).toBeVisible();
+  });
+
+  test('should redirect to Underground Comedian website on desktop', async ({
+    page,
+  }) => {
+    // Set viewport to mobile size
+    await page.setViewportSize({ width: 1920, height: 1080 }); // iPhone SE dimensions
+
+    await page.goto('https://www.louiechristie.com');
+
+    const comedyLink = page.getByText('comedy', { exact: true });
+
+    // Click the comedy link by its text
+    await expect(comedyLink).toBeVisible();
+
+    await comedyLink.click();
 
     await page.waitForURL('https://undergroundcomedian.wordpress.com/');
 

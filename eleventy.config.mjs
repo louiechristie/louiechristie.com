@@ -184,7 +184,7 @@ export default function (eleventyConfig) {
     let data = await Cache(
       `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?${params.toString()}`,
       {
-        duration: '1m',
+        duration: '10m',
         type: 'json',
       }
     );
