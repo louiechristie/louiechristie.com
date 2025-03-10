@@ -5,7 +5,21 @@
   <meta name="application-name" content="Louie Christie"/>
   <meta name="msapplication-TileColor" content="#2d89ef"/>
   <meta name="theme-color" content="#ffffff"/>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js" defer></script>
+  <script
+    type="module"
+    src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js"
+    defer
+    crossorigin></script>
+  <script>
+    // this object must follow the MailgoConfig type
+    window.mailgoConfig = {
+      showFooter: false,
+      actions: {
+        whatsapp: false
+      }
+    };
+  </script>
+  <script src="https://unpkg.com/mailgo@0.12.2/dist/mailgo.min.js" defer></script>
   <style>
     .lqip {
       background-size: cover;
@@ -37,21 +51,12 @@
       background-image: url("/images/wheel-of-cheese-studio_viqpnh_c_geometrized_LQIP.svg");
     }
   </style>
-{% endblock %}
-{{ content }}
-<script>
-  function revealTheranosTrailer(event) {
-    event.preventDefault()
-    const theranosTrailer = document.getElementById("theranos-trailer");
-    const theranosTrailerLink = document.getElementById("theranos-trailer-link");
-    if (theranosTrailer.style.display === "none") {
-      // Show video. Stopping the video once it is playing is non-trivial, so remove link (instead of having it clickable to
-      // hide the video.) Being able to reverse the action would be preferable, but the use can just refresh the page, and
-      // it's only an easter egg.
-      theranosTrailer.style.display = "block";
-      const theranosTrailerText = document.createElement('span');
-      theranosTrailerText.innerHTML = theranosTrailerLink.innerHTML;
-      theranosTrailerLink.parentNode.replaceChild(theranosTrailerText, theranosTrailerLink);
-    }
-  }
-</script>
+  <!-- Preload the LCP image with a high fetchpriority so it starts loading with the stylesheet. -->
+  <link
+    rel="preload"
+    fetchpriority="high"
+    as="image"
+    href="https://i.ytimg.com/vi/psBMnmz1G_Y/hqdefault.jpg"
+    type="image/jpeg">
+  {% endblock %}
+  {{ content }}

@@ -43,6 +43,8 @@ export default function (eleventyConfig) {
     htmlOptions: {
       imgAttributes: {
         sizes: '(min-width: 1024em) 400px, 100vw',
+        loading: 'lazy',
+        decoding: 'async',
       },
     },
   });
@@ -142,7 +144,9 @@ export default function (eleventyConfig) {
               <div class="analytics-stats-value">${humanReadableTime(
                 siteEngagementTime
               )}</div> 
-              <div class="analytics-stats-key">Webpage: </div>
+              <div class="analytics-stats-key">Webpage ${
+                this.page.url || 'url not found'
+              }: </div>
               <div class="analytics-stats-value">${humanReadableTime(
                 pageEngagementTime
               )}</div>
@@ -180,7 +184,7 @@ export default function (eleventyConfig) {
     let data = await Cache(
       `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?${params.toString()}`,
       {
-        duration: '1h',
+        duration: '10m',
         type: 'json',
       }
     );
