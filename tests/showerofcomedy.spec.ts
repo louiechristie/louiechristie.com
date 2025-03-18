@@ -1,5 +1,7 @@
 import { test, expect } from '@playwright/test';
 
+const isProduction = process.env.ELEVENTY_RUN_MODE === 'build';
+
 const homepageAddresses = [
   // .club
 
@@ -39,8 +41,8 @@ const title = 'Shows - Shower of Comedy';
 const heading = 'Underground stand-up comedy';
 const url = 'https://www.showerofcomedy.club/';
 
-homepageAddresses.forEach((address) => {
-  test.describe('variations', () => {
+if (isProduction) {
+  homepageAddresses.forEach((address) => {
     test.beforeEach(async ({ page }) => {
       await page.goto(address);
     });
@@ -55,4 +57,4 @@ homepageAddresses.forEach((address) => {
       await expect(page).toHaveURL(url);
     });
   });
-});
+}
