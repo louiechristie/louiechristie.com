@@ -111,7 +111,7 @@ if (isProduction) {
         // Check the h1 heading
         await expect(
           page.getByRole('heading', { level: 1, name: 'Underground Comedian' })
-        ).toBeVisible({ timeout: 20_000 });
+        ).toBeVisible();
       });
 
       test('should redirect on mobile', async ({ page, baseURL }) => {
@@ -140,7 +140,7 @@ if (isProduction) {
         // Check the h1 heading
         await expect(
           page.getByRole('heading', { level: 1, name: 'Underground Comedian' })
-        ).toBeVisible({ timeout: 20_000 });
+        ).toBeVisible();
       });
     });
   });
