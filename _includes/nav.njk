@@ -1,5 +1,5 @@
 {% set currentUrl = page.url %}
-<nav class="navbar navbar-expand-xl navbar-dark bg-dark p-3 mb-4">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark p-3 mb-4">
   <a class="navbar-brand" href="/">
     <img class="m-2" src="/images/lc-icon.svg" width="40" height="40" alt="L C icon" role="img">
   </a>
@@ -11,10 +11,11 @@
     aria-controls="navbarSupportedContent"
     aria-expanded="false"
     aria-label="Toggle navigation">
+    <span class="me-2 align-middle">Menu</span>
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mr-auto flex-wrap">
       <li class="nav-item">
         <a class="nav-link" href="/" {% if currentUrl==='/' %} aria-current="page" {% endif %}>home
         </a>
@@ -50,7 +51,7 @@
         <a class="nav-link" href="/#about">about</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/blog/contact/">contact</a>
+        <a class="nav-link" href="/#contact">contact</a>
       </li>
     </ul>
   </div>
