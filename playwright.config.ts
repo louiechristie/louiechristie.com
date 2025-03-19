@@ -80,4 +80,6 @@ export default defineConfig({
         url: 'http://127.0.0.1:8080',
         reuseExistingServer: !process.env.CI,
       },
+
+  expect: { timeout: 15_000 }, // for tests of links to external websites @TODO improve this
 });
