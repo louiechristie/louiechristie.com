@@ -22,6 +22,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('android-chrome*');
   eleventyConfig.addPassthroughCopy('apple-touch-icon*');
   eleventyConfig.addPassthroughCopy('img');
+  eleventyConfig.addPassthroughCopy('images/lc-icon.svg'); // for memes subdirectory
   eleventyConfig.addPassthroughCopy('browserconfig.xml');
   eleventyConfig.addPassthroughCopy('site.webmanifest');
   eleventyConfig.addPassthroughCopy({ '_tmp/bak/blog': 'blog' });
