@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { urls } from './musicnatters.spec';
+import { urls } from './musicnattersTestUtils.ts';
 
 type Navigation =
   | {
