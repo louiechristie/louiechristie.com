@@ -1,3 +1,6 @@
+import 'dotenv/config';
+import analytics, { analyticsShortcodeFunction } from './analytics.mjs';
+import fs from 'fs';
 import {
   IdAttributePlugin,
   InputPathToUrlTransformPlugin,
@@ -140,6 +143,8 @@ export default async function (eleventyConfig) {
   });
 
   eleventyConfig.addGlobalData('layout', 'layouts/base.njk');
+
+  eleventyConfig.addShortcode('analytics', analyticsShortcodeFunction);
 
   eleventyConfig.addShortcode('performance', async function () {
     const fullUrl = `${baseUrl}${this.page.url}`;
