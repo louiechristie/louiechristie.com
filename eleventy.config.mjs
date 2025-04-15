@@ -32,7 +32,6 @@ export default async function (eleventyConfig) {
   });
 
   // Copy the contents of the `public` folder to the output folder
-  // For example, `./public/css/` ends up in `_site/css/`
   eleventyConfig.addPassthroughCopy({
     './img/': '/img',
   });
@@ -71,10 +70,10 @@ export default async function (eleventyConfig) {
     preAttributes: { tabindex: 0 },
   });
   eleventyConfig.addPlugin(pluginNavigation);
-  eleventyConfig.addPlugin(HtmlBasePlugin, {
-    baseHref: isProduction ? baseUrl : config.pathPrefix,
-    extensions: 'html',
-  });
+  // eleventyConfig.addPlugin(HtmlBasePlugin, {
+  //   baseHref: isProduction ? baseUrl : config.pathPrefix,
+  //   extensions: 'html',
+  // });
   eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
 
   eleventyConfig.addPlugin(feedPlugin, {
@@ -131,7 +130,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginFilters);
 
   eleventyConfig.addPlugin(IdAttributePlugin, {
-    // by default we use Eleventy’s built-in `slugify` filter:
+    // by default we use Eleventy's built-in `slugify` filter:
     // slugify: eleventyConfig.getFilter("slugify"),
     // selector: "h1,h2,h3,h4,h5,h6", // default
   });
