@@ -15,8 +15,10 @@ layout: layouts/blog.njk
       {% endif %}
     </li>
   {%- endfor %}
-  <img src="{{ metadata.featuredImage }}"></ul>
-  <article>
+</ul>
+<article>
+  <div class="featured-image">
+    <img src="{{ metadata.featuredImage }}"></div>
     {{ content | safe }}
   </article>
   {%- if collections.posts %}
