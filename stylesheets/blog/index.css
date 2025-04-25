@@ -121,6 +121,18 @@ footer {
 	margin-bottom: 1em;
 }
 
+.blog-listing-image {
+	max-width: 300px;
+	max-height: 225px;
+	object-fit: contain;
+}
+
+.avatar {
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+}
+
 .links-nextprev {
 	display: flex;
 	justify-content: space-between;
@@ -257,6 +269,7 @@ code {
 	list-style: none;
 	padding: 0;
 	margin: 0;
+	align-items: center;
 }
 
 .post-metadata time {
