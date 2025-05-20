@@ -197,6 +197,11 @@ h1 {
   }
 }
 
+.about {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
 .grid {
   display: grid;
   grid-row-gap: 2rem;
