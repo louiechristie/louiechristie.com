@@ -1,61 +1,29 @@
 {% set currentUrl = page.url %}
-<nav class="navbar navbar-expand-md navbar-dark bg-dark p-3 mb-4">
-  <a class="navbar-brand" href="/">
-    <img class="m-2" src="/images/lc-icon.svg" width="40" height="40" alt="L C icon" role="img" eleventy:ignore>
-  </a>
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-bs-toggle="collapse"
-    data-bs-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent"
-    aria-expanded="false"
-    aria-label="Toggle navigation">
-    <span class="me-2 align-middle">Menu</span>
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto flex-wrap">
+<div class="center">
+  <div>
+    <a href="/"><img
+        style="width: 300px; height: auto"
+        src="/images/handwritten_louie_christie_600x220.jpg"
+        alt="handwritten Louie Christie"/>
+    </a>
+  </div>
+  <nav style="display: inline-block">
+    <ul class="nav nav-tabs">
       <li class="nav-item">
-        <a class="nav-link" href="/" {% if currentUrl==='/' %} aria-current="page" {% endif %}>home
-        </a>
+        <a class="nav-link" href="/" {% if currentUrl === '/' %} aria-current="page" {% endif %}>home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/adventure/" {% if currentUrl === '/adventure/' %} aria-current="page" {% endif %}>adventure</a>
+        <a class="nav-link" href="/tech/" {% if 'tech' in currentUrl %} aria-current="page" {% endif %}>tech</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/blog/">blog</a>
+        <a class="nav-link" href="/adventure/" {% if 'adventure' in currentUrl %} aria-current="page" {% endif %}>adventure</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="https://www.louiechristie.com/comedy/">comedy</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/#experiments">experiments</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/#tech-talks">talks</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/intro-to-web-dev-course/">tutorials</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/memes/">memes</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://www.musicnatters.com/">podcasts</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/#profiles">profiles</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/testimonials">testimonials</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/#about">about</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/#contact">contact</a>
+        <a class="nav-link" href="/about/" {% if 'about' in currentUrl %} aria-current="page" {% endif %}>about</a>
       </li>
     </ul>
-  </div>
-</nav>
+  </nav>
+</div>

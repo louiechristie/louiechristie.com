@@ -44,9 +44,9 @@
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
-[aria-current="page"] {
+/* [aria-current="page"] {
   color: white;
-}
+} */
 
 html {
   display: flex;
@@ -55,6 +55,30 @@ html {
 
 body {
   max-width: 490px;
+}
+
+nav {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  border-bottom: 1px solid grey;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav li {
+  display: inline;
+  margin: 4px;
+}
+
+[aria-current] {
+  font-weight: bold;
+}
+
+p {
+  line-height: 1.8rem;
 }
 
 @media all and (min-width: 1024px) {
@@ -171,6 +195,8 @@ h6,
 
 .site-description {
   margin: 1rem;
+  font-weight: 500;
+  font-size: 1em;
 }
 
 @media all and (min-width: 1024px) {
@@ -197,11 +223,6 @@ h1 {
   }
 }
 
-.about {
-  background-color: #f9f9f9;
-  border-radius: 10px;
-}
-
 .grid {
   display: grid;
   grid-row-gap: 2rem;
@@ -225,66 +246,21 @@ h1 {
     grid-area: apple-quote;
   }
 
-  .about {
-    grid-area: about;
-  }
-
-  .vr-comedy-feature {
-    grid-area: vr-comedy-feature;
-  }
-
-  .podcast-feature {
-    grid-area: podcast-feature;
-  }
-
-  .meme-feature {
-    grid-area: meme-feature;
-  }
-
-  .experiments {
-    grid-area: experiments;
-  }
-
-  .tech-talks {
-    grid-area: tech-talks;
-  }
-
-  .profiles {
-    grid-area: profiles;
-  }
-
-  .profiles {
-    grid-area: profiles;
-  }
-
-  .cta {
-    grid-area: bottom_cta;
-  }
-
-  .contact {
-    grid-area: contact;
-  }
-
-  .testimonials {
-    grid-area: testimonials;
-  }
-
   .grid {
     display: grid;
     grid-column-gap: 2rem;
-    grid-row-gap: 5rem;
     align-content: center;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
       "adventure-headline it-headline    comedy-headline"
       "apple-quote        apple-quote    apple-quote"
-      "about              about          about"
-      "vr-comedy-feature podcast-feature meme-feature"
-      "experiments        experiments    tech-talks"
-      "profiles           bottom_cta     contact"
-      "testimonials       testimonials   testimonials"
   }
 }
+
+.column {
+  max-width: 800px;
+}
+
 
 /* .headlines div {
   border: 1px dotted var(--grey-color);
@@ -602,6 +578,17 @@ lite-youtube {
 
 .it-headline lite-youtube {
   aspect-ratio: 4 / 3;
+}
+
+.features-row {
+  max-width: 320px;
+}
+
+@media all and (min-width: 1024px) {
+  .features-row {
+    max-width: 1024px;
+    columns: 3;
+  }
 }
 
 .vr-comedy-feature lite-youtube,

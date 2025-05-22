@@ -1,0 +1,46 @@
+---
+layout: layouts/techLayout.njk
+title: Tech | Louie Christie 
+---
+
+<main class="column">
+  <div class="column">
+    <h1>Tech Geek</h1>
+    <div style="border-bottom: 1px solid grey;">
+      <p>
+        On graduation I picked up my masters degree in Human-Centred Computer Systems
+        <sup>
+          <a href="#1">1</a>
+        </sup>, from Richard
+        Attenborough<sup>
+          <a href="#1">2</a>
+        </sup>.</p>
+      <p>Since then I have worked for companies like American Express, Penguin Publishing, DK Books, Kings College London.
+        Also a few agencies and start-ups that were possibly more interesting but you won't of heard of.</p>
+      <p>More about my career:</p>
+      <ul class="icon-list colorized">
+        {% include 'socials/linkedin.njk' %}
+      </ul>
+      <a href="/images/banner-2025-04-28-1650.excalidraw.svg"><img
+          src="/images/banner-2025-04-28-1650.excalidraw.svg"
+          alt="sketch of Louie's career, mostly front-end but some back-end software development. And explaining technology."
+          style="width: 100%; height: auto;"/>
+      </a>
+      <p>
+        I’m wear many tech hats. I call myself an IT consultant, freelance tech geek, app & web developer and
+        <a href="/host/">
+          tech event host</a>.
+      </p>
+    </div>
+  </div>
+  <div class="center">
+    <div style="max-width: 375px">
+      {% include 'homepage/bottom_cta.njk' %}
+    </div>
+  </div>
+  <h3>Footnotes</h3>
+  <And id="1">[1] No, I'm not sure what Human-Centred Computer Systems means either. Think it's something to do with
+    making computers user-friendly. And goodness knows, we could all do with a bit of that.</p>
+  <p id="2">[2] Yes, really, Richard Attenborough happened to be the honorary chancellor of the University of Sussex at
+    the time.</p>
+</main>

@@ -42,8 +42,8 @@ const navigations: Navigation[] = [
     },
   },
   {
-    text: 'talks',
-    to: '/#tech-talks',
+    text: 'host',
+    to: '/tech/host',
     expected: {
       h2: 'Tech Event Host',
     },

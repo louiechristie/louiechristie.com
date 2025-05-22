@@ -6,7 +6,7 @@
      width="40px" height="40px"
      viewBox="0 0 310 310">
   <path id="C Path"
-        fill="none" stroke="white" stroke-width="20"
+        fill="none" stroke="black" stroke-width="20"
         d="M 246.00,85.00
            C 246.00,85.00 241.00,76.25 236.00,76.00
              229.25,77.50 225.25,83.00 220.00,92.00
@@ -15,7 +15,7 @@
              182.66,233.07 198.00,243.75 208.00,239.00
              218.50,232.75 228.00,221.00 228.00,221.00" />
   <path id="L Path"
-        fill="none" stroke="white" stroke-width="20"
+        fill="none" stroke="black" stroke-width="20"
         d="M 102.00,73.00
            C 95.88,80.88 70.10,139.19 51.00,194.00
              44.75,211.00 42.00,219.25 41.00,235.00
