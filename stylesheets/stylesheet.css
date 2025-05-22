@@ -57,6 +57,17 @@ body {
   max-width: 490px;
 }
 
+.logo {
+  width: 150px;
+  height: auto
+}
+
+@media all and (min-width: 1024px) {
+  .logo {
+    width: 300px;
+  }
+}
+
 nav {
   display: grid;
   align-items: center;
@@ -66,11 +77,13 @@ nav {
 
 nav ul {
   list-style-type: none;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 nav li {
   display: inline;
-  margin: 4px;
+  margin: 2px;
 }
 
 [aria-current] {
@@ -338,7 +351,13 @@ a.comedy-link:visited {
 
 section {
   padding-top: 2rem;
-  padding: 1rem;
+  padding: 10px;
+}
+
+@media all and (min-width: 1024px) {
+  section {
+    padding: 1rem;
+  }
 }
 
 aside {
