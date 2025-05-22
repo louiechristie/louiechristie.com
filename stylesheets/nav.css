@@ -1,0 +1,21 @@
+nav {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  border-bottom: 1px solid grey;
+}
+
+nav ul {
+  list-style-type: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+nav li {
+  display: inline;
+  margin: 2px;
+}
+
+[aria-current] {
+  font-weight: bold;
+}
