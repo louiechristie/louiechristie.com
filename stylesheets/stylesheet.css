@@ -57,17 +57,6 @@ body {
   max-width: 490px;
 }
 
-.logo {
-  width: 150px;
-  height: auto
-}
-
-@media all and (min-width: 1024px) {
-  .logo {
-    width: 300px;
-  }
-}
-
 p {
   line-height: 1.8rem;
 }

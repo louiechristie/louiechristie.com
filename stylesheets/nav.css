@@ -1,3 +1,14 @@
+.logo {
+  width: 150px;
+  height: auto
+}
+
+@media all and (min-width: 1024px) {
+  .logo {
+    width: 300px;
+  }
+}
+
 nav {
   display: grid;
   align-items: center;
