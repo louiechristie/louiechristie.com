@@ -598,3 +598,21 @@ footer {
   color: white;
   color-scheme: dark;
 }
+
+.company-logos {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 85px;
+  height: auto;
+  filter: grayscale(100%);
+}
+
+@media all and (min-width: 1024px) {
+  .company-logos {
+    grid-column-gap: 100px;
+  }
+}
