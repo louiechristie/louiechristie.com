@@ -616,3 +616,13 @@ footer {
     grid-column-gap: 100px;
   }
 }
+
+.banner {
+  max-width: 1600px;
+}
+
+@media all and (min-width: 490px) {
+  .banner {
+    padding: 40px;
+  }
+}
