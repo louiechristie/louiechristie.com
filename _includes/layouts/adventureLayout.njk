@@ -1,5 +1,5 @@
 {% extends "layouts/layout.njk" %}
-{{ content }}
-{% block customHeadExtras %}
-  <link rel="stylesheet" href="/stylesheets/adventure-page.css"/>
+{% block header %}
+  {% include "nav.njk" %}
+  {% include "adventure/adventure-nav.njk" %}
 {% endblock %}
