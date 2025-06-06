@@ -627,6 +627,6 @@ footer {
 
 @media all and (min-width: 490px) {
   .banner {
-    padding: 40px;
+    padding: 20px;
   }
 }
