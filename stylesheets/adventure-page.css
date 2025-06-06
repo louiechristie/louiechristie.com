@@ -33,9 +33,19 @@ h1 {
   font-size: 40px;
 }
 
+.adventure-title-image {
+  width: 320px;
+  height: auto;
+}
+
 @media all and (min-width: 490px) {
   h1 {
     font-size: 70px;
+  }
+
+  .adventure-title-image {
+    width: 490px;
+    height: auto;
   }
 }
 
@@ -118,7 +128,7 @@ figcaption p sub {
 }
 
 .fast {
-  transform: scale(1, 0.96);
+  transform: scale(1, 0.92);
   /* W3C */
 }
 
