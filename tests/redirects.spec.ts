@@ -1,5 +1,9 @@
 import { test, expect } from '@playwright/test';
 
+// Implementation is hard to find in Cloudflare. As of 2025 (often changes by)
+// Cloudflare -> louiechristie.com zone -> rules -> overview
+// https://dash.cloudflare.com/5d9b28a886b15f78c59376d9fc6b0f8b/louiechristie.com/rules/overview?type=http_request_dynamic_redirect
+
 const redirects = [
   {
     from: 'https://www.louiechristie.com/comedy/',
@@ -27,6 +31,11 @@ const redirects = [
     to: 'https://www.louiechristie.com/blog/2014/03/09/computers-for-good/',
     h1: 'Louie Learns Blog',
     h2: 'Computers For Good',
+  },
+  {
+    from: 'https://www.louiechristie.com/podcasts/',
+    to: 'https://www.youtube.com/@music.natters/',
+    h1: 'Music Natters Podcast',
   },
 ];
 
