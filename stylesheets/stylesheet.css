@@ -627,6 +627,14 @@ footer {
 
 @media all and (min-width: 490px) {
   .banner {
-    padding: 20px;
+    padding: 10px;
   }
+}
+
+.hide {
+  display: none;
+}
+
+.myDIV:hover+.hide {
+  display: inline;
 }
