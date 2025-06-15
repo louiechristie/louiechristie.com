@@ -638,3 +638,13 @@ footer {
 .myDIV:hover+.hide {
   display: inline;
 }
+
+.align-text-bottom {
+  position: relative;
+  top: 3px;
+}
+
+.align-middle {
+  position: relative;
+  top: 5px;
+}
