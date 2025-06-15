@@ -357,28 +357,6 @@ aside {
   padding-bottom: 0;
 }
 
-.icon-link {
-  text-decoration: none;
-  /* padding-left: 0; */
-}
-
-.icon-emoji {
-  font-size: 24px;
-}
-
-.icon {
-  margin-right: 12px;
-  font-style: normal;
-}
-
-.icon svg,
-.icon-image {
-  position: relative;
-  width: 24px;
-  height: 24px;
-  top: -4px;
-}
-
 .colorized img {
   /* https://stackoverflow.com/a/72369382/3469524 */
   /* filter: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg"><defs><filter id="colorize" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 0.0549019608 0 0 0 0 0.3921568627 0 0 0 0 0.7098039216 0 0 0 1 0"/></filter></defs></svg>#colorize'); */
@@ -637,14 +615,4 @@ footer {
 
 .myDIV:hover+.hide {
   display: inline;
-}
-
-.align-text-bottom {
-  position: relative;
-  top: 3px;
-}
-
-.align-middle {
-  position: relative;
-  top: 5px;
 }

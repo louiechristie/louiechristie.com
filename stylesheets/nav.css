@@ -30,3 +30,35 @@ nav li {
 [aria-current] {
   font-weight: bold;
 }
+
+
+.icon-link {
+  text-decoration: none;
+  /* padding-left: 0; */
+}
+
+.icon-emoji {
+  font-size: 24px;
+}
+
+.icon {
+  margin-right: 12px;
+  font-style: normal;
+}
+
+.icon svg,
+.icon-image {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  top: -4px;
+}
+
+.align-text-bottom {
+  position: relative;
+  top: 3px;
+}
+
+.align-middle {
+  vertical-align: baseline;
+}
