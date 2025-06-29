@@ -1,3 +1,14 @@
+/* Fonts */
+
+@font-face {
+  font-family: 'Excalifont';
+  src: url('https://excalidraw.nyc3.cdn.digitaloceanspaces.com/fonts/Excalifont-Regular.woff2') format('woff2');
+}
+
+.sketchy {
+  font-family: 'Excalifont';
+}
+
 /* Utility */
 .hidden {
   display: none;
