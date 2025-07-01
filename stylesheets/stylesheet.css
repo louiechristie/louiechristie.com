@@ -393,6 +393,7 @@ aside {
 }
 
 .blue-button {
+  font-size: initial;
   margin: 1rem;
   display: inline-block;
   outline: 0;
