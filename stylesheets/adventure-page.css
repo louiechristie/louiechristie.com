@@ -132,12 +132,8 @@ figcaption p sub {
   /* W3C */
 }
 
-.instagram-media {
-  max-width: calc(100% - 40px) !important;
-}
-
 .title {
-  max-width: 100%;
+  max-width: max-width: calc(100% - 40px);
   height: auto;
 }
 
