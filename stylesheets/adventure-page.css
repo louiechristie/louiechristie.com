@@ -31,11 +31,17 @@
 
 h1 {
   font-size: 40px;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .adventure-title-image {
   width: 300px;
   height: auto;
+}
+
+.adventure-boxes {
+  margin-top: 2rem;
 }
 
 @media all and (min-width: 490px) {
