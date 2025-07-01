@@ -25,6 +25,7 @@ nav ul {
 nav li {
   display: inline;
   margin: 2px;
+  line-height: 2em;
 }
 
 [aria-current] {
