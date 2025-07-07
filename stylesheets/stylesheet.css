@@ -237,6 +237,10 @@ h1 {
     grid-area: apple-quote;
   }
 
+  .bottom_cta {
+    grid-area: bottom_cta;
+  }
+
   .grid {
     display: grid;
     grid-column-gap: 2rem;
@@ -245,6 +249,7 @@ h1 {
     grid-template-areas:
       "adventure-headline it-headline    comedy-headline"
       "apple-quote        apple-quote    apple-quote"
+      ".                  bottom_cta     ."
   }
 }
 
