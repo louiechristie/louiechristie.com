@@ -20,12 +20,19 @@ nav ul {
   list-style-type: none;
   padding-left: 10px;
   padding-right: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 nav li {
   display: inline;
   margin: 2px;
-  line-height: 2em;
+  line-height: 1.8rem;
+}
+
+.nav-list li {
+  margin-right: 1rem;
 }
 
 [aria-current] {

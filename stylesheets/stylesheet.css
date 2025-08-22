@@ -373,6 +373,11 @@ aside {
   padding-bottom: 0;
 }
 
+.weather-icon {
+  margin-bottom: -14px;
+  margin-left: -9px;
+}
+
 .colorized img {
   /* https://stackoverflow.com/a/72369382/3469524 */
   /* filter: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg"><defs><filter id="colorize" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 0.0549019608 0 0 0 0 0.3921568627 0 0 0 0 0.7098039216 0 0 0 1 0"/></filter></defs></svg>#colorize'); */
