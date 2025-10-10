@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, Locator } from '@playwright/test';
 import { urls } from './musicnattersTestUtils.ts';
 
 type Navigation =
@@ -21,6 +21,13 @@ const navigations: Navigation[] = [
     },
   },
   {
+    text: 'tech',
+    to: '/tech/',
+    expected: {
+      h1: 'Tech',
+    },
+  },
+  {
     text: 'adventure',
     to: '/adventure/',
     expected: {
@@ -28,63 +35,17 @@ const navigations: Navigation[] = [
     },
   },
   {
-    text: 'blog',
-    to: '/blog/',
-    expected: {
-      h1: 'Blog',
-    },
-  },
-  {
-    text: 'experiments',
-    to: '/#experiments',
-    expected: {
-      h2: 'Experiments',
-    },
-  },
-  {
-    text: 'host',
-    to: '/tech/host',
-    expected: {
-      h2: 'Tech Event Host',
-    },
-  },
-  {
-    text: 'tutorials',
-    to: '/intro-to-web-dev-course/',
-    expected: {
-      h1: 'Introduction to Web Development Course',
-    },
-  },
-  {
-    text: 'memes',
-    to: '/memes/',
-    expected: {
-      h1: 'Memes',
-    },
-  },
-  {
-    text: 'podcasts',
-    to: urls,
-  },
-  {
-    text: 'profiles',
-    to: '/#profiles',
-    expected: {
-      h2: 'Profiles',
-    },
-  },
-  {
     text: 'about',
-    to: '/#about',
+    to: '/about/',
     expected: {
-      h2: 'About Me',
+      h1: 'About Me',
     },
   },
   {
     text: 'contact',
-    to: '/#contact',
+    to: '/contact/',
     expected: {
-      h2: 'Contact',
+      h1: 'Contact',
     },
   },
 ];
@@ -155,12 +116,20 @@ test.describe('nav links', () => {
   navigations.forEach((navigation) => {
     const { text, to } = navigation;
     test.describe(`${text} link`, () => {
+      let link: Locator;
+
+      test.beforeEach(async ({ page }) => {
+        link = await page
+          .getByRole('navigation')
+          .getByRole('link', { name: text });
+
+        await link.click();
+      });
+
       if ('expected' in navigation && typeof to === 'string') {
         const { expected } = navigation;
 
         test(`url is ${to}`, async ({ page }) => {
-          const navigation = await page.getByRole('navigation');
-          await navigation.getByRole('link', { name: text }).click();
           await expect(page).toHaveURL(to);
         });
 

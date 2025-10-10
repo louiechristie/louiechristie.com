@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, Locator } from '@playwright/test';
 
 type Navigation = {
   text: string;
@@ -15,7 +15,7 @@ const navigations: Navigation[] = [
     },
   },
   {
-    text: 'Newcrossities',
+    text: 'Quirky Travel Guide',
     to: 'https://newcrossities.com/',
     expected: {
       h1: 'Newcrossities',
@@ -54,12 +54,29 @@ const navigations: Navigation[] = [
 const isProduction = process.env.ELEVENTY_RUN_MODE === 'build';
 
 test.describe('experiments links', () => {
+  test.beforeEach(async ({ page, baseURL }) => {
+    await page.goto(
+      baseURL + '/tech/experiments/' ||
+        'https://www.louiechristie.com' + '/tech/experiments/'
+    );
+  });
+
   navigations.forEach((navigation) => {
     const { text, to, expected } = navigation;
-    test.describe(`${text} link`, () => {
+
+    test.describe(`${text} link`, async () => {
+      let link: Locator;
+
       test.beforeEach(async ({ page, baseURL }) => {
-        await page.goto(baseURL || 'https://www.louiechristie.com');
-        await page.getByRole('link', { name: text }).click();
+        link = await page
+          .getByRole('navigation')
+          .getByRole('link', { name: text });
+
+        await link.click();
+      });
+
+      test(`nav has link ${text}`, async ({ page }) => {
+        expect(link).toBeVisible;
       });
 
       test(`url is ${to}`, async ({ page }) => {
