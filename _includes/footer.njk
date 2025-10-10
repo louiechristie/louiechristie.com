@@ -1,29 +1,13 @@
-<footer class="d-flex flex-column justify-content-center align-items-center pt-3 mt-4 border-top text-light bg-dark dark-mode ">
-  <p>© 2025 Louie Christie</p>
-  <p>
-    <a class="text-light" href="blog/about/">Handmade by Louie Christie</a>
-  </p>
-  <p>
-    <a class="text-light" href="https://www.facebook.com/groups/2352226331/">
-      Looking for a different Louie Christie?
-    </a>
-  </p>
-  {% performance %}
-  {% analytics %}
-  <a href="https://github.com/louiechristie/louiechristie.github.io/actions/">
-    <img
-      style="vertical-align: middle;"
-      src="https://github.com/louiechristie/louiechristie.github.io/actions/workflows/playwright.yml/badge.svg"
-      alt="Badge: Github logo, 'Playwright Tests'"
-      eleventy:ignore="eleventy:ignore"/>
-  </a>
-  <link rel="stylesheet" href="/stylesheets/analytics.css"/>
-  <script>
-    window.minimalAnalytics = {
-      trackingId: 'G-746SBNNHXR',
-      autoTrack: true
-    };
-  </script>
-  <script src='https://unpkg.com/@minimal-analytics/ga4/dist/index.js' defer="defer"></script>
-  <script src='https://cursor-party.louiechristie.partykit.dev/cursors.js' defer="defer"></script>
+<footer>
+  {% set currentUrl = page.url %}
+  <nav>
+    <ul>
+      <li class="nav-item">
+        <a class="nav-link" href="/about/" {% if 'about' in currentUrl %} aria-current="page" {% endif %}>about</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/contact/" {% if 'contact' in currentUrl %} aria-current="page" {% endif %}>contact</a>
+      </li>
+    </ul>
+  </nav>
 </footer>

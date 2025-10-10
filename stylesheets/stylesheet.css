@@ -108,6 +108,11 @@ p {
   padding: 1rem 1rem 1rem 1rem;
 }
 
+.margin-vertical {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 @media all and (min-width: 490px) {
   :root {
     font-size: 1.2em;
@@ -185,14 +190,14 @@ h6,
 }
 
 .site-description {
-  margin: 1rem;
-  font-weight: 500;
-  font-size: 1em;
+  margin-top: 1.1rem;
+  font-size: 1.1rem;
 }
 
 @media all and (min-width: 1024px) {
   .site-description {
-    font-size: 1.4rem;
+    margin-top: 2rem;
+    font-size: 2rem;
   }
 }
 
@@ -587,16 +592,21 @@ lite-youtube {
   --lite-youtube-aspect-ratio: 1 / 1;
 }
 
-footer,
 .visitors-currently {
   font-size: 0.85em;
 }
 
 footer {
   /* border: 1px dotted red; */
-  background-color: #1e2328;
+  border-top: 1px solid grey;
+  margin-top: 2em;
+  padding-top: 1em;
   padding-bottom: 50px;
   width: 100%;
+}
+
+footer nav {
+  border-bottom: none;
 }
 
 .dark-mode {

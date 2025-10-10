@@ -1,24 +1,22 @@
 {% set currentUrl = page.url %}
-<nav>
-  <div>
-    <ul>
-      <li class="nav-item">
-        <a class="nav-link" href="/tech/host/" {% if currentUrl === '/tech/host/' %} aria-current="page" {% endif %}>host</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/tech/experiments/" {% if currentUrl === '/tech/experiments/' %} aria-current="page" {% endif %}>experiments</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/intro-to-web-dev-course/" {% if currentUrl === '/intro-to-web-dev-course/' %} aria-current="page" {% endif %}>tutorials</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/blog/">blog</a>
-      </li>
-      <li class="nav-item">
-        <a href="/tech/offer/">
-          free book
-        </a>
-      </li>
-    </ul>
-  </div>
+<nav class="secondary-nav">
+  <ul>
+    <li class="nav-item">
+      <a class="nav-link" href="/tech/experiments/" {% if currentUrl === '/tech/experiments/' %} aria-current="page" {% endif %}>experiments</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/tech/host/" {% if currentUrl === '/tech/host/' %} aria-current="page" {% endif %}>host</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/intro-to-web-dev-course/" {% if currentUrl === '/intro-to-web-dev-course/' %} aria-current="page" {% endif %}>tutorials</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/blog/">blog</a>
+    </li>
+    <li class="nav-item">
+      <a href="/tech/offer/">
+        free book
+      </a>
+    </li>
+  </ul>
 </nav>

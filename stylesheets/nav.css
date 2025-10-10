@@ -1,6 +1,11 @@
+header {
+  border-bottom: 1px solid grey;
+  padding-bottom: 1em;
+}
+
 .logo {
   width: 150px;
-  height: auto
+  height: auto;
 }
 
 @media all and (min-width: 1024px) {
@@ -13,7 +18,14 @@ nav {
   display: grid;
   align-items: center;
   justify-items: center;
-  border-bottom: 1px solid grey;
+}
+
+nav:nth-of-type(2) {
+  font-size: 0.9em;
+}
+
+nav:nth-of-type(2) {
+  font-size: 0.85em;
 }
 
 nav ul {
@@ -23,6 +35,8 @@ nav ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 nav li {
@@ -31,8 +45,14 @@ nav li {
   line-height: 1.8rem;
 }
 
-.nav-list li {
-  margin-right: 1rem;
+.nav-link {
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.experiment-item {
+  margin-left: 6px;
+  margin-right: 12px;
 }
 
 [aria-current] {

@@ -1,29 +1,23 @@
 {% set currentUrl = page.url %}
-<div class="center">
-  <div>
-    <a href="/"><img class="logo" src="/images/handwritten_louie_christie_600x220.jpg" alt="handwritten Louie Christie"/>
-    </a>
+<nav>
+  <div class="center">
+    <div>
+      <a href="/"><img class="logo" src="/images/handwritten_louie_christie_600x220.jpg" alt="handwritten Louie Christie"/>
+      </a>
+    </div>
   </div>
-  <nav style="display: inline-block">
-    <ul class="nav nav-tabs">
-      <li class="nav-item">
-        <a class="nav-link" href="/" {% if currentUrl === '/' %} aria-current="page" {% endif %}>home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/tech/" {% if 'tech' in currentUrl %} aria-current="page" {% endif %}>tech</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/adventure/" {% if 'adventure' in currentUrl %} aria-current="page" {% endif %}>adventure</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://www.louiechristie.com/comedy/">comedy</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/about/" {% if 'about' in currentUrl %} aria-current="page" {% endif %}>about</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/contact/" {% if 'contact' in currentUrl %} aria-current="page" {% endif %}>contact</a>
-      </li>
-    </ul>
-  </nav>
-</div>
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/" {% if currentUrl === '/' %} aria-current="page" {% endif %}>home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/adventure/" {% if 'adventure' in currentUrl %} aria-current="page" {% endif %}>adventure</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/tech/" {% if 'tech' in currentUrl %} aria-current="page" {% endif %}>tech</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="https://www.louiechristie.com/comedy/">comedy</a>
+    </li>
+  </ul>
+</nav>
