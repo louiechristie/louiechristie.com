@@ -15,7 +15,7 @@ const navigations: Navigation[] = [
     },
   },
   {
-    text: 'Quirky Travel Guide',
+    text: 'Newcrossities',
     to: 'https://newcrossities.com/',
     expected: {
       h1: 'Newcrossities',
@@ -68,9 +68,7 @@ test.describe('experiments links', () => {
       let link: Locator;
 
       test.beforeEach(async ({ page, baseURL }) => {
-        link = await page
-          .getByRole('navigation')
-          .getByRole('link', { name: text });
+        link = await page.getByRole('link', { name: text });
 
         await link.click();
       });
