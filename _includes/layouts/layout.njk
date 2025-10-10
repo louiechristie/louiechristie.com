@@ -21,11 +21,9 @@
     {% block customHeadExtras %}{% endblock %}
   </head>
   <body>
-    <header>
-      {% block header %}
-        {% include "nav.njk" %}
-      {% endblock %}
-    </header>
+    {% block header %}
+      {% include "nav.njk" %}
+    {% endblock %}
     {{ content | safe }}
     {# For removing footer in footer layout #}
     {% block footer %}

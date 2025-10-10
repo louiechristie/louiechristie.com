@@ -9,6 +9,7 @@
   --monochromacy-color: #3b3b3b;
   --black-color: #000000;
 
+  --light-grey-color: rgba(59, 59, 59, 0.4);
   --dark-grey-color: var(--monochromacy-color);
   --grey-color: var(--less-saturated-color);
 

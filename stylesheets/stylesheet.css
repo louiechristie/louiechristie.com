@@ -31,6 +31,7 @@
   --monochromacy-color: #3b3b3b;
   --black-color: #000000;
 
+  --light-grey-color: #555555;
   --dark-grey-color: var(--monochromacy-color);
   --grey-color: var(--black-color);
 
@@ -190,14 +191,28 @@ h6,
 }
 
 .site-description {
-  margin-top: 1.1rem;
-  font-size: 1.1rem;
+  font-family: 'Excalifont';
+  /* margin-top: 1.1rem; */
+  /* font-size: 1.5em; */
+  /* font-weight: bold; */
+  color: var(--light-grey-color);
+  margin-block-start: 1em;
+  margin-block-end: 0;
+}
+
+.site-description a {
+  color: var(--light-grey-color);
+  text-decoration: none;
+}
+
+.site-description a:hover {
+  color: var(--grey-color);
 }
 
 @media all and (min-width: 1024px) {
   .site-description {
-    margin-top: 2rem;
-    font-size: 2rem;
+    /* margin-block-start: 1em;
+    margin-block-end: 1em; */
   }
 }
 
