@@ -60,8 +60,6 @@ const navigations: Navigation[] = [
   },
 ];
 
-const isProduction = process.env.ELEVENTY_RUN_MODE === 'build';
-
 test.describe('experiments links', () => {
   test.beforeEach(async ({ page, baseURL }) => {
     await page.goto(

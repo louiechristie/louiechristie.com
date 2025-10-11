@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { urls } from './musicnattersTestUtils.ts';
+import { urls } from '../utils/musicnattersTestUtils.ts';
 
 const addresses = [
   // https
@@ -20,7 +20,7 @@ const addresses = [
 const title = 'Music Natters Podcast - YouTube';
 const heading = 'Music Natters Podcast';
 
-const isProduction = process.env.ELEVENTY_RUN_MODE === 'build';
+const isProduction = !!process.env.CI;
 
 if (isProduction) {
   addresses.forEach((address) => {
@@ -33,5 +33,13 @@ if (isProduction) {
         await expect(urls).toContain(page.url());
       });
     });
+  });
+
+  const from = 'https://www.louiechristie.com/podcasts/';
+  const to = 'https://www.youtube.com/@music.natters/';
+
+  test(`test redirect from ${from}, to ${to}`, async ({ page }) => {
+    await page.goto(from);
+    await expect(urls).toContain(page.url());
   });
 }

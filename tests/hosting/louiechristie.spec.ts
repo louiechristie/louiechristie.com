@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-const isProduction = process.env.ELEVENTY_RUN_MODE === 'build';
+const isProduction = !!process.env.CI;
 
 const homepageAddresses = [
   // https
@@ -47,9 +47,9 @@ if (isProduction) {
         );
       });
       test(`testing with ${address}, heading`, async ({ page }) => {
-        await expect(page.getByRole('heading', { level: 1 })).toHaveText(
-          'Louie Christie'
-        );
+        await expect(
+          page.getByRole('heading', { level: 1, name: 'Louie Christie' })
+        ).toBeVisible();
       });
 
       test(`testing with ${address}, url`, async ({ page }) => {

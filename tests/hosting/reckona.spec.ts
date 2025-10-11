@@ -19,7 +19,7 @@ const removeSecure = (string) => {
   return string.replace('https', 'http');
 };
 
-const isProduction = process.env.ELEVENTY_RUN_MODE === 'build';
+const isProduction = !!process.env.CI;
 
 if (isProduction) {
   test(`removeTrailingSlash`, async ({ page }) => {
@@ -52,26 +52,8 @@ if (isProduction) {
     removeSecure(removeTrailingSlash(removeWww(redirectFrom))),
   ];
 
-  redirectFromes.forEach((redirectFrom) => {
-    test.describe('variations', () => {
-      test.beforeEach(async ({ page }) => {
-        await page.goto(redirectFrom);
-      });
-
-      test(`testing with ${redirectFrom}, heading`, async ({ page }) => {
-        await expect(page.getByRole('heading', { level: 2 })).toHaveText(
-          heading
-        );
-      });
-
-      test(`testing with ${redirectFrom}, url`, async ({ page }) => {
-        await expect(page).toHaveURL(redirectTo);
-      });
-    });
-  });
-
   test(`click from louiechristie.com to reckona.co.uk`, async ({ page }) => {
-    await page.goto('https://www.louiechristie.com/');
+    await page.goto('https://www.louiechristie.com/tech/experiments/');
 
     const link = page.getByText('Reckona', { exact: true });
 

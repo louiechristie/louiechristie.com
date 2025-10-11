@@ -9,28 +9,28 @@
     "build": "eleventy",
     "serve": "cd _site && npx serve && cd ..",
     "start": "npx @11ty/eleventy --serve --quiet",
-    "test": "npx playwright test",
+    "test": "npx playwright test --max-failures=10",
     "debug": "npx playwright test --ui",
     "compare": "diff $INIT_CWD/_tmp/bak $INIT_CWD/_site --color --recursive --exclude={.*,README*,readme*,start,deploy,shower-of-comedy,travel-guide} --ignore-all-space --strip-trailing-cr",
     "deploy:trivia-trundle": "rsync -avhP --delete ~/Documents/trivia-trundle/dist/ ~/Documents/louiechristie.com/_site/trivia-trundle",
     "deploy:weeks-to-go": "rsync -avhP --delete ~/Documents/weeks-to-go/build/ ~/Documents/louiechristie.com/_site/weeks-to-go",
-    "deploy": "npm run deploy:weeks-to-go && npm run deploy:trivia-trundle && ~/Documents/louiechristie.com/node_modules/wrangler/bin/wrangler.js pages deploy _site"
+    "deploy:intro-to-web-dev-course": "rsync -avhP ./_tmp/bak/intro-to-web-dev-course ~/Documents/louiechristie.com/_site/intro-to-web-dev-course",
+    "deploy:blog": "rsync -avhP ./_tmp/bak/blog ~/Documents/louiechristie.com/_site/blog",
+    "deploy:subfolders": "npm run deploy:weeks-to-go && npm run deploy:trivia-trundle && npm run deploy:intro-to-web-dev-course && npm run deploy:blog",
+    "deploy": "npm run deploy:subfolders && ~/Documents/louiechristie.com/node_modules/wrangler/bin/wrangler.js pages deploy _site"
   },
   "keywords": [],
   "author": "Louie Christie",
   "license": "UNLICENSED",
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0",
-    "@playwright/test": "^1.48.1",
-    "@types/node": "^22.7.7",
-    "eleventy-auto-cache-buster": "^0.7.0",
-    "wrangler": "^3.106.0"
+    "@11ty/eleventy": "^3.1.2",
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^24.7.2",
+    "eleventy-auto-cache-buster": "^0.8.1",
+    "wrangler": "^4.42.2"
   },
   "dependencies": {
-    "@11ty/eleventy-cache-assets": "^2.3.0",
-    "@11ty/eleventy-img": "^6.0.0",
-    "@google-analytics/data": "^4.12.0",
-    "dotenv": "^16.4.7",
-    "temporal-polyfill": "^0.2.5"
+    "@11ty/eleventy-img": "^6.0.4",
+    "dotenv": "^17.2.3"
   }
 }

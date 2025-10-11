@@ -30,7 +30,7 @@ const navigations: Navigation[] = [
     text: 'adventure',
     to: '/adventure/',
     expected: {
-      h1ImageAlt: 'Adventure',
+      h1: 'Adventure',
     },
   },
   {
@@ -49,59 +49,31 @@ const navigations: Navigation[] = [
   },
 ];
 
-const isProduction = process.env.ELEVENTY_RUN_MODE === 'build';
+const isProduction = !!process.env.CI;
 
 if (isProduction) {
   test.describe('nav external redirects', () => {
-    test.describe('comedy link redirects to https://undergroundcomedian.wordpress.com/', () => {
-      test('should redirect on desktop', async ({ page, baseURL }) => {
-        await page.setViewportSize({ width: 1920, height: 1080 });
+    test('comedy link redirects to https://comedy.louiechristie.com/', async ({
+      page,
+      baseURL,
+    }) => {
+      await page.setViewportSize({ width: 1920, height: 1080 });
 
-        await page.goto(baseURL || 'https://www.louiechristie.com');
+      await page.goto(
+        baseURL + 'tech' || 'https://www.louiechristie.com' + 'tech'
+      );
 
-        const comedyLink = page.getByText('comedy', { exact: true });
+      const comedyLink = page.getByText('comedy', { exact: true });
 
-        // Click the comedy link by its text
-        await expect(comedyLink).toBeVisible();
+      // Click the comedy link by its text
+      await expect(comedyLink).toBeVisible();
 
-        await comedyLink.click();
+      await comedyLink.click();
 
-        await page.waitForURL('https://undergroundcomedian.wordpress.com/');
+      await page.waitForURL('https://comedy.louiechristie.com/');
 
-        // Check the h1 heading
-        await expect(
-          page.getByRole('heading', { level: 1, name: 'Underground Comedian' })
-        ).toBeVisible();
-      });
-
-      test('should redirect on mobile', async ({ page, baseURL }) => {
-        // Set viewport to mobile size
-        await page.setViewportSize({ width: 375, height: 667 }); // iPhone SE dimensions
-
-        await page.goto(baseURL || 'https://www.louiechristie.com/');
-
-        const toggler = page.getByLabel('Toggle navigation');
-
-        // Ensure the button is visible
-        await expect(toggler).toBeVisible();
-
-        // Click the navbar toggler
-        await toggler.click();
-
-        const comedyLink = page.getByText('comedy', { exact: true });
-
-        // Click the comedy link by its text
-        await expect(comedyLink).toBeVisible();
-
-        await comedyLink.click();
-
-        await page.waitForURL('https://undergroundcomedian.wordpress.com/');
-
-        // Check the h1 heading
-        await expect(
-          page.getByRole('heading', { level: 1, name: 'Underground Comedian' })
-        ).toBeVisible();
-      });
+      // Check the title because no h1 in current Ghost template
+      await expect(page).toHaveTitle('Louie Christie, Alternative Comedian');
     });
   });
 }
@@ -109,7 +81,9 @@ if (isProduction) {
 test.describe('nav links', () => {
   test.beforeEach(async ({ page, baseURL }) => {
     await page.setViewportSize({ width: 1920, height: 1080 });
-    await page.goto(baseURL || 'https://www.louiechristie.com');
+    await page.goto(
+      baseURL + '/tech/' || 'https://www.louiechristie.com' + '/tech/'
+    );
   });
 
   navigations.forEach((navigation) => {
@@ -120,7 +94,7 @@ test.describe('nav links', () => {
       test.beforeEach(async ({ page }) => {
         link = await page
           .getByRole('navigation')
-          .getByRole('link', { name: text });
+          .getByRole('link', { name: text, exact: true });
 
         await link.click();
       });

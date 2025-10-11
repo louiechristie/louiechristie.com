@@ -7,12 +7,12 @@ import { test, expect } from '@playwright/test';
 const redirects = [
   {
     from: 'https://www.louiechristie.com/comedy/',
-    to: 'https://undergroundcomedian.wordpress.com/',
-    h1: 'Underground Comedian',
+    to: 'https://comedy.louiechristie.com/',
+    title: 'Louie Christie,  Alternative Comedian',
   },
   {
     from: 'https://www.louiechristie.com/comedy/improv/',
-    to: 'https://undergroundcomedian.wordpress.com/improv/',
+    to: 'https://comedy.louiechristie.com/improv/',
     h1: 'Improv',
   },
   {
@@ -32,11 +32,6 @@ const redirects = [
     h1: 'Louie Learns Blog',
     h2: 'Computers For Good',
   },
-  {
-    from: 'https://www.louiechristie.com/podcasts/',
-    to: 'https://www.youtube.com/@music.natters/',
-    h1: 'Music Natters Podcast',
-  },
 ];
 
 const removeTrailingSlash = (string: string) => {
@@ -52,7 +47,7 @@ const removeSecure = (string) => {
   return string.replace('https', 'http');
 };
 
-const isProduction = process.env.ELEVENTY_RUN_MODE === 'build';
+const isProduction = !!process.env.CI;
 
 if (isProduction) {
   redirects.forEach((redirect) => {

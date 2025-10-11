@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-const isProduction = process.env.ELEVENTY_RUN_MODE === 'build';
+const isProduction = !!process.env.CI;
 
 const homepageAddresses = [
   // .club

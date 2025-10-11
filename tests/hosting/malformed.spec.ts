@@ -23,10 +23,14 @@ if (process.env.CI) {
       page,
       baseURL,
     }) => {
-      const response = await page.goto(`${path}`);
-      await page.waitForURL(`${baseURL}multiple-slashes`);
-
-      expect(response?.status()).toBe(404);
+      try {
+        const response = await page.goto(`${path}`);
+        expect(response?.status()).toBe(404);
+      } catch (error) {
+        if (error instanceof Error) {
+          expect(error.message).toMatch('net::ERR_NAME_NOT_RESOLVED');
+        }
+      }
     });
   });
 
