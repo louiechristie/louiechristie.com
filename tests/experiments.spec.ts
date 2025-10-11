@@ -49,6 +49,13 @@ const navigations: Navigation[] = [
       h1: 'Blog',
     },
   },
+  {
+    text: 'Memes',
+    to: '/memes/',
+    expected: {
+      h1: 'Meme',
+    },
+  },
 ];
 
 const isProduction = process.env.ELEVENTY_RUN_MODE === 'build';
