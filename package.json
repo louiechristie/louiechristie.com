@@ -12,8 +12,9 @@
     "test": "npx playwright test",
     "debug": "npx playwright test --ui",
     "compare": "diff $INIT_CWD/_tmp/bak $INIT_CWD/_site --color --recursive --exclude={.*,README*,readme*,start,deploy,shower-of-comedy,travel-guide} --ignore-all-space --strip-trailing-cr",
-    "deploy:trivia-trundle": "rsync -avhP --delete ~/Documents/trivia-trundle/dist/ $INIT_CWD/_site/trivia-trundle",
-    "deploy": "npm run deploy:trivia-trundle && $INIT_CWD/node_modules/wrangler/bin/wrangler.js pages deploy _site"
+    "deploy:trivia-trundle": "rsync -avhP --delete ~/Documents/trivia-trundle/dist/ ~/Documents/louiechristie.com/_site/trivia-trundle",
+    "deploy:weeks-to-go": "rsync -avhP --delete ~/Documents/weeks-to-go/build/ ~/Documents/louiechristie.com/_site/weeks-to-go",
+    "deploy": "npm run deploy:weeks-to-go && npm run deploy:trivia-trundle && ~/Documents/louiechristie.com/node_modules/wrangler/bin/wrangler.js pages deploy _site"
   },
   "keywords": [],
   "author": "Louie Christie",
