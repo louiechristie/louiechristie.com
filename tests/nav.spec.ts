@@ -1,5 +1,4 @@
-import { test, expect, Locator } from '@playwright/test';
-import { urls } from './musicnattersTestUtils.ts';
+import { test, expect, type Locator } from '@playwright/test';
 
 type Navigation =
   | {
