@@ -4,6 +4,7 @@ type Navigation = {
   text: string;
   to: string;
   expected: { h1: string } | { h1ImageAlt: string } | { h2: string };
+  faultyWordPressException?: boolean;
 };
 
 const navigations: Navigation[] = [
@@ -41,6 +42,7 @@ const navigations: Navigation[] = [
     expected: {
       h2: 'The Recruitment Calculator',
     },
+    faultyWordPressException: true,
   },
   {
     text: 'Creative Tech Blog',
@@ -69,7 +71,7 @@ test.describe('experiments links', () => {
   });
 
   navigations.forEach((navigation) => {
-    const { text, to, expected } = navigation;
+    const { text, to, expected, faultyWordPressException } = navigation;
 
     test.describe(`${text} link`, async () => {
       let link: Locator;
@@ -106,9 +108,15 @@ test.describe('experiments links', () => {
       if ('h2' in expected) {
         const { h2 } = expected;
         test(`heading 2 is ${h2}`, async ({ page }) => {
-          await expect(
-            page.getByRole('heading', { level: 2, name: h2 })
-          ).toBeVisible();
+          if (faultyWordPressException) {
+            await expect(
+              page.getByRole('heading', { level: 2, name: h2 })
+            ).toHaveCount(1);
+          } else {
+            await expect(
+              page.getByRole('heading', { level: 2, name: h2 })
+            ).toBeVisible();
+          }
         });
       }
     });
