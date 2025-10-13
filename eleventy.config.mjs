@@ -5,8 +5,6 @@ import { EleventyHtmlBasePlugin } from '@11ty/eleventy';
 
 const isProductionBuild = process.env.ELEVENTY_RUN_MODE === 'build';
 
-const baseUrl = 'https://www.louiechristie.com';
-
 export const config = {
   pathPrefix: '/',
 };
@@ -38,7 +36,7 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin, {
-    baseHref: isProductionBuild ? baseUrl : config.pathPrefix,
+    baseHref: config.pathPrefix,
     extensions: 'html',
   });
 }

@@ -60,7 +60,7 @@ if (isProduction) {
       await page.setViewportSize({ width: 1920, height: 1080 });
 
       await page.goto(
-        baseURL + 'tech' || 'https://www.louiechristie.com' + 'tech'
+        baseURL + '/tech/' || 'https://www.louiechristie.com' + '/tech/'
       );
 
       const comedyLink = page.getByText('comedy', { exact: true });

@@ -76,8 +76,8 @@ test.describe('experiments links', () => {
 
       test.beforeEach(async ({ page, baseURL }) => {
         link = await page.getByRole('link', { name: text });
-
         await link.click();
+        await page.waitForURL(to);
       });
 
       test(`nav has link ${text}`, async ({ page }) => {
@@ -92,8 +92,8 @@ test.describe('experiments links', () => {
         const { h1 } = expected;
         test(`heading 1 is ${h1}`, async ({ page }) => {
           await expect(
-            page.getByRole('heading', { level: 1, name: h1 })
-          ).toBeVisible();
+            page.getByRole('heading', { level: 1 })
+          ).toContainText(h1);
         });
       }
 
