@@ -261,11 +261,6 @@ h1 {
   max-width: 800px;
 }
 
-
-/* .headlines div {
-  border: 1px dotted var(--grey-color);
-} */
-
 .text-box {
   display: flex;
   flex-direction: column;
