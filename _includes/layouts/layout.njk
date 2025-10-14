@@ -25,10 +25,10 @@
       {% include "nav.njk" %}
     {% endblock %}
     {{ content | safe }}
-    {# For removing footer in footer layout #}
-    {% block footer %}
-      {# {% include 'footer.njk' %} #}
-    {% endblock %}
-    {% include "footer.njk" %}
+    <footer>
+      {% block footer %}
+        {% include 'footer.njk' %}
+      {% endblock %}
+    </footer>
   </body>
-</html>
+</html></footer></body></html>
