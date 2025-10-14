@@ -65,18 +65,9 @@ html {
   justify-content: center;
 }
 
-body {
-  max-width: 490px;
-}
 
 p {
   line-height: 1.8rem;
-}
-
-@media all and (min-width: 1024px) {
-  body {
-    max-width: initial
-  }
 }
 
 .headline-link,
@@ -207,13 +198,6 @@ h6,
 
 .site-description a:hover {
   color: var(--grey-color);
-}
-
-@media all and (min-width: 1024px) {
-  .site-description {
-    /* margin-block-start: 1em;
-    margin-block-end: 1em; */
-  }
 }
 
 h1 {
@@ -355,12 +339,6 @@ a.comedy-link:visited {
 section {
   padding-top: 2rem;
   padding: 10px;
-}
-
-@media all and (min-width: 1024px) {
-  section {
-    padding: 1rem;
-  }
 }
 
 aside {
