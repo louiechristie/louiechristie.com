@@ -65,15 +65,32 @@ html {
   justify-content: center;
 }
 
+.headlines {
+  display: grid;
+  gap: 20px;
+}
+
+.headline {
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.headline-title {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media all and (min-width: 1080px) {
+  .headlines {
+    grid-template-columns: 320px 320px 320px;
+  }
+}
 
 p {
   line-height: 1.8rem;
-}
-
-.headline-link,
-.headline-no-link {
-  flex: 1;
-  padding: 1rem 1rem 0 1rem;
 }
 
 .media-descripton {
@@ -87,12 +104,6 @@ p {
 .box-shadow {
   border: 3px solid var(--less-saturated-color);
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.4);
-  border-radius: 20px;
-}
-
-.headline-link:hover,
-.box-shadow-link:hover {
-  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.8);
   border-radius: 20px;
 }
 
@@ -117,6 +128,12 @@ figure {
 
 .page-container {
   max-width: var(--small);
+}
+
+.comedy-headline a,
+.comedy-headline a:visited {
+  color: var(--comedy-color);
+  text-decoration-color: rgba(224, 40, 40, 0.4);
 }
 
 .image-container {
@@ -218,45 +235,6 @@ h1 {
   }
 }
 
-.grid {
-  display: grid;
-  grid-row-gap: 2rem;
-  grid-template-columns: 1fr;
-}
-
-@media all and (min-width: 1024px) {
-  .adventure-headline {
-    grid-area: adventure-headline;
-  }
-
-  .it-headline {
-    grid-area: it-headline;
-  }
-
-  .comedy-headline {
-    grid-area: comedy-headline;
-  }
-
-  .apple-quote {
-    grid-area: apple-quote;
-  }
-
-  .bottom_cta {
-    grid-area: bottom_cta;
-  }
-
-  .grid {
-    display: grid;
-    grid-column-gap: 2rem;
-    align-content: center;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:
-      "adventure-headline it-headline    comedy-headline"
-      "apple-quote        apple-quote    apple-quote"
-      ".                  bottom_cta     ."
-  }
-}
-
 .column {
   max-width: 800px;
 }
@@ -307,28 +285,6 @@ h2.adventure {
   height: 1.4em;
   max-width: 100%;
   object-fit: contain;
-}
-
-.adventure,
-a.adventure-link,
-a.adventure-link:visited {
-  color: var(--adventure-color);
-}
-
-.developer,
-a.developer-link,
-a.developer-link:visited {
-  color: var(--developer-color);
-}
-
-.comedy {
-  color: var(--comedy-color);
-}
-
-a.comedy-link,
-a.comedy-link:visited {
-  color: var(--comedy-color);
-  text-decoration-color: rgba(224, 40, 40, 0.4);
 }
 
 section {
@@ -450,10 +406,6 @@ aside {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-cite {
-  line-height: 1.2em;
 }
 
 @media all and (min-width: 1024px) {

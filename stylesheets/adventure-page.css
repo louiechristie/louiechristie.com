@@ -36,6 +36,13 @@ h1 {
   margin-bottom: 0;
 }
 
+.adventure-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .adventure-title-image {
   width: 300px;
   height: auto;
@@ -134,13 +141,50 @@ figcaption p sub {
   margin-bottom: 3em;
 }
 
+
+.grid {
+  max-width: 375px;
+}
+
+@media all and (min-width: 1024px) {
+  .adventure-headline {
+    grid-area: adventure-headline;
+  }
+
+  .it-headline {
+    grid-area: it-headline;
+  }
+
+  .comedy-headline {
+    grid-area: comedy-headline;
+  }
+
+  .apple-quote {
+    grid-area: apple-quote;
+  }
+
+  .bottom_cta {
+    grid-area: bottom_cta;
+  }
+
+  .grid {
+    display: grid;
+    grid-row-gap: 2rem;
+    grid-template-columns: 1fr;
+    max-width: initial;
+    grid-column-gap: 2rem;
+    align-content: center;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .fast {
   transform: scale(1, 0.92);
   /* W3C */
 }
 
 .title {
-  max-width: max-width: calc(100% - 40px);
+  max-width: calc(100% - 40px);
   height: auto;
 }
 
