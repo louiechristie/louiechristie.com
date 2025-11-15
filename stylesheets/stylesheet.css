@@ -268,15 +268,6 @@ h3 {
   line-height: 1.4em;
 }
 
-.apple-quote {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
-  line-height: 2em;
-}
-
-.apple-quote cite {
-  margin-top: 1rem;
-}
-
 h2.adventure {
   margin-bottom: 0.75em;
 }
@@ -288,7 +279,6 @@ h2.adventure {
 }
 
 section {
-  padding-top: 2rem;
   padding: 10px;
 }
 
