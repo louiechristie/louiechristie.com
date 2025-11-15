@@ -5,8 +5,10 @@
   src: url('https://excalidraw.nyc3.cdn.digitaloceanspaces.com/fonts/Excalifont-Regular.woff2') format('woff2');
 }
 
-.sketchy {
+.sketchy,
+.sketchy a {
   font-family: 'Excalifont';
+  color: var(--light-grey-color);
 }
 
 /* Utility */
@@ -199,13 +201,56 @@ h6,
 }
 
 .site-description {
-  font-family: 'Excalifont';
-  /* margin-top: 1.1rem; */
-  /* font-size: 1.5em; */
-  /* font-weight: bold; */
-  color: var(--light-grey-color);
+  /* border: 1px solid red; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-block-start: 1em;
   margin-block-end: 0;
+}
+
+.site-description-formatter {
+  /* border: 2px solid orange; */
+  display: flex;
+  justify-content: center;
+  align-items: first baseline;
+  flex-wrap: wrap;
+}
+
+.sentence {
+  /* border: 2px solid yellow; */
+  text-align: center;
+  flex-basis: 1;
+  flex-shrink: 0;
+  flex-grow: 1;
+  line-height: 1.6em;
+}
+
+.in-head {
+  font-size: 1.1em;
+}
+
+@media all and (min-width: 640px) {
+  .sentence a {
+    /* padding-right: 0.1em; */
+  }
+
+  .sentence a:last-of-type {
+    /* padding-right: 0; */
+  }
+
+  .in-head {
+    display: flex;
+    padding-left: 0.1em;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .site-description-formatter {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+  }
 }
 
 .site-description a {
