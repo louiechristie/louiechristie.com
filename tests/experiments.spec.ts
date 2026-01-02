@@ -9,12 +9,20 @@ type Navigation = {
 
 const navigations: Navigation[] = [
   {
-    text: 'Trivia Trundle',
-    to: '/trivia-trundle/',
+    text: 'Weather Winton',
+    to: 'https://weather.louiechristie.com/',
     expected: {
-      h1: 'Trivia Trundle',
+      h1: 'Weather Winton',
     },
   },
+  {
+    text: 'Memes',
+    to: '/memes/',
+    expected: {
+      h1: 'Meme',
+    },
+  },
+
   {
     text: 'Newcrossities',
     to: 'https://newcrossities.com/',
@@ -23,26 +31,19 @@ const navigations: Navigation[] = [
     },
   },
   {
-    text: 'Weather Winton',
-    to: 'https://weather.louiechristie.com/',
+    text: 'Trivia Trundle',
+    to: '/trivia-trundle/',
     expected: {
-      h1: 'Weather Winton',
+      h1: 'Trivia Trundle',
     },
   },
+
   {
     text: 'Weeks To Go',
     to: '/weeks-to-go/',
     expected: {
       h1: 'Weeks To Go',
     },
-  },
-  {
-    text: 'Reckona',
-    to: 'https://www.reckona.co.uk/',
-    expected: {
-      h2: 'The Recruitment Calculator',
-    },
-    faultyWordPressException: true,
   },
   {
     text: 'Creative Tech Blog',
@@ -52,11 +53,12 @@ const navigations: Navigation[] = [
     },
   },
   {
-    text: 'Memes',
-    to: '/memes/',
+    text: 'Reckona',
+    to: 'https://www.reckona.co.uk/',
     expected: {
-      h1: 'Meme',
+      h2: 'The Recruitment Calculator',
     },
+    faultyWordPressException: true,
   },
 ];
 
@@ -91,9 +93,9 @@ test.describe('experiments links', () => {
       if ('h1' in expected) {
         const { h1 } = expected;
         test(`heading 1 is ${h1}`, async ({ page }) => {
-          await expect(
-            page.getByRole('heading', { level: 1 })
-          ).toContainText(h1);
+          await expect(page.getByRole('heading', { level: 1 })).toContainText(
+            h1
+          );
         });
       }
 
