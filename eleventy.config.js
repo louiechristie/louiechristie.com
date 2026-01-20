@@ -17,15 +17,6 @@ const isProductionBuild = process.env.ELEVENTY_RUN_MODE === 'build';
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('stylesheets');
-	eleventyConfig.addPassthroughCopy('mstile-*.png');
-	eleventyConfig.addPassthroughCopy('favicon*');
-	eleventyConfig.addPassthroughCopy('android-chrome*');
-	eleventyConfig.addPassthroughCopy('apple-touch-icon*');
-	eleventyConfig.addPassthroughCopy('img');
-	eleventyConfig.addPassthroughCopy('images');
-	eleventyConfig.addPassthroughCopy('images/lc-icon.svg'); // for memes subdirectory
-	eleventyConfig.addPassthroughCopy('browserconfig.xml');
-	eleventyConfig.addPassthroughCopy('site.webmanifest');
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin, {
 		baseHref: config.pathPrefix,
 		extensions: 'html',
@@ -99,11 +90,12 @@ export default async function (eleventyConfig) {
 		},
 		metadata: {
 			language: 'en',
-			title: 'Blog Title',
-			subtitle: 'This is a longer description about your blog.',
-			base: 'https://example.com/',
+			title: 'louiechristie.com',
+			subtitle:
+				'This is a blog about my creative technology projects and associated rantings.',
+			base: 'https://www.louiechristie.com/',
 			author: {
-				name: 'Your Name',
+				name: 'Louie Christie',
 			},
 		},
 	});
