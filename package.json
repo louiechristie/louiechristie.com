@@ -13,7 +13,7 @@
 		"debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy",
 		"debugstart": "cross-env DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
 		"benchmark": "cross-env DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
-		"import": "node ./node_modules/@11ty/import/cli.js wordpress https://louiechristie.wordpress.com/ --overwrite --output=/content/blog/ --cacheduration=1h",
+		"import": "node ./node_modules/@11ty/import/cli.js wordpress https://louiechristie.wordpress.com/ --overwrite --output=/content/blog/ --cacheduration=6h",
 		"test": "npx playwright test --max-failures=1",
 		"debug:test": "npx playwright test --ui",
 		"debug:github-action": "open -a Docker && act --container-architecture linux/amd64 --artifact-server-path ~/Desktop/artifacts",

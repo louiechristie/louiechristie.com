@@ -1,0 +1,6 @@
+# Only used for sitemaps
+# Relying on Cloudflare to modify robots.txt with allow/disallow settings
+# Because of AI crawlers
+
+Sitemap: http://www.louiechristie.com/sitemap.xml
+Sitemap: http://www.louiechristie.com/memes/sitemap.xml
