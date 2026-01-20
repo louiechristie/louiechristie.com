@@ -38,4 +38,4 @@ The trick for making the trailer was to write TV guide descriptions of each epis
 
 **You can find more videos and links [on my brother Alec Christie’s web site](http://www.alecchristie.com/performer) and [my comedy website](https://comedy.louiechristie.com).**
 
-The tune in the trailer is Lover Killer by [The Foxes.](http://www.thefoxesband.co.uk/)
+The tune in the trailer is [Lover Killer by The Foxes](https://www.youtube.com/watch?v=MfFcKiOyqhY)[.](http://www.thefoxesband.co.uk/)
