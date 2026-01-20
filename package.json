@@ -1,37 +1,55 @@
 {
-  "name": "louiechristie.com",
-  "version": "0.2.0",
-  "description": "## Setup local development",
-  "type": "module",
-  "main": "index.js",
-  "scripts": {
-    "watch": "eleventy --serve",
-    "build": "eleventy --quiet",
-    "serve": "cd _site && npx serve --no-request-logging && cd ..",
-    "start": "npx @11ty/eleventy --serve --quiet",
-    "test": "npx playwright test --max-failures=1",
-    "debug:test": "npx playwright test --ui",
-    "debug:github-action": "open -a Docker && act --container-architecture linux/amd64 --artifact-server-path ~/Desktop/artifacts",
-    "compare": "diff $INIT_CWD/_tmp/bak $INIT_CWD/_site --color --recursive --exclude={.*,README*,readme*,start,deploy,shower-of-comedy,travel-guide} --ignore-all-space --strip-trailing-cr",
-    "deploy:trivia-trundle": "rsync -avhP --delete ~/Documents/trivia-trundle/dist/ ~/Documents/louiechristie.com/_site/trivia-trundle",
-    "deploy:weeks-to-go": "rsync -avhP --delete ~/Documents/weeks-to-go/build/ ~/Documents/louiechristie.com/_site/weeks-to-go",
-    "deploy:intro-to-web-dev-course": "rsync -avhP ./_tmp/bak/intro-to-web-dev-course ~/Documents/louiechristie.com/_site/intro-to-web-dev-course",
-    "deploy:blog": "rsync -avhP ./_tmp/bak/blog ~/Documents/louiechristie.com/_site/blog",
-    "deploy:subfolders": "npm run deploy:weeks-to-go && npm run deploy:trivia-trundle && npm run deploy:intro-to-web-dev-course && npm run deploy:blog",
-    "deploy": "npm run deploy:subfolders && ~/Documents/louiechristie.com/node_modules/wrangler/bin/wrangler.js pages deploy _site"
-  },
-  "keywords": [],
-  "author": "Louie Christie",
-  "license": "UNLICENSED",
-  "devDependencies": {
-    "@11ty/eleventy": "^3.1.2",
-    "@playwright/test": "^1.57.0",
-    "@types/node": "^24.10.3",
-    "eleventy-auto-cache-buster": "^0.8.3",
-    "wrangler": "^4.54.0"
-  },
-  "dependencies": {
-    "@11ty/eleventy-img": "^6.0.4",
-    "dotenv": "^17.2.3"
-  }
+	"name": "louiechristie.com",
+	"version": "0.3.0",
+	"description": "Repository for louiechristie.com homepage and blog",
+	"type": "module",
+	"scripts": {
+		"build": "npx @11ty/eleventy",
+		"build-nocolor": "cross-env NODE_DISABLE_COLORS=1 npx @11ty/eleventy",
+		"build-ghpages": "npx @11ty/eleventy --pathprefix=/eleventy-base-blog/",
+		"serve": "cd _site && npx serve --no-request-logging && cd ..",
+		"start": "npx @11ty/eleventy --serve --quiet",
+		"start-ghpages": "npx @11ty/eleventy --pathprefix=/eleventy-base-blog/ --serve --quiet",
+		"debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy",
+		"debugstart": "cross-env DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
+		"benchmark": "cross-env DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
+		"import": "node ./node_modules/@11ty/import/cli.js wordpress https://louiechristie.wordpress.com/ --output=/content/blog/ --overwrite",
+		"test": "npx playwright test --max-failures=1",
+		"debug:test": "npx playwright test --ui",
+		"debug:github-action": "open -a Docker && act --container-architecture linux/amd64 --artifact-server-path ~/Desktop/artifacts",
+		"compare": "diff $INIT_CWD/_tmp/bak $INIT_CWD/_site --color --recursive --exclude={.*,README*,readme*,start,deploy,shower-of-comedy,travel-guide} --ignore-all-space --strip-trailing-cr",
+		"deploy:trivia-trundle": "rsync -avhP --delete ~/Documents/trivia-trundle/dist/ ~/Documents/louiechristie.com/_site/trivia-trundle",
+		"deploy:weeks-to-go": "rsync -avhP --delete ~/Documents/weeks-to-go/build/ ~/Documents/louiechristie.com/_site/weeks-to-go",
+		"deploy:intro-to-web-dev-course": "rsync -avhP ./_tmp/bak/intro-to-web-dev-course/ ~/Documents/louiechristie.com/_site/intro-to-web-dev-course",
+		"deploy:memes": "rsync -avhP ~/Documents/memes/frontend/out/ ~/Documents/louiechristie.com/_site/memes",
+		"deploy:subfolders": "npm run deploy:weeks-to-go && npm run deploy:trivia-trundle && npm run deploy:intro-to-web-dev-course && npm run deploy:memes",
+		"deploy": "npm run import && npm run build && npm run deploy:subfolders && npm run test && ~/Documents/louiechristie.com/node_modules/wrangler/bin/wrangler.js pages deploy _site"
+	},
+	"keywords": [],
+	"author": "Louie Christie",
+	"license": "UNLICENSED",
+	"engines": {
+		"node": ">=18"
+	},
+	"devDependencies": {
+		"@11ty/eleventy": "^3.1.2",
+		"@11ty/eleventy-img": "^6.0.4",
+		"@11ty/eleventy-navigation": "^1.0.4",
+		"@11ty/eleventy-plugin-rss": "^2.0.4",
+		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
+		"@11ty/import": "^1.0.16",
+		"@playwright/test": "^1.57.0",
+		"@types/node": "^24.10.3",
+		"cross-env": "^7.0.3",
+		"dotenv": "^17.2.3",
+		"eleventy-auto-cache-buster": "^0.8.3",
+		"luxon": "^3.6.1",
+		"prismjs": "^1.30.0",
+		"wrangler": "^4.54.0",
+		"zod": "^3.25.67",
+		"zod-validation-error": "^3.5.2"
+	},
+	"dependencies": {
+		"@zachleat/heading-anchors": "^1.0.5"
+	}
 }
