@@ -80,7 +80,7 @@ export default async function (eleventyConfig) {
 		stylesheet: 'pretty-atom-feed.xsl',
 		templateData: {
 			eleventyNavigation: {
-				key: 'RSS Feed',
+				key: 'Feed',
 				order: 4,
 			},
 		},
