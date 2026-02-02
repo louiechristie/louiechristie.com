@@ -15,19 +15,13 @@
         </h1>
       {% endif %}
     </div>
+
+    {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}	
+    <h2 class="visually-hidden">Top level navigation menu</h2>
     <ul class="nav">
-      <li class="nav-item">
-        <a class="nav-link" href="/" {% if currentUrl === '/' %} aria-current="page" {% endif %}>home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/adventure/" {% if 'adventure' in currentUrl %} aria-current="page" {% endif %}>adventure</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/tech/" {% if 'tech' in currentUrl %} aria-current="page" {% endif %}>tech</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://www.louiechristie.com/comedy/">comedy</a>
-      </li>
+    {%- for entry in collections.all | eleventyNavigation %}
+      <li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
+    {%- endfor %}
     </ul>
   </nav>
 </header>

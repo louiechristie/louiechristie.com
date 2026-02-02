@@ -10,6 +10,7 @@ media:
 date: 2019-04-09T12:40:38.000Z
 eleventyNavigation:
   key: 'About'
+  parent: 'Blog'
   order: 2
 ---
 
