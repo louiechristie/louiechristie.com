@@ -210,6 +210,8 @@ h6,
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   color: var(--heading-color);
   text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1rem;
 }
 
 
@@ -221,8 +223,6 @@ h6,
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-block-start: 1em;
-    margin-block-end: 1rem;
   }
 
   .site-description-formatter {
