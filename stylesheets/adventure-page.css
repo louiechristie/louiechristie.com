@@ -1,40 +1,6 @@
 /* Adventure page */
-:root {
-  /* Colors */
-  --main-color: #0e64b5;
-  --analogous-color: #0e11b5;
-  --complementary-color: #b50e11;
-  --tertiary-color: #008400;
-  --less-saturated-color: #070707;
-  --monochromacy-color: #3b3b3b;
-  --black-color: #000000;
-
-  --light-grey-color: rgba(59, 59, 59, 0.4);
-  --dark-grey-color: var(--monochromacy-color);
-  --grey-color: var(--less-saturated-color);
-
-  --link-color: var(--dark-grey-color);
-  --link-visited-color: var(--dark-grey-color);
-  --nav-color: var(--dark-grey-color);
-  --heading-color: var(--dark-grey-color);
-
-  --adventure-color: var(--main-color);
-  --developer-color: var(--tertiary-color);
-  --comedy-color: var(--complementary-color);
-
-  /* Breakpoints */
-  --extra-small: 320px;
-  --small: 490px;
-  --medium: 1024px;
-  --large: 1280px;
-  --extra-large: 1920px;
-}
-
-h1 {
-  font-size: 40px;
-  padding-bottom: 0;
-  margin-bottom: 0;
-}
+/* Adventure page */
+:root {}
 
 .adventure-page {
   display: flex;
@@ -147,26 +113,6 @@ figcaption p sub {
 }
 
 @media all and (min-width: 1024px) {
-  .adventure-headline {
-    grid-area: adventure-headline;
-  }
-
-  .it-headline {
-    grid-area: it-headline;
-  }
-
-  .comedy-headline {
-    grid-area: comedy-headline;
-  }
-
-  .apple-quote {
-    grid-area: apple-quote;
-  }
-
-  .bottom_cta {
-    grid-area: bottom_cta;
-  }
-
   .grid {
     display: grid;
     grid-row-gap: 2rem;
@@ -181,11 +127,6 @@ figcaption p sub {
 .fast {
   transform: scale(1, 0.92);
   /* W3C */
-}
-
-.title {
-  max-width: calc(100% - 40px);
-  height: auto;
 }
 
 .middle {

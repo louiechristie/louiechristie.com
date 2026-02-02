@@ -53,7 +53,7 @@
   --nav-color: var(--black-color);
   --heading-color: var(--monochromacy-color);
 
-  --adventure-color: var(--complementary-color);
+  --adventure-color: var(--main-color);
   --developer-color: var(--main-color);
   --comedy-color: var(--complementary-color);
   --comedy-less-saturated-color: rgba(224, 40, 40, 0.4);
