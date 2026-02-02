@@ -6,6 +6,7 @@
 		<title>{{ title | safe or metadata.title | safe }}</title>
 		<meta name="description" content="{{ description or metadata.description }}">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title | safe}}">
+    {% if canonical %}<link rel="canonical" href="{{ canonical }}"> {% else %}<link rel="canonical" href="https://www.louiechristie.com{{ page.url }}">{% endif %}
 
 		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
 		{#- <meta name="generator" content="{{ eleventy.generator }}"> #}
