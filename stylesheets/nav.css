@@ -3,10 +3,6 @@ header {
   padding-bottom: 1em;
 }
 
-header.frontpage {
-  border-bottom: none;
-}
-
 .image-heading {
   margin-block-end: 0;
   margin-block-start: 0;
