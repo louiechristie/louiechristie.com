@@ -60,7 +60,8 @@ nav li {
   margin-right: 12px;
 }
 
-[aria-current] {
+[aria-current],
+.selected {
   font-weight: bold;
 }
 

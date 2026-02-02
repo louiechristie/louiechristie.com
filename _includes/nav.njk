@@ -1,21 +1,5 @@
-{% set currentUrl = page.url %}
 <header>
   <nav>
-    <div class="center">
-      {% if currentUrl === '/' %}
-        <h1 class="image-heading">
-      {% endif %}
-        <a href="/"><img
-            class="logo"
-            src="/images/handwritten_louie_christie_600x220.jpg"
-            alt="Louie Christie"
-            title="Louie Christie (handwritten logo)"/>
-        </a>
-      {% if currentUrl === '/' %}
-        </h1>
-      {% endif %}
-    </div>
-
     {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}	
     <h2 class="visually-hidden">Top level navigation menu</h2>
     <ul class="nav">
