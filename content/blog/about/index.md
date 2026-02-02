@@ -9,7 +9,7 @@ media:
   featuredImage: assets/louie-christie-react-native-conference-2018.jpg
 date: 2019-04-09T12:40:38.000Z
 eleventyNavigation:
-  key: 'About'
+  key: 'About Blog'
   parent: 'Blog'
   order: 2
 ---

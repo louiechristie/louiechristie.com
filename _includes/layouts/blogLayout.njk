@@ -36,6 +36,10 @@
 		<script type="module">{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}</script>
 {% endblock %}
 
+{% block header %}
+  {% include "blog/blog-nav.njk" %}
+{% endblock %}
+
 {% block main %}
 		<main id="main">
 			<heading-anchors>

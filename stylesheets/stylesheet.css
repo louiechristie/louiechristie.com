@@ -45,6 +45,7 @@
   --black-color: #000000;
 
   --light-grey-color: #555555;
+  --color-gray-20: #e0e0e0;
   --dark-grey-color: var(--monochromacy-color);
   --grey-color: var(--black-color);
 
