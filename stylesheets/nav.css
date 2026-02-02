@@ -1,6 +1,14 @@
 header {
-  border-bottom: 1px dashed var(--color-gray-20);
   padding-bottom: 1em;
+}
+
+header nav ul {
+  border-top: 1px dashed var(--color-gray-20);
+}
+
+header {
+  border-bottom: 1px dashed var(--color-gray-20);
+
 }
 
 .image-heading {

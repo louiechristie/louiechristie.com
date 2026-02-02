@@ -2,13 +2,14 @@
   <nav>
     {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}	
     <h2 class="visually-hidden">Top level navigation menu</h2>
+
     <ul class="nav">
     {%- for entry in collections.all | eleventyNavigation %}
-      {%- set isHomePage = entry.url == "/" %}
-      <li class="nav-item {% if isHomePage %}selected{% endif %}">
+      {%- set isSelected = page.url == entry.url %}
+      <li class="nav-item {% if isSelected %}selected{% endif %}">
         <a 
           href="{{ entry.url }}"
-          {% if isHomePage %} aria-current="page"{% endif %}
+          {% if isSelected %} aria-current="page"{% endif %}
         >
           {{ entry.title }}
         </a>
@@ -16,6 +17,19 @@
     {%- endfor %}
     </ul>
 
+<div>
+    <ul>
+      <li class="nav-item">
+        <a class="nav-link" href="/tech/experiments/" {% if currentUrl == "/experiments/" %} aria-current="page" {% endif %}>Inventions</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/memes/" {% if currentUrl == "/memes/" %} aria-current="page" {% endif %}>Shorts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/blog/" {% if currentUrl == "/blog/" %} aria-current="page" {% endif %}>Blog</a>
+      </li>
+    <ul>
+      </div>
     <h2 class="visually-hidden">Secondary level navigation menu</h2>
     
     {% include "about/about-nav.njk" %}

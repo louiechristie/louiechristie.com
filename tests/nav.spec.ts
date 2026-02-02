@@ -34,10 +34,10 @@ const navigations: Navigation[] = [
 		},
 	},
 	{
-		text: 'About Me',
+		text: 'About',
 		to: '/about/',
 		expected: {
-			h1: 'About Me',
+			h1: 'About',
 		},
 	},
 	{
@@ -94,7 +94,8 @@ test.describe('nav links', () => {
 			test.beforeEach(async ({ page }) => {
 				link = await page
 					.getByRole('navigation')
-					.getByRole('link', { name: text, exact: true });
+					.getByRole('link', { name: text, exact: true })
+					.first();
 
 				await link.click();
 			});

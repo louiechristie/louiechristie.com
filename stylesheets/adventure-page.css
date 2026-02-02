@@ -44,13 +44,6 @@ h2.adventure {
   }
 }
 
-@media all and (min-width: 960px) {
-  h2 {
-    padding-top: 1em;
-    padding-bottom: 1em;
-  }
-}
-
 h2.surfing {
   color: var(--adventure-color);
 }
