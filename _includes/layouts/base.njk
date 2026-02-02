@@ -1,12 +1,7 @@
-<!doctype html>
-<html lang="{{ metadata.language }}">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>{{ title | safe or metadata.title | safe }}</title>
-		<meta name="description" content="{{ description or metadata.description }}">
+{% extends "layouts/layout.njk" %}
+
+{% block customHeadExtras %}  
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title | safe}}">
-    {% if canonical %}<link rel="canonical" href="{{ canonical }}"> {% else %}<link rel="canonical" href="https://www.louiechristie.com{{ page.url }}">{% endif %}
 
 		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
 		{#- <meta name="generator" content="{{ eleventy.generator }}"> #}
@@ -41,16 +36,11 @@
 
 		{#- Add the heading-anchors web component to the JavaScript bundle #}
 		<script type="module">{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}</script>
-	</head>
-	<body>
-		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+{% endblock %}
 
-		<header>
-			{% include "nav.njk" %}
-
-			<a href="/" class="home-link">{{ title | safe or metadata.title | safe }}</a>
-
-			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+{% block header %}
+  	{% include "nav.njk" %}
+  	{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
 			<nav>
 				<h2 class="visually-hidden">Top level navigation menu</h2>
 				<ul class="nav">
@@ -59,27 +49,15 @@
 				{%- endfor %}
 				</ul>
 			</nav>
-		</header>
+{% endblock %}
 
+{% block main %}
 		<main id="main">
 			<heading-anchors>
 				{{ content | safe }}
 			</heading-anchors>
 		</main>
-
-		<footer>
-			<footer>
-      {% block footer %}
-			<p>
-				<a href="https://www.louiechristie.com/"><- Back to louiechristie.com</a>
-			</p>
-			{% include 'footer.njk' %}
-
-			{% endblock %}
-
-		</footer>
-
 		<!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
 		<script type="module" src="{% getBundleFileUrl "js" %}"></script>
-	</body>
-</html>
+{% endblock %}
+

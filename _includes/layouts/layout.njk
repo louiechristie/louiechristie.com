@@ -21,10 +21,18 @@
     {% block customHeadExtras %}{% endblock %}
   </head>
   <body>
+    <a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
     {% block header %}
       {% include "nav.njk" %}
     {% endblock %}
-    {{ content | safe }}
+
+    {% block main %}
+	  <main id="main">
+    	{{ content | safe }}
+    </main>
+
+    {% endblock %}
+
     <footer>
       {% block footer %}
         {% include 'footer.njk' %}
