@@ -86,14 +86,14 @@ export default async function (eleventyConfig) {
 		},
 		collection: {
 			name: 'posts',
-			limit: 10,
+			limit: 50,
 		},
 		metadata: {
 			language: 'en',
-			title: 'louiechristie.com',
+			title: 'Louie Learns Blog',
 			subtitle:
 				'This is a blog about my creative technology projects and associated rantings.',
-			base: 'https://www.louiechristie.com/',
+			base: 'https://www.louiechristie.com/blog/',
 			author: {
 				name: 'Louie Christie',
 			},
