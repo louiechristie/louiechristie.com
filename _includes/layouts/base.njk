@@ -36,6 +36,8 @@
 
 		{#- Renders the CSS bundle using a separate file, if you can't set CSP directive style-src: 'unsafe-inline' #}
 		{#- <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
+		
+		<link rel="stylesheet" href="/stylesheets/nav.css">
 
 		{#- Add the heading-anchors web component to the JavaScript bundle #}
 		<script type="module">{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}</script>
@@ -44,6 +46,8 @@
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
 
 		<header>
+			{% include "nav.njk" %}
+
 			<a href="/" class="home-link">{{ title | safe or metadata.title | safe }}</a>
 
 			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
@@ -64,9 +68,15 @@
 		</main>
 
 		<footer>
+			<footer>
+      {% block footer %}
 			<p>
 				<a href="https://www.louiechristie.com/"><- Back to louiechristie.com</a>
 			</p>
+			{% include 'footer.njk' %}
+
+			{% endblock %}
+
 		</footer>
 
 		<!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
