@@ -4,16 +4,16 @@
 	"description": "Repository for louiechristie.com homepage and blog",
 	"type": "module",
 	"scripts": {
-		"build": "npx @11ty/eleventy",
+		"build": "npm run import && npx @11ty/eleventy",
 		"build-nocolor": "cross-env NODE_DISABLE_COLORS=1 npx @11ty/eleventy",
 		"build-ghpages": "npx @11ty/eleventy --pathprefix=/eleventy-base-blog/",
 		"serve": "cd _site && npx serve --no-request-logging && cd ..",
-		"start": "npx @11ty/eleventy --serve",
+		"start": "npm run import && npx @11ty/eleventy --serve",
 		"start-ghpages": "npx @11ty/eleventy --pathprefix=/eleventy-base-blog/ --serve --quiet",
 		"debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy",
 		"debugstart": "cross-env DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
 		"benchmark": "cross-env DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
-		"import": "node ./node_modules/@11ty/import/cli.js wordpress https://louiechristie.wordpress.com/ --overwrite --output=/content/blog/ --cacheduration=6h",
+		"import": "node ./node_modules/@11ty/import/cli.js wordpress https://louiechristie.wordpress.com/ --overwrite --output=/content/blog/ --cacheduration=1m",
 		"test": "npx playwright test --max-failures=1",
 		"debug:test": "npx playwright test --ui",
 		"debug:github-action": "open -a Docker && act --container-architecture linux/amd64 --artifact-server-path ~/Desktop/artifacts",
@@ -23,7 +23,7 @@
 		"deploy:intro-to-web-dev-course": "rsync -avhP ./_tmp/bak/intro-to-web-dev-course/ ~/Documents/louiechristie.com/_site/intro-to-web-dev-course",
 		"deploy:memes": "rsync -avhP ~/Documents/memes/frontend/out/ ~/Documents/louiechristie.com/_site/memes",
 		"deploy:subfolders": "npm run deploy:weeks-to-go && npm run deploy:trivia-trundle && npm run deploy:intro-to-web-dev-course && npm run deploy:memes",
-		"deploy": "npm run import && npm run build && npm run deploy:subfolders && npm run test && ~/Documents/louiechristie.com/node_modules/wrangler/bin/wrangler.js pages deploy _site"
+		"deploy": "npm run build && npm run deploy:subfolders && npm run test && ~/Documents/louiechristie.com/node_modules/wrangler/bin/wrangler.js pages deploy _site"
 	},
 	"keywords": [],
 	"author": "Louie Christie",
