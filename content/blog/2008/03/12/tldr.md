@@ -18,4 +18,4 @@ metadata:
   type: wordpressapi-hosted
   url: https://louiechristie.wordpress.com/2008/03/12/tldr/
 ---
-**I’m smart, talented, modest, and available for hire. Feel free to [get in touch](http://blog.louiechristie.com/contact/) if you like what you see. [More about me…](https://blog.louiechristie.com/about/)**
+Welcome to my blog. I’m smart, talented, modest, and available for hire. Feel free to [get in touch](https://www.louiechristie.com/contact/) if you like what you see. [More about me…](https://www.louiechristie.com/about/)
