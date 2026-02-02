@@ -23,7 +23,7 @@
   <body>
     <a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
     <div class="center">
-      {% if currentUrl === '/' %}
+      {% if page.url === '/' %}
         <h1 class="image-heading">
       {% endif %}
         <a href="/"><img
@@ -32,7 +32,7 @@
             alt="Louie Christie"
             title="Louie Christie (handwritten logo)"/>
         </a>
-      {% if currentUrl === '/' %}
+      {% if page.url === '/' %}
         </h1>
       {% endif %}
     </div>
