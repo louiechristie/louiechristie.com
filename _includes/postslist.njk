@@ -4,8 +4,8 @@
 		<p>
 			<a href="{{ post.url }}" class="postlist-link">
 				{%- set featuredImage = post.data.metadata.featuredImage %}
-				{%- if featuredImage %}<img src="{{ featuredImage }}" alt="Featured image for {{ post.data.title }}">{% endif %}
-				{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}
+				{%- if featuredImage %}<img src="{{ featuredImage }}" alt="Featured image for {{ post.data.title | safe }}">{% endif %}
+				{% if post.data.title %}{{ post.data.title | safe }}{% else %}<code>{{ post.url }}</code>{% endif %}
 			</a>
 			<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
 		</p>
