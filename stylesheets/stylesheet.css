@@ -33,6 +33,10 @@
   width: 1px;
 }
 
+@view-transition {
+  navigation: auto;
+}
+
 :root {
   /* Colors */
   --main-color: #0e64b5;
