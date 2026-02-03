@@ -21,6 +21,6 @@ metadata:
 ---
 **Update 2025:** This website from 2014 was used for a number of years before the charity stopped using it. [Link to an archived version of the website from 2014.](https://web.archive.org/web/20160311215624/http://londoncatering.org.uk/)
 
-Working for a charity in north London I made a website for their catering service [http://www.londoncatering.org.uk.](http://www.londoncatering.org.uk. )  I used the technology WordPress to build the site so that the community group could easily log in and update the site.
+Working for a charity in north London I made a website for their catering service.  I used the technology WordPress to build the site so that the community group could easily log in and update the site.
 
 I attended meetings with the community group to get ideas for the website and work in a collaborative way.  Afterwards I ran workshops in the use of WordPress so that the group would be able to updated the site.  The only complicated part of the site is a little bit of custom CSS code I added to make the fonts bigger.
