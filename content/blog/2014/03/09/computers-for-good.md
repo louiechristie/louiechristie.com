@@ -30,4 +30,4 @@ I grew up playing around on a ZX Spectrum computer at home and a BBC Micro at sc
 
 These days PCs hide programming away and kids are less inclined to delve under the hood.  I hope a new generation will grow up programming on the Raspberry Pi, like I did on the BBC Micro.
 
-I’ve been playing around with a Raspberry Pi and as a project I set it up as [a Linux web server with a WordPress blog](http://raspberrypi.louiechristie.com) on it.
+I’ve been playing around with a Raspberry Pi and as a project I set it up as a Linux web server with a WordPress blog on it.
