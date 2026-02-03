@@ -18,11 +18,9 @@ metadata:
   type: wordpressapi-hosted
   url: https://louiechristie.wordpress.com/2018/11/30/choosing-a-software-project/
 ---
-**After buying my first flat, (a London flat is like a US apartment, but smaller, and more** **expensive****) and frantically developing websites and apps for a failing (now failed) technology start-up company, I was made redundant.**
+After buying my first flat, (a London flat is like a US apartment, but smaller, and more expensive) and frantically developing websites and apps for a failing (now failed) technology start-up company, I was made redundant.
 
-**I suddenly had some free time to work on my own software project,** **bu****y some** **furniture****, blog, and stop living like some** **cross between** **Mark** **Zuckerberg** **and [Renton from Trainspotting](https://www.imdb.com/title/tt0117951/mediaviewer/rm3666984448).**
-
-**But** **what software project should I make?**
+I suddenly had some free time to work on my own software project, buy some furniture, blog, and stop living like some cross between Mark Zuckerberg and [Renton from Trainspotting](https://www.imdb.com/title/tt0117951/mediaviewer/rm3666984448).
 
 Goals of the project:
 
@@ -32,11 +30,11 @@ Goals of the project:
 4.  Build a website and app using the same codebase
 5.  \[optional\] Make something people want, and will pay for
 
-I spent ages trying to think of a thing that people want. Most of my ideas had already been done e.g. [The Great British Toilet Map](https://www.toiletmap.org.uk/). After a lot of research into start-ups over the years including recently seeing serial tech investor Andrew Lockley, tearing apart business ideas in a Dragon’s Den (or Shark Tank) style at the ‘London Tech Day’ and reading Lockley’s blog post [Top 10 reasons why your business plan is pants](https://andrewlockley.com/investments/top-10-reasons-why-your-business-plan-is-pants) I came to the conclusion that, at least for now, I’m better off making a personal portfolio project that will be enjoyable to make, rather than trying to create a profitable product.
+I spent ages trying to think of a thing that people want. Most of my ideas had already been done e.g. [The Great British Toilet Map](https://www.toiletmap.org.uk/). After a lot of research into start-ups over the years including recently seeing serial tech investor Andrew Lockley, tearing apart business ideas in a Dragon’s Den (or Shark Tank) style at the ‘London Tech Day’ and reading Lockley’s blog post ‘[top 10 reasons why your business plan is pants](https://andrewlockley.com/investments/top-10-reasons-why-your-business-plan-is-pants)‘ I came to the conclusion that, at least for now, I’m better off making a personal portfolio project that will be enjoyable to make, rather than trying to create a profitable product.
 
 However, I took away one bit of advice from Lockley: you need to know your domain. Your domain is your specialist subject, the area of knowledge where you have a competitive advantage, and aren’t just winging it on optimism bias and wishful thinking.
 
-![Hopeful start-ups vying for each other's attention at London Tech Day](assets/img_1585-VL11IyOhdmSl.jpg)
+![Hopeful start-ups vying for each other's attention at London Tech Day](assets/img_1585-tWSBPH4KblTw.jpg)
 
 London Tech Day: Hopeful start-ups vying for each other’s (not customers’) attention.
 
@@ -84,7 +82,7 @@ I also noticed [The Great British Toilet Map](https://www.toiletmap.org.uk/) and
 
 Anyway, I was also scouting out local places where I can work from, the local libraries, cafes, co-working spaces and hipster hang-outs. Of which there are many; New Cross and Deptford are up-and-coming areas with a local art-student scene from Goldsmiths University.
 
-<iframe title="VideoPress Video Player" aria-label="VideoPress Video Player" width="500" height="281" src="https://video.wordpress.com/embed/xROIzdpM?preloadContent=metadata&amp;hd=0&amp;cover=1" frameborder="0" allowfullscreen="" allow="clipboard-write"></iframe>
+<iframe title="VideoPress Video Player" aria-label="VideoPress Video Player" width="500" height="281" src="https://video.wordpress.com/embed/xROIzdpM?cover=1&amp;preloadContent=metadata&amp;hd=0" frameborder="0" allowfullscreen="" data-resize-to-parent="true" allow="clipboard-write"></iframe>
 
 Please world, don’t make me go back to a grey office.
 
@@ -116,7 +114,9 @@ The funnest thing about it is the downstairs toilet has bookshelves in it. The c
 
 The Lewisham museum collection of oddities is not open to the public. The Lewisham Museum is unlikely to ever have a physical space open to the public. Perhaps I could do a museum website / app instead.
 
-I’d already been to the South London Horniman Museam looking for the shrunken heads and the [merman](https://img.horniman.ac.uk/deepzoom-mob.php?dzi=167/714/NH_82_5_223__001_DS.ptif). Sadly the heads weren’t on display (the Spanish volunteer gave me a weird look when I asked her about them) and the [merman](https://img.horniman.ac.uk/deepzoom-mob.php?dzi=167/714/NH_82_5_223__001_DS.ptif) is on loan/holiday in New York. But I did discover that the British EU passport is now a museum piece.
+I’d already been to the South London Horniman Museum looking for the shrunken heads and the [merman](https://img.horniman.ac.uk/deepzoom-mob.php?dzi=167/714/NH_82_5_223__001_DS.ptif). Sadly the heads weren’t on display (the Spanish volunteer gave me a weird look when I asked her about them) and the [merman](https://img.horniman.ac.uk/deepzoom-mob.php?dzi=167/714/NH_82_5_223__001_DS.ptif) is on loan/holiday in New York. But I did discover that the British EU passport is now a museum piece.
+
+###### @todo fix this Instagram embed
 
 > [
 > 
@@ -144,17 +144,15 @@ The idea is map based, which I like, and gives me an excuse to use [OpenStreetMa
 
 Actually there is one very good reason not to do the project. It’s very niche, it’s not something that people will want in great numbers and it is unlikely people will want to pay for it. It’s not really an idea that scales, unless, maybe I make it a technology platform and do something like sell fanchises to people in other geographical areas. And the local geeks, students, and hipsters are unlikely to pay for it.
 
-But you know what. FUCK IT.
+But you know what. F@CK IT.
 
-I’d enjoy making the project, I know the domain and the techology, and it will showcase my skills if nothing else. It could meet goals 1-4 just not goal 5. (At the [beginning of this blog post](https://blog.louiechristie.com/2018/11/30/choosing-a-software-project/), remember the goals?)
+I’d enjoy making the project, I know the domain and the technology, and it will showcase my skills if nothing else. It could meet goals 1-4 just not goal 5. (At the [beginning of this blog post](https://blog.louiechristie.com/2018/11/30/choosing-a-software-project/), remember the goals?)
 
 As someone once said: ‘screw it, lets do it.’
 
 (I forget who said it. Sounds like a self-help book title.)
 
 And the name for the project came quite quickly, a quick search showed it was available.[\[2\]](#Footnotes)
-
-> **Newcrossities**
 
 A portmanteau[\[1\]](#footnotes) of New Cross and curiousities. (Actually, it started as Newcrossity, but my girlfriend thought the plural works better, and she has an English degree waiting to be used. And it now reminds me of the Geocities website from the nineties, popular before the first dot com crash.)
 

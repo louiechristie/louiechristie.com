@@ -18,6 +18,7 @@
 	--text-color-link-visited: #17050F;
 
 	--syntax-tab-size: 2;
+
 }
 
 /* Global stylesheet */
@@ -122,12 +123,17 @@ main :first-child {
 }
 
 .links-nextprev {
-	display: flex;
-	justify-content: space-between;
-	gap: .5em 1em;
 	list-style: "";
 	border-top: 1px dashed var(--color-gray-20);
 	padding: 1em 0;
+}
+
+@media all and (min-width: 490px) {
+	.links-nextprev {
+		display: flex;
+		justify-content: space-between;
+		gap: .5em 1em;
+	}
 }
 
 .links-nextprev>* {
@@ -262,4 +268,17 @@ code {
 
 .post-metadata time {
 	margin-right: 1em;
+}
+
+blockquote {
+	max-width: 100%;
+	overflow: hidden;
+
+}
+
+blockquote p {
+	max-width: 100%;
+	;
+	overflow: hidden;
+
 }

@@ -72,7 +72,7 @@ Anyone reading this agree and want to help make it happen? Then [get in touch wi
 
 **UPDATE 2019-05-15:**
 
-Recently in a job interview I was asked ‘what is the main advantage of React over other libraries?’.
+Recently in a job interview I was asked ‘what is the main advantage of React over other libraries[?](https://twitter.com/dan_abramov/status/1208931536399028224)’.
 
 I said ‘community?’.
 
@@ -84,8 +84,6 @@ He said: ‘I honestly couldn’t answer that question’.
 
 I felt better.
 
-Then Dan said it the main advantage of React is probably a couple of new features coming out called concurrent mode and suspense…
-
-[https://twitter.com/dan\_abramov/status/1208931536399028224](https://twitter.com/dan_abramov/status/1208931536399028224)
+Then Dan said the main advantage of React is probably a couple of new features coming out called concurrent mode and suspense…
 
 You may also like: my blog post on [If you were to start React all over again what would you do? \[NSFW\]](https://www.louiechristie.com/blog/2018/11/30/if-you-were-to-start-react-all-over-again-what-would-you-do/)
