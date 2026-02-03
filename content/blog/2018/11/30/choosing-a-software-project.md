@@ -116,7 +116,7 @@ The Lewisham museum collection of oddities is not open to the public. The Lewish
 
 I’d already been to the South London Horniman Museum looking for the shrunken heads and the [merman](https://img.horniman.ac.uk/deepzoom-mob.php?dzi=167/714/NH_82_5_223__001_DS.ptif). Sadly the heads weren’t on display (the Spanish volunteer gave me a weird look when I asked her about them) and the [merman](https://img.horniman.ac.uk/deepzoom-mob.php?dzi=167/714/NH_82_5_223__001_DS.ptif) is on loan/holiday in New York. But I did discover that the British EU passport is now a museum piece.
 
-###### @todo fix this Instagram embed
+###### [@todo fix this Instagram embed](https://github.com/11ty/eleventy-import/issues/20)
 
 > [
 > 
