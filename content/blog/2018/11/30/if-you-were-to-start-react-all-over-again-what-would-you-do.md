@@ -108,9 +108,9 @@ React… back to React. What does this have to do with React? Well…
 
 ## **The Holy Grail**
 
-> “Play with Expo Snack.”
+> “Play with [Expo Snack](https://snack.expo.dev/).”
 
-“Play with Expo Snack.” This was almost the reply I sent immediately to your text of “if you were to start react all over again what would you do?”.
+“Play with [Expo Snack](https://snack.expo.dev/).” This was almost the reply I sent immediately to your text of “if you were to start react all over again what would you do?”.
 
 It was the first thing that came to mind. Before I thought about it, and ended up writing the nebulous Winter 2018 series of blog posts up to this one.
 
@@ -120,11 +120,15 @@ See the button on the right that says something like ‘Tap to play’. Never pr
 
 It works by you installing the Expo app on your phone, and then you scanning a QR code. For iOS, Expo Snack implies you can’t use QR codes. Ignore that. It’s just poorly worded. You can, you just need to open the official apple camera app (and not Expo app) and point it at the QR code.
 
-Anyway, the a nice thing about Expo Snack is that it has a search bar on the right and a load of components that you can drag and drop into your code. Which illustrates my point about components. Except that it isn’t working any more, bollocks, but it’s probably for the best. So you’ll have to look at the gif halfway through [this blog post from last Summer 2017](https://blog.expo.io/sketch-a-playground-for-react-native-16b2401f44a2) instead.
+Anyway, the a nice thing about Expo Snack is that it has a search bar on the right and a load of components that you can drag and drop into your code. Which illustrates my point about components. Except that it isn’t working any more, bollocks, but it’s probably for the best. So you’ll have to look at the gif instead:
 
-Look! Someone dragging and dropping code around. Like magic. Slotting pieces together like Lego. This is the holy grail. Re-usable components. That do one thing each. That can work together. Without weird bugs, crashes, global variables or side-effects. Without headfuckery, without losing billions of dollars on the stock market in seconds, or blowing up Chernobyl.
+[![](assets/1*3-yGQn4PPUJ6jtVrCmIKpg-FXsJSiXj5r2l.gif)](https://miro.medium.com/v2/resize:fit:2000/format:webp/1*3-yGQn4PPUJ6jtVrCmIKpg.gif)
 
-Edit code visually, like slotting together Lego? Sadly React is not that. The closest I’ve seen (that actually works, and isn’t some bastard absolute positioned, un-semantic, hack, that won’t work on different sized screens) is Scratch for kids, [see this video on DK Findout!](https://www.dkfindout.com/uk/computer-coding/how-do-i-start-coding/) (a children’s encyclopaedia website I once worked on, I hope kids are reading that, and not this.)
+Animation (GIF) taken from ‘Snack — A Playground for React Native’, Satyajit Sahoo, Mar 14, 2017
+
+Look! Someone dragging and dropping code around. Like magic. Slotting pieces together like Lego. This is the holy grail. Re-usable components. That do one thing each. That can work together. Without weird bugs, crashes, global variables or side-effects. Without headf@ckery, without losing billions of dollars on the stock market in seconds, or blowing up Chernobyl.
+
+Edit code visually, like slotting together Lego? Sadly React is not that. The closest I’ve seen (that actually works, and isn’t some bastard absolute positioned, un-semantic, hack, that won’t work on different sized screens) is Scratch for kids, [see this video from DK Penguin Books.](https://youtu.be/thbgMU5oo-U?si=fGdHHkT2UBXD-Fes&t=116) I used to work on DKFindout \[RIP\] a children’s encyclopaedia website. I hope kids are reading stuff like that, and not this.
 
 Possibly we’ll never get to editing code visually because of paradigm shifts and [The Law of Leaky Abstractions](https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/).
 
@@ -132,7 +136,7 @@ React isn’t the holy grail. But it’s close, and it’s in the right directio
 
 ## Look at the jigsaw puzzle box picture
 
-I was also going to text you about looking at some decent open source React code. Personally I think before you do a jigsaw, you should look at the picture on the box. And likewise, before you code React, look at some quality React code, like [todoMVC](http://todomvc.com/), if it had a Redux or [apollo-graph-persist](https://slides.com/kadikraman/offline-first#/) version, but it looks like I’ll have to cover that in another post. You don’t have to understand the code. But just take a peek. Think of it as inspiration. Especially look back when you are having a bad day at work, and remind yourself that clean code does exist, somewhere, out there. I wish I’d known about todoMVC earlier, and that it was a cloud data driven multi-page thing, more like a real world website you might work on.
+I was also going to text you about looking at some decent open source React code. Personally I think before you do a jigsaw, you should look at the picture on the box. And likewise, before you code React, look at some quality React code, like [todoMVC](http://todomvc.com/), <s>if it had</s> (update 2026 – it does now) a Redux or [apollo-graph-persist](https://slides.com/kadikraman/offline-first#/) version, but it looks like I’ll have to cover that in another post. You don’t have to understand the code. But just take a peek. Think of it as inspiration. Especially look back when you are having a bad day at work, and remind yourself that clean code does exist, somewhere, out there. I wish I’d known about todoMVC earlier, and that it was a cloud data driven multi-page thing, more like a real world website you might work on.
 
 Actually something like that exists from [Thinkster here.](https://github.com/gothinkster/react-redux-realworld-example-app) Look at it, bathe in the sunlight. You’ll probably never get paid to make clean code like this, and neither will I. But it’s comforting to know it’s out there.
 
