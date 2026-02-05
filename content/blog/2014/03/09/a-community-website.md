@@ -23,4 +23,4 @@ metadata:
 
 Working for a charity in north London I made a website for their catering service.  I used the technology WordPress to build the site so that the community group could easily log in and update the site.
 
-I attended meetings with the community group to get ideas for the website and work in a collaborative way.  Afterwards I ran workshops in the use of WordPress so that the group would be able to updated the site.  The only complicated part of the site is a little bit of custom CSS code I added to make the fonts bigger.
+I attended meetings with the community group to get ideas for the website and work in a collaborative way.  Afterwards I ran workshops in the use of WordPress so that the group would be able to update the site.  The only complicated part of the site is a little bit of custom CSS code I added to make the fonts bigger.
