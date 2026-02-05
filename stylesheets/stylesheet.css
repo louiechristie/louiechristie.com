@@ -53,9 +53,7 @@
   --dark-grey-color: var(--monochromacy-color);
   --grey-color: var(--black-color);
 
-  --link-color: var(--dark-grey-color);
-  --link-visited-color: var(--dark-grey-color);
-  --nav-color: var(--black-color);
+  --link-color: var(--main-color);
   --heading-color: var(--monochromacy-color);
 
   --adventure-color: var(--main-color);
@@ -201,7 +199,7 @@ figcaption li {
 }
 
 a {
-  color: var(--main-color);
+  color: var(--link-color);
 }
 
 h1,

@@ -1,6 +1,22 @@
 /* Adventure page */
-/* Adventure page */
-:root {}
+
+* {
+  box-sizing: border-box;
+}
+
+section {
+  margin-bottom: 1em;
+}
+
+.no-underline {
+  text-decoration: none;
+  color: initial;
+}
+
+.underline {
+  text-decoration: underline;
+  color: var(--link-color);
+}
 
 .adventure-page {
   display: flex;
@@ -15,7 +31,8 @@
 }
 
 .adventure-boxes {
-  margin-top: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
 }
 
 @media all and (min-width: 490px) {
@@ -44,7 +61,7 @@ h2.adventure {
   }
 }
 
-h2.surfing {
+h2 {
   color: var(--adventure-color);
 }
 
@@ -100,21 +117,8 @@ figcaption p sub {
   margin-bottom: 3em;
 }
 
-
-.grid {
+.column {
   max-width: 375px;
-}
-
-@media all and (min-width: 1024px) {
-  .grid {
-    display: grid;
-    grid-row-gap: 2rem;
-    grid-template-columns: 1fr;
-    max-width: initial;
-    grid-column-gap: 2rem;
-    align-content: center;
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
 .fast {
