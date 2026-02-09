@@ -33,6 +33,17 @@
   width: 1px;
 }
 
+.no-underline,
+a .no-underline {
+  text-decoration: none;
+  color: initial;
+}
+
+.underline {
+  text-decoration: underline;
+  color: var(--link-color);
+}
+
 @view-transition {
   navigation: auto;
 }

@@ -8,16 +8,6 @@ section {
   margin-bottom: 1em;
 }
 
-.no-underline {
-  text-decoration: none;
-  color: initial;
-}
-
-.underline {
-  text-decoration: underline;
-  color: var(--link-color);
-}
-
 .adventure-page {
   display: flex;
   flex-direction: column;
