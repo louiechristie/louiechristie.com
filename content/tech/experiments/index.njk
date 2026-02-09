@@ -16,8 +16,9 @@ eleventyNavigation:
                 most maintained to most abandoned):
             </p>
             <ul class="icon-list">
-                <li>
-                    <a class="icon-link" href="https://weather.louiechristie.com/">
+                <a class="icon-link no-underline"
+                   href="https://weather.louiechristie.com/">
+                    <li>
                         <img eleventy:ignore="eleventy:ignore"
                              width="36"
                              height="36"
@@ -25,25 +26,25 @@ eleventyNavigation:
                              alt="Icon of weather"
                              src="https://www.metoffice.gov.uk/webfiles/latest/images/icons/weather/3.svg"
                              class="weather-icon" />
-                        <!-- no space -->&nbsp;
-                    Weather Winton</a>
-                    - An experiment in user friendly weather forecasting (South London)
-                </li>
-                <li>
-                    <span class="icon-emoji">
-                        <a class="icon-link" href="/memes/">🙂</a>
-                    </span>
-                    <a href="/memes/">Memes</a>
-                    - Funny videos, images and quotes that are shareable in WhatsApp with previews. Technologies: Next.js (nextjs),
-                    React.js, JavaScript (some TypeScript)
-                </li>
-                <li>
-                    <span class="align-middle icon-emoji">
-                        <a class="icon-link" href="https://www.newcrossities.com/">🗺️</a>
-                    </span>
-                    <a href="https://www.newcrossities.com/">Newcrossities</a>
-                    - Quirky Travel Guide to South London and beyond
-                </li>
+                        <span class="underline">Weather Winton</span>
+                        - An experiment in user friendly weather forecasting (South London)
+                    </li>
+                </a>
+                <a class="icon-link no-underline" href="/memes/">
+                    <li>
+                        <span class="icon-emoji">🙂</span>
+                        <span class="underline">Memes</span>
+                        - Funny videos, images and quotes that are shareable in WhatsApp with previews. Technologies: Next.js (nextjs),
+                        React.js, JavaScript (some TypeScript)
+                    </li>
+                </a>
+                <a class="icon-link" href="https://www.newcrossities.com/">
+                    <li>
+                        <span class="align-middle icon-emoji">🗺️</span>
+                        <a href="https://www.newcrossities.com/">Newcrossities</a>
+                        - Quirky Travel Guide to South London and beyond
+                    </li>
+                </a>
                 <li>
                     <a href="/trivia-trundle/" class="icon-link">
                         <svg class="align-middle"
@@ -62,8 +63,8 @@ eleventyNavigation:
                     [Android]</a>
                     [iOS] [<a href="https://github.com/louiechristie/trivia-trundle">Source Code</a>]
                 </li>
-                <li>
-                    <a href="/weeks-to-go/" class="no-underline">
+                <a href="/weeks-to-go/" class="no-underline">
+                    <li>
                         <img eleventy:ignore="eleventy:ignore"
                              class="align-middle"
                              width="24"
@@ -71,32 +72,33 @@ eleventyNavigation:
                              role="presentation"
                              alt="Icon of a calendar"
                              src="/weeks-to-go/favicon.ico">
-                        &nbsp;<span class="underline">Weeks To Go</span></a> - ⚠️ Warning: may cause angst
+                        &nbsp;<span class="underline">Weeks To Go</span> - ⚠️ Warning: may cause angst
                     </li>
+                </a>
+                <a href="/blog/" class="icon-link">
                     <li>
-                        <a href="/blog/" class="icon-link">
-                            <span class="align-middle icon-emoji">📙</span>
-                        </a>
-                        <a href="/blog/">Creative Tech Blog</a>
+                        <span class="align-middle icon-emoji">📙</span>
+                        <span class="underline">Creative Tech Blog</span>
                     </li>
+                </a>
+                <a href="https://www.reckona.co.uk/" class="no-underline">
                     <li class="icon">
-                        <a href="https://www.reckona.co.uk/" class="no-underline">
-                            <img class="icon-image align-text-bottom"
-                                 width="24"
-                                 height="24"
-                                 role="presentation"
-                                 alt="Reckona logo"
-                                 src="https://www.reckona.co.uk/wp-content/uploads/2020/02/cropped-Favicon400x400-32x32.png" />
-                            &nbsp;<span class="underline">Reckona</span>
-                            - Took an app all the way from idea to app stores as technical co-founder and sole developer [iOS]
-                            [Android]
-                        </a>
+                        <img class="icon-image align-text-bottom"
+                             width="24"
+                             height="24"
+                             role="presentation"
+                             alt="Reckona logo"
+                             src="https://www.reckona.co.uk/wp-content/uploads/2020/02/cropped-Favicon400x400-32x32.png" />
+                        &nbsp;<span class="underline">Reckona</span>
+                        - Took an app all the way from idea to app stores as technical co-founder and sole developer [iOS]
+                        [Android]
                     </li>
-                </ul>
-            </section>
-        </main>
-    </div>
-    <script type="module"
-            src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js"
-            defer="defer"
-            crossorigin="crossorigin"></script>
+                </a>
+            </ul>
+        </section>
+    </main>
+</div>
+<script type="module"
+        src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js"
+        defer="defer"
+        crossorigin="crossorigin"></script>
