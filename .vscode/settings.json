@@ -16,5 +16,9 @@
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
 		"editor.formatOnSave": true
 	},
+	"[njk]": {
+		"editor.defaultFormatter": "monosans.djlint",
+		"editor.formatOnSave": true
+	},
 	"editor.formatOnSave": true
 }
