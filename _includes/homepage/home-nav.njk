@@ -11,26 +11,26 @@
                 </li>
             {%- endfor %}
         </ul>
-        <div>
-            <ul>
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="/tech/experiments/"
-                       {% if currentUrl == "/experiments/" %}aria-current="page"{% endif %}>Inventions</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="/memes/"
-                       {% if currentUrl == "/memes/" %}aria-current="page"{% endif %}>Shorts</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="/blog/"
-                       {% if currentUrl == "/blog/" %}aria-current="page"{% endif %}>Blog</a>
-                </li>
-                <ul>
-                </div>
-                <h2 class="visually-hidden">Secondary level navigation menu</h2>
-                {% include "about/about-nav.njk" %}
-            </nav>
-        </header>
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link"
+                   href="/tech/experiments/"
+                   {% if currentUrl == "/experiments/" %}aria-current="page"{% endif %}>Inventions</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"
+                   href="/memes/"
+                   {% if currentUrl == "/memes/" %}aria-current="page"{% endif %}>Shorts</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"
+                   href="/blog/"
+                   {% if currentUrl == "/blog/" %}aria-current="page"{% endif %}>Blog</a>
+            </li>
+        </ul>
+        <h2 class="visually-hidden">Secondary level navigation menu</h2>
+        <ul>
+            {% include "about/about-nav.njk" %}
+        </ul>
+    </nav>
+</header>
