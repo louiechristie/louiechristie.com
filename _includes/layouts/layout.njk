@@ -1,55 +1,59 @@
 <!DOCTYPE html>
 <html lang="en-gb">
-  <head>
-    <meta charset="utf-8"/>
-    <title>{{ title | safe or metadata.title | safe }}</title>
-    <meta name="description" content="{{ description or metadata.description }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="/stylesheets/stylesheet.css#{{ page.date }}">
-    <link rel="stylesheet" href="/stylesheets/nav.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
-    <link rel="icon" type="image/png" href="/favicon.ico"/>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
-    <link rel="mask-icon" href="/favicon.svg" color="black"/>
-    <meta name="monetization" content="$ilp.gatehub.net/484331722">
-    {% if canonical %}<link rel="canonical" href="{{ canonical }}"> {% else %}<link rel="canonical" href="https://www.louiechristie.com{{ page.url }}">{% endif %}
-    {% block customHeadExtras %}{% endblock %}
-  </head>
-  <body>
-    <a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
-    <div class="center">
-      {% if page.url === '/' %}
-        <h1 class="image-heading">
-      {% endif %}
-        <a href="/"><img
-            class="logo"
-            src="/images/handwritten_louie_christie_600x220.jpg"
-            alt="Louie Christie"
-            title="Louie Christie (handwritten logo)"/>
-        </a>
-      {% if page.url === '/' %}
-        </h1>
-      {% endif %}
-    </div>
-    {% block header %}
-      {% include "homepage/home-nav.njk" %}
-    {% endblock %}
-
-    {% block main %}
-	  <main id="main">
-    	{{ content | safe }}
-    </main>
-    {% endblock %}
-
-    <footer>
-      {% block footer %}
-        {% include 'footer.njk' %}
-      {% endblock %}
-    </footer>
-  </body>
-</html></footer></body></html>
+    <head>
+        <meta charset="utf-8" />
+        <title>{{ title | safe or metadata.title | safe }}</title>
+        <meta name="description"
+              content="{{ description or metadata.description }}">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="/stylesheets/stylesheet.css#{{ page.date }}">
+        <link rel="stylesheet" href="/stylesheets/nav.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;900&display=swap"
+              rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="icon" type="image/png" href="/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="mask-icon" href="/favicon.svg" color="black" />
+        <meta name="monetization" content="$ilp.gatehub.net/484331722">
+        {% if canonical %}
+            <link rel="canonical" href="{{ canonical }}">
+        {% else %}
+            <link rel="canonical" href="https://www.louiechristie.com{{ page.url }}">
+        {% endif %}
+        {% block customHeadExtras %}{% endblock %}
+    </head>
+    <body>
+        <a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+        <div class="center">
+            {% if page.url === '/' %}<h1 class="image-heading">{% endif %}
+                <a href="/">
+                    <img class="logo"
+                         src="/images/handwritten_louie_christie_600x220.jpg"
+                         alt="Louie Christie"
+                         title="Louie Christie (handwritten logo)" />
+                </a>
+                {% if page.url === '/' %}</h1>{% endif %}
+        </div>
+        {% block header %}
+            {% include "homepage/home-nav.njk" %}
+        {% endblock %}
+        {% block main %}
+            <main id="main">
+                {{ content | safe }}
+            </main>
+        {% endblock %}
+        <footer>
+            {% block footer %}
+                {% include 'footer.njk' %}
+            {% endblock %}
+        </footer>
+    </body>
+</html>
+</footer>
+</body>
+</html>

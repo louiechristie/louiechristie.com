@@ -1,13 +1,17 @@
 {% set currentUrl = page.url %}
 <nav>
-  <div>
-    <ul>
-      <li class="nav-item">
-        <a class="nav-link" href="/about/" {% if currentUrl == "/about/" %} aria-current="page" {% endif %}>About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/contact/" {% if 'contact' in currentUrl %} aria-current="page" {% endif %}>Contact</a>
-      </li>
-    </ul>
-  </div>
+    <div>
+        <ul>
+            <li class="nav-item">
+                <a class="nav-link"
+                   href="/about/"
+                   {% if currentUrl == "/about/" %}aria-current="page"{% endif %}>About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"
+                   href="/contact/"
+                   {% if 'contact' in currentUrl %}aria-current="page"{% endif %}>Contact</a>
+            </li>
+        </ul>
+    </div>
 </nav>

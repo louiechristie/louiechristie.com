@@ -1,12 +1,11 @@
 {% extends "layouts/layout.njk" %}
 {% block customHeadExtras %}
-  <link rel="manifest" href="/site.webmanifest"/>
-  <meta name="apple-mobile-web-app-title" content="Louie Christie"/>
-  <meta name="application-name" content="Louie Christie"/>
-  <meta name="msapplication-TileColor" content="#2d89ef"/>
-  <meta name="theme-color" content="#ffffff"/>
-
-  <style eleventy:ignore>
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="apple-mobile-web-app-title" content="Louie Christie" />
+    <meta name="application-name" content="Louie Christie" />
+    <meta name="msapplication-TileColor" content="#2d89ef" />
+    <meta name="theme-color" content="#ffffff" />
+    <style eleventy:ignore>
     .lqip {
       background-size: cover;
       background-position: center;
@@ -27,18 +26,15 @@
     .museum-of-comedy {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.2' baseProfile='tiny' width='400' height='300'%3E%0A%5B%3Crect x='0' y='0' width='399' height='299' fill='rgb(37,27,27)' fill-opacity='1'/%3E,%3Cg transform='translate(345 96) rotate(351) scale(107 54)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(155,129,175)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cg transform='translate(184 104) rotate(1) scale(42 36)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(213,30,42)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cg transform='translate(66 34) rotate(245) scale(56 130)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(4,1,0)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cg transform='translate(130 251) rotate(117) scale(111 198)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(0,0,0)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cg transform='translate(321 28) rotate(180) scale(71 65)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(58,105,48)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cg transform='translate(399 268) rotate(57) scale(66 103)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(0,0,0)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cg transform='translate(262 114) rotate(3) scale(28 28)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(67,71,202)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cg transform='translate(295 116) rotate(45) scale(23 31)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(183,128,171)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cg transform='translate(346 161) rotate(241) scale(45 33)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(35,49,86)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cg transform='translate(297 68) rotate(266) scale(21 24)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(167,60,45)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cg transform='translate(233 106) rotate(312) scale(63 21)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(54,45,64)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cg transform='translate(144 77) rotate(275) scale(18 35)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(43,28,17)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cg transform='translate(190 10) rotate(141) scale(13 17)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(81,52,85)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cg transform='translate(362 88) rotate(15) scale(12 49)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(34,25,43)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cg transform='translate(391 247) rotate(219) scale(39 102)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(0,0,0)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cg transform='translate(198 92) rotate(133) scale(16 13)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(255,4,23)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cg transform='translate(97 101) rotate(207) scale(23 30)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(67,51,29)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cg transform='translate(366 18) rotate(196) scale(7 66)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(30,222,106)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cg transform='translate(334 151) rotate(95) scale(41 9)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(59,118,220)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cg transform='translate(163 110) rotate(81) scale(22 35)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(160,24,29)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cg transform='translate(274 36) rotate(56) scale(25 15)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(0,153,52)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cg transform='translate(268 113) rotate(145) scale(22 18)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(56,90,215)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cg transform='translate(284 148) rotate(45) scale(13 28)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(135,13,49)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cg transform='translate(126 274) rotate(20) scale(132 122)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(4,0,0)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cg transform='translate(352 166) rotate(180) scale(11 39)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(23,9,0)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cpolygon points='399,135 399,36 370,155' fill='rgb(202,123,172)' fill-opacity='0.5019607843137255'/%3E,%3Cg transform='translate(271 174) rotate(182) scale(47 13)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(19,0,1)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cg transform='translate(204 143) rotate(115) scale(8 23)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(110,77,75)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cg transform='translate(25 222) rotate(193) scale(91 25)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(30,1,0)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cg transform='translate(202 54) rotate(12) scale(4 6)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(255,239,188)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cg transform='translate(148 207) rotate(350) scale(21 36)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(45,36,25)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cg transform='translate(61 157) rotate(162) scale(25 248)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(8,5,0)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cg transform='translate(274 209) rotate(231) scale(25 23)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(42,41,51)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cg transform='translate(381 106) rotate(347) scale(17 23)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(157,102,149)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cpolygon points='145,169 131,179 163,185' fill='rgb(118,94,85)' fill-opacity='0.5019607843137255'/%3E,%3Cg transform='translate(288 285) rotate(191) scale(61 24)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(22,0,0)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cg transform='translate(115 84) rotate(338) scale(28 30)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(46,32,18)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E,%3Cpolygon points='204,49 181,29 183,47' fill='rgb(140,94,141)' fill-opacity='0.5019607843137255'/%3E,%3Cg transform='translate(337 105) rotate(131) scale(11 9)'%3E%3Cellipse cx='0' cy='0' rx='1' ry='1' fill='rgb(179,124,167)' fill-opacity='0.5019607843137255'/%3E%3C/g%3E%5D%3C/svg%3E");
     }
-  </style>
-  <!-- Preload the LCP image with a high fetchpriority so it starts loading with the stylesheet. -->
-  <link
-    rel="preload"
-    fetchpriority="high"
-    as="image"
-    href="https://i.ytimg.com/vi/psBMnmz1G_Y/hqdefault.jpg"
-    type="image/jpeg">
+    </style>
+    <!-- Preload the LCP image with a high fetchpriority so it starts loading with the stylesheet. -->
+    <link rel="preload"
+          fetchpriority="high"
+          as="image"
+          href="https://i.ytimg.com/vi/psBMnmz1G_Y/hqdefault.jpg"
+          type="image/jpeg">
 {% endblock %}
-
 {% block header %}
-  {% include "homepage/home-nav.njk" %}
+    {% include "homepage/home-nav.njk" %}
 {% endblock %}
-
-  {{ content }}
+{{ content }}

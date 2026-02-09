@@ -1,27 +1,24 @@
 <header>
-  <nav>
-    {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}	
-    <h2 class="visually-hidden">Top level navigation menu</h2>
-    <ul class="nav">
-    {%- for entry in collections.all | eleventyNavigation %}
-      {%- set isBlogPage = entry.url == "/blog/" %}
-      <li class="nav-item {% if isBlogPage %}selected{% endif %}">
-        <a 
-          href="{{ entry.url }}"
-          {% if isBlogPage %} aria-current="page"{% endif %}
-        >
-          {{ entry.title }}
-        </a>
-      </li>
-    {%- endfor %}
-    </ul>
-
-    <h2 class="visually-hidden">Secondary level navigation menu</h2>
-    
-    <ul class="nav">
-    {%- for entry in collections.all | eleventyNavigation("Blog") %}
-      <li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
-    {%- endfor %}
-    </ul>
-  </nav>
+    <nav>
+        {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+        <h2 class="visually-hidden">Top level navigation menu</h2>
+        <ul class="nav">
+            {%- for entry in collections.all | eleventyNavigation %}
+                {%- set isBlogPage = entry.url == "/blog/" %}
+                <li class="nav-item {% if isBlogPage %}selected{% endif %}">
+                    <a href="{{ entry.url }}"
+                       {% if isBlogPage %}aria-current="page"{% endif %}>{{ entry.title }}</a>
+                </li>
+            {%- endfor %}
+        </ul>
+        <h2 class="visually-hidden">Secondary level navigation menu</h2>
+        <ul class="nav">
+            {%- for entry in collections.all | eleventyNavigation("Blog") %}
+                <li class="nav-item">
+                    <a href="{{ entry.url }}"
+                       {% if entry.url == page.url %}aria-current="page"{% endif %}>{{ entry.title }}</a>
+                </li>
+            {%- endfor %}
+        </ul>
+    </nav>
 </header>
