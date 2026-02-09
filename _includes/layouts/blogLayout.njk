@@ -28,10 +28,10 @@
     {#- <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
     {#- Add the heading-anchors web component to the JavaScript bundle #}
     <script type="module">{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}</script>
-{% endblock %}
+{% endblock customHeadExtras s %}
 {% block header %}
     {% include "blog/blog-nav.njk" %}
-{% endblock %}
+{% endblock header %}
 {% block main %}
     <main id="main">
         <heading-anchors>
@@ -40,4 +40,4 @@
     </main>
     <!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
     <script type="module" src="{% getBundleFileUrl "js" %}"></script>
-{% endblock %}
+{% endblock main %}
