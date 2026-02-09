@@ -14,7 +14,7 @@
 		"debugstart": "cross-env DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
 		"benchmark": "cross-env DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
 		"import": "node ./node_modules/@11ty/import/cli.js wordpress https://louiechristie.wordpress.com/ --overwrite --output=/content/blog/ --cacheduration=1d",
-		"lint": "djlint . --profile=nunjucks --extension njk --ignore='H005,H006,H007,H008,H009,H010,H011,H012,H013,H014,H015,H016,H019,H020,H021,H022,H023,H024,H026,H029,H030,H031,H033,J004,J018,T001,T002,T027,T028,T032,T034' --include='H025,T003,H037' && npm run format:check",
+		"lint": "djlint . --profile=nunjucks --extension njk --ignore='H006,H021,H026,H029,H030,H031,H033,J004,J018,T001,T002,T027,T028,T032,T034' --include='H025,T003,H037' && npm run format:check",
 		"format:check": "djlint . --profile=nunjucks --extension njk --check",
 		"format:fix": "djlint . --profile=nunjucks --extension njk --reformat",
 		"test": "npm run lint && npx playwright test --max-failures=1",
