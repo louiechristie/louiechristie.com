@@ -266,10 +266,6 @@ code {
 	margin: 0;
 }
 
-.post-metadata time {
-	margin-right: 1em;
-}
-
 blockquote {
 	max-width: 100%;
 	overflow: hidden;
