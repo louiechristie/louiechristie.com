@@ -114,7 +114,7 @@ export default async function (eleventyConfig) {
 		widths: ['auto', 400, 800, 1200],
 		htmlOptions: {
 			imgAttributes: {
-				sizes: '(min-width: 1024em) 400px, 100vw',
+				sizes: '(min-width: 1024px) 400px, 100vw',
 				// e.g. <img loading decoding> assigned on the HTML tag will override these values.
 				loading: 'lazy',
 				decoding: 'async',
