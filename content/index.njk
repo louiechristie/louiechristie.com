@@ -8,19 +8,18 @@ eleventyNavigation:
   order: 1
 ---
 
-<main>
-    <section class="center">
-        <div style="max-width: 70vw; text-wrap: pretty;">
-            <h1 style="font-size: 1.6em;">
-                {{ title }}
-                <a style="text-decoration: none;" href="/memes/%F0%9F%98%AC/">😬</a>
-            </h1>
-            <p style="text-align: center;">{{ description }}</p>
-        </div>
-    </section>
+<main class="center">
+    <h1 style="font-size: 1.6em;">
+        {{ title }}
+        <a style="text-decoration: none;" href="/memes/%F0%9F%98%AC/">😬</a>
+    </h1>
     {% include "homepage/headlines.njk" %}
-    <section class="apple-quote center">
-        <blockquote style="max-width: 640px;">
+    <div style="max-width: 640px; text-wrap: pretty;"">
+        <p>
+            <strong>{{ description }}</strong>
+        </p>
+        <hr>
+        <blockquote class="apple-quote">
             <q class="with-quote-marks">Steve [Jobs'] big thing was, um, he believed that Apple sat at the <a style="text-decoration: none;
            color: initial"
     href="https://commons.wikimedia.org/wiki/File:Haight-Ashbury_signs_%28San_Francisco%29_%28TK3%29.JPG#/media/File:Haight-Ashbury_signs_(San_Francisco)_(TK3).JPG">intersection</a> of liberal arts
@@ -31,29 +30,30 @@ eleventyNavigation:
                 <a href="https://www.louiechristie.com/memes/steve-jobs-rather-hire-coder-who-did-comedy/">Andy&nbsp;Miller,&nbsp;2020</a>
             </cite>
         </blockquote>
-    </section>
-    <section>
-        <div class="center" style="gap: 12px;">
-            <div>
-                <a href="https://comedy.louiechristie.com/stand-up/#/portal/signup">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Apple_Pay_Acceptance_Mark.svg"
-                         alt="Apple Pay"
-                         width="166"
-                         height="106"
-                         style="width: 55px;
-                                height: 35px">
-                </a>
-            </div>
-            <div>
-                <a href="https://comedy.louiechristie.com/stand-up/#/portal/signup">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Google_Pay_Acceptance_Mark.svg"
-                         alt="Google Pay"
-                         width="200"
-                         height="106"
-                         style="width: 64px;
-                                height: 34px">
-                </a>
-            </div>
+        <hr>
+        <section>
+            <div class="center" style="gap: 12px;">
+                <div>
+                    <a href="https://comedy.louiechristie.com/stand-up/#/portal/signup">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Apple_Pay_Acceptance_Mark.svg"
+                             alt="Apple Pay"
+                             width="166"
+                             height="106"
+                             style="width: 55px;
+                                    height: 35px">
+                    </a>
+                </div>
+                <div>
+                    <a href="https://comedy.louiechristie.com/stand-up/#/portal/signup">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Google_Pay_Acceptance_Mark.svg"
+                             alt="Google Pay"
+                             width="200"
+                             height="106"
+                             style="width: 64px;
+                                    height: 34px">
+                    </a>
+                </div>
+            </section>
         </div>
-    </section>
+    </div>
 </main>

@@ -589,6 +589,7 @@ footer nav {
 
 blockquote,
 q {
+  color: var(--light-grey-color);
   margin: 0;
   padding: 0;
 }
