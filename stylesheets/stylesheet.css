@@ -218,79 +218,12 @@ h2,
 h3,
 h4,
 h5,
-h6,
-.site-description {
+h6 {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   color: var(--heading-color);
   text-align: center;
 }
 
-.site-description {
-  padding-top: 1em;
-  padding-bottom: 1rem;
-}
-
-
-
-@media all and (min-width: 640px) {
-  .site-description {
-    /* border: 1px solid red; */
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .site-description-formatter {
-    /* border: 2px solid orange; */
-    display: flex;
-    justify-content: center;
-    align-items: first baseline;
-    flex-wrap: wrap;
-  }
-
-  .sentence {
-    /* border: 2px solid yellow; */
-    text-align: center;
-    flex-basis: 1;
-    flex-shrink: 0;
-    flex-grow: 1;
-    line-height: 1.6em;
-  }
-
-  .in-head {
-    font-size: 1.1em;
-  }
-
-  .sentence a {
-    /* padding-right: 0.1em; */
-  }
-
-  .sentence a:last-of-type {
-    /* padding-right: 0; */
-  }
-
-  .in-head {
-    display: flex;
-    padding-left: 0.1em;
-  }
-}
-
-@media all and (min-width: 1024px) {
-  .site-description-formatter {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-  }
-}
-
-.site-description a {
-  color: var(--light-grey-color);
-  text-decoration: none;
-}
-
-.site-description a:hover {
-  color: var(--grey-color);
-}
 
 h1 {
   font-weight: bold;

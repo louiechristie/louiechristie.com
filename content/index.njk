@@ -1,31 +1,59 @@
 ---
 layout: /layouts/homepageLayout.njk
-title: Louie Christie | Homepage
-description: 'Louie Christie - Adventurous | Tech Geek | Underground Comedian in my own head 😬 -> Homepage'
+title: "Host Louie Christie - Adventurous, nerd, comedian
+in my head"
+description: "I work at the intersection of humans and technology. Unlike most computer geeks, I’m good at making software user friendly, and speaking."
 eleventyNavigation:
   key: "Home"
   order: 1
 ---
 
-<div class="site-description">
-    <div class="site-description-formatter">
-        <div class="spacer">
-            <!-- spacer -->
-        </div>
-        <div class="sentence">
-            <a href="/adventure/">Adventurous,</a>
-            <a href="/tech/">tech&nbsp;geek,</a>
-            <a href="comedy">alternative&nbsp;comedian</a>
-        </div>
-        <div class="in-head">
-        <span class="sketchy" style="margin-left: 5px;">in&nbsp;my&nbsp;own&nbsp;head&nbsp;<!-- no space --><a href="/memes/%F0%9F%98%AC/">😬</a>
-    </span>
-</div>
-</div>
-</div>
 <main>
     <section class="center">
-        {% include "homepage/headlines.njk" %}
-        {% include "homepage/quote.njk" %}
+        <div style="max-width: 70vw; text-wrap: pretty;">
+            <h1 style="font-size: 1.6em;">
+                {{ title }}
+                <a style="text-decoration: none;" href="/memes/%F0%9F%98%AC/">😬</a>
+            </h1>
+            <p style="text-align: center;">{{ description }}</p>
+        </div>
+    </section>
+    {% include "homepage/headlines.njk" %}
+    <section class="apple-quote center">
+        <blockquote style="max-width: 640px;">
+            <q class="with-quote-marks">Steve [Jobs'] big thing was, um, he believed that Apple sat at the <a style="text-decoration: none;
+           color: initial"
+    href="https://commons.wikimedia.org/wiki/File:Haight-Ashbury_signs_%28San_Francisco%29_%28TK3%29.JPG#/media/File:Haight-Ashbury_signs_(San_Francisco)_(TK3).JPG">intersection</a> of liberal arts
+            and technology... meaning he'd rather hire a great software coder who also did stand-up&nbsp;comedy.</q>
+            <cite>-
+                Former vice president of Apple
+                <br>
+                <a href="https://www.louiechristie.com/memes/steve-jobs-rather-hire-coder-who-did-comedy/">Andy&nbsp;Miller,&nbsp;2020</a>
+            </cite>
+        </blockquote>
+    </section>
+    <section>
+        <div class="center" style="gap: 12px;">
+            <div>
+                <a href="https://comedy.louiechristie.com/stand-up/#/portal/signup">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Apple_Pay_Acceptance_Mark.svg"
+                         alt="Apple Pay"
+                         width="166"
+                         height="106"
+                         style="width: 55px;
+                                height: 35px">
+                </a>
+            </div>
+            <div>
+                <a href="https://comedy.louiechristie.com/stand-up/#/portal/signup">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Google_Pay_Acceptance_Mark.svg"
+                         alt="Google Pay"
+                         width="200"
+                         height="106"
+                         style="width: 64px;
+                                height: 34px">
+                </a>
+            </div>
+        </div>
     </section>
 </main>
