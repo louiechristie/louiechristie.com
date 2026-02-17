@@ -16,7 +16,7 @@ const navigations: Navigation[] = [
 		text: 'Home',
 		to: '/',
 		expected: {
-			h1: 'Louie Christie',
+			h1: 'Host Louie Christie - Adventurous, nerd, comedian in my head',
 		},
 	},
 	{
