@@ -1,15 +1,37 @@
 <header>
     <nav>
+        {%- set primaryLevelSection = "/" %}
         {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
         <h2 class="visually-hidden">Top level navigation menu</h2>
         <ul class="nav">
             {%- for entry in collections.all | eleventyNavigation %}
-                {%- set isBlogPage = entry.url == "/blog/" %}
-                <li class="nav-item {% if isBlogPage %}selected{% endif %}">
+                {%- set isSectionPage = entry.url in page.url %}
+                {%- if entry.url in page.url %}
+                    {%- set primaryLevelSection = entry.url %}
+                {%- endif %}
+                <li class="nav-item {% if isSectionPage %}selected{% endif %}">
                     <a href="{{ entry.url }}"
-                       {% if isBlogPage %}aria-current="page"{% endif %}>{{ entry.title }}</a>
+                       {% if isSectionPage %}aria-current="page"{% endif %}>{{ entry.title }}</a>
                 </li>
             {%- endfor %}
+        </ul>
+        {% set isBlogPage = "/blog/" in page.url %}
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link"
+                   href="/tech/experiments/"
+                   {% if currentUrl == "/tech/experiments/" %}aria-current="page"{% endif %}>Inventions</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"
+                   href="/memes/"
+                   {% if currentUrl == "/memes/" %}aria-current="page"{% endif %}>Shorts (Memes)</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if isBlogPage %}selected{% endif %}"
+                   href="/blog/"
+                   {% if currentUrl == "/blog/" %}aria-current="page"{% endif %}>Blog</a>
+            </li>
         </ul>
         <h2 class="visually-hidden">Secondary level navigation menu</h2>
         <ul class="nav">

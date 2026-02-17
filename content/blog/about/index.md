@@ -20,7 +20,7 @@ Hello ! 👋
 
 My name is Louie Christie and I live in London.
 
-This is a blog about my creative technology projects and associated rantings.
+This is a blog about my creative / technology projects and associated rantings.
 
 I’m a freelance app & website developer, tech geek for hire, coding coach, and underground comedian in my own head.
 

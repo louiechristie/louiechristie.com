@@ -82,6 +82,7 @@ export default async function (eleventyConfig) {
 			eleventyNavigation: {
 				key: 'Feed',
 				parent: 'Blog',
+				order: 3,
 			},
 		},
 		collection: {
@@ -92,7 +93,7 @@ export default async function (eleventyConfig) {
 			language: 'en',
 			title: 'Louie Learns Blog',
 			subtitle:
-				'This is a blog about my creative technology projects and associated rantings.',
+				'This is a blog about my creative / technology projects and associated rantings.',
 			base: 'https://www.louiechristie.com/blog/',
 			author: {
 				name: 'Louie Christie',

@@ -1,11 +1,14 @@
 ---
 layout: layouts/blogLayout.njk
-description: subtitle
+title: Blog - Louie Learns 
+description: This is a blog about my creative technology projects and associated rantings.
 eleventyNavigation: 
-  key: 'Blog Posts'
-  parent: 'Blog'
+  key: 'Blog'
+  parent: 'Home'
+  order: 3
 ---
 
-<h1>Blog</h1>
+<h1>{{ title | safe or metadata.title | safe }}</h1>
+<p>{{ description | safe or metadata.description | safe }}</p>
 {% set postslist = collections.posts %}
 {% include "postslist.njk" %}
