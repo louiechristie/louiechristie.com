@@ -47,7 +47,7 @@ Lack of ‘executive function’ is why people with ADHD (attention deficit hype
 
 Interestingly, I recently learned that dopamine also is released when _anticipating_ something good.
 
-Perhaps you could, _we_ could, get high on anticipating finishing the website/app/robot/tech whatever… just enough to actually finish it and get the reward, plaudits, and sense of achievement we so very often deserve but too often [procrastinate](https://weeks.louiechristie.com/) ourselves out of.
+Perhaps you could, _we_ could, get high on anticipating finishing the website/app/robot/tech whatever… just enough to actually finish it and get the reward, plaudits, and sense of achievement we so very often deserve but too often [procrastinate](https://www.louiechristie.com/weeks-to-go/) ourselves out of.
 
 On the other hand most new tech is shit.
 
