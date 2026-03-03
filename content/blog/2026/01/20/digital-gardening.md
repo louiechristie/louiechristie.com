@@ -25,7 +25,7 @@ Things like:
 
 1.  Fixing old broken links
 2.  Moving videos from old broken social media platforms (e.g. MySpace) to new platforms that can still be watched (e.g. Vimeo)
-3.  Updating with new information that has come to light – like that Guy Burnett who [was in short films I worked on](https://louiechristie.wordpress.com/2008/07/08/christie-bloopers-outtakes/), is now a movie star
+3.  Updating with new information that has come to light – like that Guy Burnett who [was in short films I worked on](https://www.louiechristie.com/blog/2008/07/08/christie-bloopers-outtakes/), is now a movie star
 4.  Removing defunct technology and moving over to other tech
 
 I did a similar thing coaching my friend who’d taken over the charity SuperKidz Trust. ‘It’s like gardening!’ he’d said as we slowly modernised and updated the website \[[before](https://web.archive.org/web/20240921211039/https://www.superkidztrust.org/)\] \[[after](https://web.archive.org/web/20250329114914/https://www.superkidztrust.org/)\].
