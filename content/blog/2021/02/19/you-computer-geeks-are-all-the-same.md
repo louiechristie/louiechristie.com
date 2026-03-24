@@ -25,6 +25,10 @@ metadata:
 ---
 ‘You computer geeks are all the same’ my  girlfriend said. ‘You get really excited about things at the start, and then lose interest really quickly.’
 
+<audio controls="" src="https://storage.ghost.io/c/35/bc/35bc96bf-ccf9-45ac-bb8e-cdb61b404b44/content/media/2026/03/You-Computer-Geeks-Are-All-The-Same-@-codebar-fringe-London--2026.m4a"></audio>
+
+Option: [Listen](https://storage.ghost.io/c/35/bc/35bc96bf-ccf9-45ac-bb8e-cdb61b404b44/content/media/2026/03/You-Computer-Geeks-Are-All-The-Same-@-codebar-fringe-London--2026.m4a) (instead of read) this blog post – I gave it as a talk at [Codebar Festival Fringe London](https://ti.to/codebar/fringe-26), March 2026.
+
 I’d told her that you, Dear Alvin my coding coaching student, hadn’t completed your personal homepage website, and were now talking about another new thing, data science or something.
 
 ‘Mm, hmm’ my girlfriend said ‘sounds like someone else I know’ and she gave me a wry smile. She said it was the same with my Scandinavian Viking friend Jämi too. ‘You’re all the same.’
