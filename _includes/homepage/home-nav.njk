@@ -2,7 +2,7 @@
     <nav>
         {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
         <h2 class="visually-hidden">Top level navigation menu</h2>
-        <ul class="nav">
+        <ul class="nav top-nav box-shadow">
             {%- for entry in collections.all | eleventyNavigation %}
                 {%- set isSelected = page.url == entry.url %}
                 <li class="nav-item {% if isSelected %}selected{% endif %}">
@@ -29,7 +29,7 @@
             </li>
         </ul>
         <h2 class="visually-hidden">Secondary level navigation menu</h2>
-        <ul>
+        <ul class="nav third-nav">
             {% include "about/about-nav.njk" %}
         </ul>
     </nav>

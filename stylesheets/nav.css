@@ -2,15 +2,6 @@ header {
   padding-bottom: 1em;
 }
 
-header nav ul {
-  border-top: 1px dashed var(--color-gray-20);
-}
-
-header {
-  border-bottom: 1px dashed var(--color-gray-20);
-
-}
-
 .image-heading {
   margin-block-end: 0;
   margin-block-start: 0;
@@ -112,6 +103,27 @@ nav li {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+.top-nav {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.top-nav a {
+  font-size: 1.1em;
+  text-decoration: none;
+  color: var(--text-color-link-visited)
+}
+
+
+.third-nav {
+  border-top: 1px dashed var(--color-gray-20);
+  font-size: 0.95em;
+}
+
+header {
+  border-bottom: 1px dashed var(--color-gray-20);
 }
 
 .nav-item {
