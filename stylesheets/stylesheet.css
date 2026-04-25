@@ -55,7 +55,7 @@ a .no-underline {
   --analogous-color: #0e11b5;
   --complementary-color: #e02828;
   --tertiary-color: #008400;
-  --less-saturated-color: rgba(0, 0, 0, 0.75);
+  --less-saturated-color: rgba(59, 59, 59, 1);
   --monochromacy-color: #3b3b3b;
   --black-color: #000000;
 
@@ -65,7 +65,7 @@ a .no-underline {
   --grey-color: var(--black-color);
 
   --link-color: var(--main-color);
-  --heading-color: var(--monochromacy-color);
+  --heading-color: var(--less-saturated-color);
 
   --adventure-color: var(--main-color);
   --developer-color: var(--main-color);
@@ -130,7 +130,7 @@ p {
 
 .box-shadow {
   border: 3px solid var(--less-saturated-color);
-  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 3px 3px 5px 0px rgba(59, 59, 59, 0.4);
   border-radius: 20px;
 }
 
@@ -220,7 +220,7 @@ h4,
 h5,
 h6 {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
-  color: var(--heading-color);
+  color: var(--less-saturated-color);
   text-align: center;
 }
 
@@ -296,7 +296,7 @@ aside {
 
 .lead-line {
   font-weight: bold;
-  color: var(--heading-color);
+  color: var(--less-saturated-color);
   margin-top: 0;
   padding-top: 0;
 }

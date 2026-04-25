@@ -3,7 +3,7 @@
         {%- set primaryLevelSection = "/" %}
         {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
         <h2 class="visually-hidden">Top level navigation menu</h2>
-        <ul class="nav top-nav box-shadow">
+        <ul class="nav top-nav">
             {%- for entry in collections.all | eleventyNavigation %}
                 {%- set isSectionPage = entry.url in page.url %}
                 {%- if entry.url in page.url %}
