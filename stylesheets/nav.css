@@ -55,6 +55,11 @@ nav li {
   margin-right: 6px;
 }
 
+.home-icon {
+  font-size: 1.5rem;
+  line-height: 1rem;
+}
+
 .experiment-item {
   margin-left: 6px;
   margin-right: 12px;

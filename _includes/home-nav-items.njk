@@ -1,0 +1,17 @@
+<ul class="nav top-nav">
+    {%- for entry in collections.all | eleventyNavigation %}
+        {%- set isHome = entry.title == "Home" %}
+        {%- set isHomeSelected = isHome and entry.url == page.url %}
+        {%- set isSelected = entry.url in page.url and entry.url != "/" or isHomeSelected %}
+        <li class="nav-item {% if isSelected %}selected{% endif %} {{ entry.title }}">
+            <a href="{{ entry.url }}"
+               {% if isSelected %}aria-current="page"{% endif %}>
+                {% if isHome %}
+                    <span role="presentation" aria-hidden="true" class="home-icon">⌂</span> {{ entry.title }}
+                {% else %}
+                    {{ entry.title }}
+                {% endif %}
+            </a>
+        </li>
+    {%- endfor %}
+</ul>
