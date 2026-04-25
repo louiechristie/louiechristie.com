@@ -31,7 +31,7 @@ metadata:
 ---
 I have a masters degree (MSc) in making computers user friendly. This is a video I made demonstrating my masters degree project (3 mins).
 
-<iframe title="Multi Dance -  2006 - Video Game to Teach Maths - User Friendly" src="https://player.vimeo.com/video/861193081?dnt=1&amp;app_id=122963" width="384" height="288" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<iframe loading="lazy" title="Multi Dance -  2006 - Video Game to Teach Maths - User Friendly" src="https://player.vimeo.com/video/861193081?dnt=1&amp;app_id=122963" width="384" height="288" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 
 Multi Dance, 2006
 

@@ -24,7 +24,7 @@ metadata:
 ---
 This was a university computer 3D animation project back in 2001. The brief was to create a toy advert. I chose to spoof the Hot Wheels toy cars and create a toy car chase loosely influenced my the movie ‘The Italian Job’.
 
-<iframe title="Hop Wheels" src="https://player.vimeo.com/video/1076750917?dnt=1&amp;app_id=122963" width="192" height="144" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<iframe loading="lazy" title="Hop Wheels" src="https://player.vimeo.com/video/1076750917?dnt=1&amp;app_id=122963" width="192" height="144" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 
 The toy car chase takes place on a dining room table via household objects like a book, kitchen roll and a ruler.
 
