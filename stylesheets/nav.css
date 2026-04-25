@@ -9,14 +9,9 @@ h1.image-heading {
 }
 
 .logo {
-  width: 150px;
-  height: auto;
-}
-
-@media all and (min-width: 1024px) {
-  .logo {
-    width: 300px;
-  }
+  width: auto;
+  height: 2rem;
+  line-height: 1rem;
 }
 
 nav {

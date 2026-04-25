@@ -219,7 +219,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: 'Excalifont';
   color: var(--less-saturated-color);
   text-align: center;
 }
@@ -582,7 +582,6 @@ footer nav {
 }
 
 .apple-quote {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
   line-height: 2em;
   margin-top: 26px;
 }
