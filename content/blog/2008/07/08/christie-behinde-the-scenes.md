@@ -46,4 +46,5 @@ If the series ever gets a cult following, I may release more behind the scenes c
 
 -   You can watch the full Christie series on [YouTube](http://www.youtube.com/watch?v=IKJaoCMzAcc&feature=PlayList&p=8F5EC9D6A8848FD9&index=0&playnext=1), [Facebook](http://www.facebook.com/pages/Christie/15991448677), and with additional extras at [filmaka.com](https://www.filmaka.com/christe-series.php?film_id=2066)[.](http://www.filmaka.com/filmaka_christie.php)
 -   [Christie Series Trailer – also made by me](/blog/2008/07/08/christie-trailer/)
+-   [Christie Series Bloopers & Outtakes featuring Alec Christie, Guy Burnet, Ria Lina](https://www.louiechristie.com/blog/2008/07/08/christie-bloopers-outtakes/)
 -   [American Dream Behind The Scenes video (3 mins)](/blog/2008/07/08/christie-behinde-the-scenes/)
