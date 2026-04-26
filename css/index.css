@@ -63,7 +63,7 @@ img {
 	max-width: 100%;
 }
 
-img[width][height] {
+img[width][height]:not(.logo) {
 	height: auto;
 }
 
