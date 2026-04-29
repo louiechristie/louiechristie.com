@@ -316,6 +316,13 @@ aside {
   padding-bottom: 1rem;
 }
 
+.icon-list li .tech,
+.icon-list li .tech a {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  line-height: 1rem;
+}
+
 .icon-list li:last-of-type {
   padding-bottom: 0;
 }
@@ -323,6 +330,12 @@ aside {
 .weather-icon {
   margin-bottom: -14px;
   margin-left: -9px;
+}
+
+.tech-page .experiments {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .colorized img {

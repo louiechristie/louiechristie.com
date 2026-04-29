@@ -7,7 +7,7 @@ eleventyNavigation:
   order: 3
 ---
 
-<main class="center">
+<main class="center tech-page">
     <div class="banner">
         <img src="/images/banner.svg"
              alt="sketch of Louie's career, mostly front-end but some back-end software development. And explaining technology."
@@ -109,10 +109,9 @@ eleventyNavigation:
                     margin-bottom: 2rem">
             <a href="./experiments/" style="text-decoration: none;">
                 <h2 class="sketchy">Mad Inventions & Tech Experiments</h2>
-            </a>
-            {% include "tech/experiments.njk" %}
-            <a href="./experiments/" style="text-decoration: none;">
-                <h3 class="sketchy"></h3>
+                <div style="dispaly: flex;
+                            flex-direction: row;
+                            justify-content: space-around">{% include "tech/experiments.njk" %}</div>
             </a>
         </div>
         <p>
