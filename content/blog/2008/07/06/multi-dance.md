@@ -39,8 +39,8 @@ The project was a video game called Multi Dance that teaches children multiplica
 
 The video is slightly embarrassing, but in my defence I made it in 2006, on my home PC with no budget, borrowing a camera from the university and using free editing software from the internet. Thankfully, since making this video I’ve learned professional film-making techniques like using a tripod, fading in music and not wearing national health service glasses.
 
-Created as part MSc masters degree project in human-centred computer systems at Sussex University, tutored by [Dr Judith Good](http://www.sussex.ac.uk/profiles/174826).
+Created as part MSc masters degree project in human-centred computer systems at Sussex University, tutored by [Professor Judith Good](http://www.sussex.ac.uk/profiles/174826).
 
-Music by [Dan Franks of the Freestyle Funk Collective](http://www.freestylefunkcollective.co.uk/)
+Music by [Dan Franks](https://www.linkedin.com/in/dr-daniel-franks/) of the [Freestyle Funk Collective](https://www.facebook.com/watch/?v=500460611256)
 
 Tags: multidance
