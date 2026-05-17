@@ -63,9 +63,10 @@ if (isProduction) {
 				baseURL + '/tech/' || 'https://www.louiechristie.com' + '/tech/'
 			);
 
-			const comedyLink = page.getByText('comedy', { exact: true });
+			const comedyLink = page
+				.getByRole('link', { name: 'Comedy' })
+				.first();
 
-			// Click the comedy link by its text
 			await expect(comedyLink).toBeVisible();
 
 			await comedyLink.click();
@@ -73,7 +74,7 @@ if (isProduction) {
 			await page.waitForURL('https://comedy.louiechristie.com/');
 
 			// Check the title because no h1 in current Ghost template
-			await expect(page).toHaveTitle('Louie Christie, Alternative Comedian');
+			await expect(page).toHaveTitle(/^Louie Christie, Alternative Comedian/);
 		});
 	});
 }

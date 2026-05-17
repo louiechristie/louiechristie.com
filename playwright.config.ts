@@ -12,37 +12,37 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: './tests',
-  /* Run tests in files in parallel */
-  fullyParallel: true,
-  /* Fail the build on CI if you accidentally left test.only in the source code. */
-  forbidOnly: !!process.env.CI,
-  /* Retry on CI only */
-  retries: process.env.CI ? 2 : 0,
-  /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
-  /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
-  use: {
-    /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: 'http://localhost:3000',
-    
-    ...devices['Desktop Chrome'],
+	testDir: './tests',
+	/* Run tests in files in parallel */
+	fullyParallel: true,
+	/* Fail the build on CI if you accidentally left test.only in the source code. */
+	forbidOnly: !!process.env.CI,
+	/* Retry on CI only */
+	retries: process.env.CI ? 2 : 0,
+	/* Reporter to use. See https://playwright.dev/docs/test-reporters */
+	reporter: 'html',
+	/* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+	use: {
+		/* Base URL to use in actions like `await page.goto('/')`. */
+		baseURL: process.env.CI
+			? 'https://www.louiechristie.com'
+			: 'http://localhost:3000',
 
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
-  },
+		...devices['Desktop Chrome'],
 
-  testIgnore: [
-    "/tests//hosting/**/*.spec.ts",
-  ],
+		/* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
+		trace: 'on-first-retry',
+	},
 
-  /* Run your local server before starting the tests */
-  webServer: {
-    command: 'npm run build && npm run serve',
-    url: 'http://localhost:3000/',
-    reuseExistingServer: !process.env.CI,
-    stdout: 'pipe', // See build output
-    stderr: 'pipe', // See error output
-  },
-  expect: { timeout: 15_000 }, // for tests of Slow Reckona link @TODO improve this
+	testIgnore: ['/tests//hosting/**/*.spec.ts'],
+
+	/* Run your local server before starting the tests */
+	webServer: {
+		command: 'npm run build && npm run serve',
+		url: 'http://localhost:3000/',
+		reuseExistingServer: !process.env.CI,
+		stdout: 'pipe', // See build output
+		stderr: 'pipe', // See error output
+	},
+	expect: { timeout: 15_000 }, // for tests of Slow Reckona link @TODO improve this
 });
