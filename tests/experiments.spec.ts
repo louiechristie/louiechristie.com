@@ -16,7 +16,7 @@ const navigations: Navigation[] = [
 		},
 	},
 	{
-		text: 'Memes',
+		text: 'Shorts (Memes)',
 		to: '/memes/',
 		expected: {
 			h1: 'Shorts',
