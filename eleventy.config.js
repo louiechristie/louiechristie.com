@@ -17,6 +17,7 @@ const isProductionBuild = process.env.ELEVENTY_RUN_MODE === 'build';
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('stylesheets');
+	eleventyConfig.addPassthroughCopy('.assetsignore');
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin, {
 		baseHref: config.pathPrefix,
 		extensions: 'html',

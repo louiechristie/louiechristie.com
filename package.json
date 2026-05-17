@@ -26,7 +26,7 @@
 		"deploy:intro-to-web-dev-course": "rsync -avhP ./_tmp/bak/intro-to-web-dev-course/ ~/Documents/louiechristie.com/_site/intro-to-web-dev-course",
 		"deploy:memes": "rsync -avhP ~/Documents/memes/out/ ~/Documents/louiechristie.com/_site/memes",
 		"deploy:subfolders": "npm run deploy:weeks-to-go && npm run deploy:trivia-trundle && npm run deploy:intro-to-web-dev-course && npm run deploy:memes",
-		"deploy": "npm run build && npm run deploy:subfolders && npm run test && ~/Documents/louiechristie.com/node_modules/wrangler/bin/wrangler.js pages deploy _site",
+		"deploy": "npm run build && npm run deploy:subfolders && npm run test && ~/Documents/louiechristie.com/node_modules/wrangler/bin/wrangler.js deploy",
 		"upgrade": "npx npm-check-updates -u --target minor && npm install"
 	},
 	"keywords": [],

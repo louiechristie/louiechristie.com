@@ -1,0 +1,6 @@
+# Appended to Wrangler's defaults (.assetsignore, _redirects, _headers).
+# Block node_modules folders by default — anywhere in the deploy.
+**/node_modules
+# Allow node_modules under /trivia-trundle/ so Expo bakes-in icon font URLs
+# like /trivia-trundle/assets/node_modules/@expo/vector-icons/.../*.ttf ship.
+!trivia-trundle/**/node_modules
