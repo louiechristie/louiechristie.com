@@ -178,6 +178,10 @@ figure {
   overflow: hidden;
 }
 
+.hero img {
+  border-radius: 10px;
+}
+
 .feature-container {
   width: 100%;
   aspect-ratio: 1 / 1;
