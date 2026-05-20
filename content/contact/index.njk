@@ -1,42 +1,27 @@
 ---
 layout: layouts/contactLayout.njk
 title: Contact | Louie Christie
-description: Smart, talented... modest. Available for hire - if you like what you see get in touch.
+description: Smart, talented, modest, and available for hire. Please do feel free to get in touch.
 ---
 
 <div class="text-center column">
     <h1>Contact</h1>
     <div class="center">
-        <div style="max-width: 490px">{% include "collaboration.njk" %}</div>
+        <section>
+            <div class="image-container" style="aspect-ratio: 16 / 9;">
+                <a href="/contact/">
+                    <img decoding="async"
+                         loading="lazy"
+                         src="/images/lander23.jpeg"
+                         alt="Louie Christie holds an old telephone receiver in a 90's style military office. A sign behind him says 'Lander Division' - a reference to the Punchdrunk Lander 23 experience.">
+                </a>
+            </div>
+        </section>
     </div>
     <p>Hello! 👋</p>
-    <p>
-        I’m Louie Christie - adventurous, tech geek, and underground
-        comedian in my own head.
-    </p>
-    <p>I’m smart, talented, modest, and available for hire.</p>
-    <p>If you like what you see here, get in touch:</p>
+    <p>{{ description }}</p>
     <div class="center">
         <ul class="icon-list">
-            <li class="icon-link">
-                <svg style="width:24px;
-                            height:24px;
-                            margin-bottom: -6px"
-                     viewbox="0 0 24 24">
-                    <a href="tel:+447733507066">
-                        <title>Post icon</title>
-                        <path fill="grey" d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
-                        <metadata>
-                        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:schema="http://schema.org/">
-                        <rdf:Description rdf:about="https://cdn.jsdelivr.net/npm/@mdi/svg@4/svg/email.svg">
-                        <schema:license rdf:resource="http://scripts.sil.org/OFL" />
-                        </rdf:Description>
-                        </rdf:RDF>
-                        </metadata>
-                    </a>
-                </svg>
-                Post: Louie Christie Ltd, 20 Wenlock Road, LONDON, United Kingdom. N1 7GU
-            </li>
             <li class="icon">
                 <a href="mailto:hello@louiechristie.com"
                    style="font-weight: 500;
@@ -79,10 +64,6 @@ description: Smart, talented... modest. Available for hire - if you like what yo
                 </svg>
                 WhatsApp:
                 <a href="https://wa.me/447733507066">+447733507066</a>
-            </li>
-            <li>
-                <br>
-                Registered company number: 15411409
             </li>
         </ul>
     </div>
