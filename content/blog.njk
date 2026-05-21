@@ -9,6 +9,8 @@ eleventyNavigation:
 ---
 
 <h1>{{ title | safe or metadata.title | safe }}</h1>
-<p style="justify-content: pretty;">{{ description | safe or metadata.description | safe }}</p>
+<p style="justify-content: pretty;">
+    {{ description | safe or metadata.description | safe }} <a href="./about/">More about this blog.</a>
+</p>
 {% set postslist = collections.posts %}
 {% include "postslist.njk" %}

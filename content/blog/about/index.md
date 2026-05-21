@@ -18,11 +18,11 @@ eleventyNavigation:
 
 Hello ! 👋
 
-My name is Louie Christie and I live in London.
+I'm [Louie Christie](https://www.louiechristie.com/) and I live in London.
 
-This is a blog about my creative / technology projects and associated rantings.
+This is a blog about my creative and technology projects and associated rantings.
 
-I’m a freelance app & website developer, tech geek for hire, coding coach, and underground comedian in my own head.
+I’m an adventurous, tech geek, and alternative comedian in my own head.
 
 This blog was created around 2008, when I was a young, enthusiastic, gloriously naive graduate spending my time travelling, studying, and making creative projects in technology and media.
 
