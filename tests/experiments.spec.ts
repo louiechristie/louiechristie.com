@@ -3,8 +3,7 @@ import { test, expect, type Locator } from '@playwright/test';
 type Navigation = {
 	text: string;
 	to: string;
-	expected: { h1: string } | { h1ImageAlt: string } | { h2: string };
-	faultyWordPressException?: boolean;
+	expected?: { h1: string } | { h1ImageAlt: string } | { h2: string };
 };
 
 const navigations: Navigation[] = [
@@ -24,11 +23,8 @@ const navigations: Navigation[] = [
 	},
 
 	{
-		text: 'Newcrossities',
-		to: 'https://newcrossities.com/',
-		expected: {
-			h1: 'Newcrossities',
-		},
+		text: 'Quirky Travel Guide',
+		to: 'https://comedy.louiechristie.com/travel/',
 	},
 	{
 		text: 'Trivia Trundle',
@@ -52,14 +48,11 @@ const navigations: Navigation[] = [
 			h1: 'Blog',
 		},
 	},
-	{
-		text: 'Reckona',
-		to: 'https://www.reckona.co.uk/',
-		expected: {
-			h2: 'The Recruitment Calculator',
-		},
-		faultyWordPressException: true,
-	},
+	// Doesn't work because Dropbox changes the link.
+	// {
+	// 	text: 'Reckona',
+	// 	to: 'https://www.dropbox.com/scl/fi/a4ondvpno7zoq63j9mlph/reckona-dont-forget-to-profit.mp4?rlkey=8zfuxij7rxi6e3gofok2rs6i8&st=ckbj81la&dl=0',
+	// },
 ];
 
 test.describe('experiments links', () => {
@@ -77,6 +70,7 @@ test.describe('experiments links', () => {
 			let link: Locator;
 
 			test.beforeEach(async ({ page, baseURL }) => {
+				test.setTimeout(45000); // https://comedy.louiechristie.com/travel/
 				link = await page.getByRole('link', { name: text });
 				await link.click();
 				await page.waitForURL(to);
@@ -90,34 +84,30 @@ test.describe('experiments links', () => {
 				await expect(page).toHaveURL(to);
 			});
 
-			if ('h1' in expected) {
-				const { h1 } = expected;
-				test(`heading 1 is ${h1}`, async ({ page }) => {
-					await expect(page.getByRole('heading', { level: 1 })).toContainText(
-						h1
-					);
-				});
-			}
+			if (expected) {
+				if ('h1' in expected) {
+					const { h1 } = expected;
+					test(`heading 1 is ${h1}`, async ({ page }) => {
+						await expect(page.getByRole('heading', { level: 1 })).toContainText(
+							h1
+						);
+					});
+				}
 
-			if ('h1ImageAlt' in expected) {
-				const { h1ImageAlt } = expected;
-				test(`heading 1 image alt is ${h1ImageAlt}`, async ({ page }) => {
-					await expect(page.getByAltText(h1ImageAlt)).toBeVisible();
-				});
-			}
-			if ('h2' in expected) {
-				const { h2 } = expected;
-				test(`heading 2 is ${h2}`, async ({ page }) => {
-					if (faultyWordPressException) {
-						await expect(
-							page.getByRole('heading', { level: 2, name: h2 })
-						).toHaveCount(1);
-					} else {
+				if ('h1ImageAlt' in expected) {
+					const { h1ImageAlt } = expected;
+					test(`heading 1 image alt is ${h1ImageAlt}`, async ({ page }) => {
+						await expect(page.getByAltText(h1ImageAlt)).toBeVisible();
+					});
+				}
+				if ('h2' in expected) {
+					const { h2 } = expected;
+					test(`heading 2 is ${h2}`, async ({ page }) => {
 						await expect(
 							page.getByRole('heading', { level: 2, name: h2 })
 						).toBeVisible();
-					}
-				});
+					});
+				}
 			}
 		});
 	});
