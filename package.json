@@ -24,7 +24,7 @@
 		"compare": "diff $INIT_CWD/_tmp/bak $INIT_CWD/_site --color --recursive --exclude={.*,README*,readme*,start,deploy,shower-of-comedy,travel-guide} --ignore-all-space --strip-trailing-cr",
 		"deploy:trivia-trundle": "rsync -avhP --delete ~/Documents/trivia-trundle/dist/ ~/Documents/louiechristie.com/_site/trivia-trundle",
 		"deploy:weeks-to-go": "rsync -avhP --delete ~/Documents/weeks-to-go/build/ ~/Documents/louiechristie.com/_site/weeks-to-go",
-		"deploy:intro-to-web-dev-course": "rsync -avhP ./_tmp/bak/intro-to-web-dev-course/ ~/Documents/louiechristie.com/_site/intro-to-web-dev-course",
+		"deploy:intro-to-web-dev-course": "rsync -avhP ../intro-to-web-dev-course/ ~/Documents/louiechristie.com/_site/intro-to-web-dev-course",
 		"deploy:memes": "rsync -avhP ~/Documents/memes/out/ ~/Documents/louiechristie.com/_site/memes",
 		"deploy:subfolders": "npm run deploy:weeks-to-go && npm run deploy:trivia-trundle && npm run deploy:intro-to-web-dev-course && npm run deploy:memes",
 		"deploy": "npm run build && npm run deploy:subfolders && npm run test && ~/Documents/louiechristie.com/node_modules/wrangler/bin/wrangler.js deploy",
