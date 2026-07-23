@@ -22,18 +22,22 @@ const title =
 const heading = 'Quirky Travel Guide - Newcrossities';
 const url = 'https://comedy.louiechristie.com/travel/';
 
-homepageAddresses.forEach((address) => {
-	test.beforeEach(async ({ page }) => {
-		await page.goto(address);
-	});
-	test(`testing with ${address}, title`, async ({ page }) => {
-		await expect(page).toHaveTitle(title);
-	});
-	test(`testing with ${address}, heading`, async ({ page }) => {
-		await expect(page.getByRole('heading', { level: 1 })).toHaveText(heading);
-	});
+const isProduction = !!process.env.CI;
 
-	test(`testing with ${address}, url`, async ({ page }) => {
-		await expect(page).toHaveURL(url);
+if (isProduction) {
+	homepageAddresses.forEach((address) => {
+		test.beforeEach(async ({ page }) => {
+			await page.goto(address);
+		});
+		test(`testing with ${address}, title`, async ({ page }) => {
+			await expect(page).toHaveTitle(title);
+		});
+		test(`testing with ${address}, heading`, async ({ page }) => {
+			await expect(page.getByRole('heading', { level: 1 })).toHaveText(heading);
+		});
+
+		test(`testing with ${address}, url`, async ({ page }) => {
+			await expect(page).toHaveURL(url);
+		});
 	});
-});
+}
