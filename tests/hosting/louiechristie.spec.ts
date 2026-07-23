@@ -3,58 +3,61 @@ import { test, expect } from '@playwright/test';
 const isProduction = !!process.env.CI;
 
 const homepageAddresses = [
-  // https
-  'https://www.louiechristie.com/',
-  'https://www.louiechristie.com',
+	// https
+	'https://www.louiechristie.com/',
+	'https://www.louiechristie.com',
 
-  'https://louiechristie.com/',
-  'https://louiechristie.com',
+	'https://louiechristie.com/',
+	'https://louiechristie.com',
 
-  // http
+	// http
 
-  'http://www.louiechristie.com/',
-  'http://www.louiechristie.com',
+	'http://www.louiechristie.com/',
+	'http://www.louiechristie.com',
 
-  'http://louiechristie.com/',
-  'http://louiechristie.com',
+	'http://louiechristie.com/',
+	'http://louiechristie.com',
 ];
 
 if (isProduction) {
-  test('has title', async ({ page }) => {
-    await page.goto('https://www.louiechristie.com/');
+	test('has title', async ({ page }) => {
+		await page.goto('https://www.louiechristie.com/');
 
-    // Expect a title "to contain" a substring.
-    await expect(page).toHaveTitle(
-      /Louie Christie: Adventurous | Tech Geek | Underground Comedian in my own head 😬 -> Homepage/
-    );
-  });
+		// Expect a title "to contain" a substring.
+		await expect(page).toHaveTitle(
+			/Louie Christie: Adventurous | Tech Geek | Underground Comedian in my own head 😬 -> Homepage/
+		);
+	});
 
-  test('has heading', async ({ page }) => {
-    await page.goto('https://www.louiechristie.com/');
-    await expect(
-      page.getByRole('heading', { level: 1, name: 'Louie Christie' })
-    ).toBeVisible();
-  });
+	test('has heading', async ({ page }) => {
+		await page.goto('https://www.louiechristie.com/');
+		await expect(
+			page.getByRole('heading', {
+				level: 1,
+				name: 'Louie Christie - Adventurous, tech geek, comedian in my head',
+			})
+		).toBeVisible();
+	});
 
-  test.describe('homepage addresses variations', () => {
-    homepageAddresses.forEach((address) => {
-      test.beforeEach(async ({ page }) => {
-        await page.goto(address);
-      });
-      test(`testing with ${address}, title`, async ({ page }) => {
-        await expect(page).toHaveTitle(
-          /Louie Christie: Adventurous | Tech Geek | Underground Comedian in my own head 😬 -> Homepage/
-        );
-      });
-      test(`testing with ${address}, heading`, async ({ page }) => {
-        await expect(
-          page.getByRole('heading', { level: 1, name: 'Louie Christie' })
-        ).toBeVisible();
-      });
+	test.describe('homepage addresses variations', () => {
+		homepageAddresses.forEach((address) => {
+			test.beforeEach(async ({ page }) => {
+				await page.goto(address);
+			});
+			test(`testing with ${address}, title`, async ({ page }) => {
+				await expect(page).toHaveTitle(
+					/Louie Christie: Adventurous | Tech Geek | Underground Comedian in my own head 😬 -> Homepage/
+				);
+			});
+			test(`testing with ${address}, heading`, async ({ page }) => {
+				await expect(
+					page.getByRole('heading', { level: 1, name: 'Louie Christie' })
+				).toBeVisible();
+			});
 
-      test(`testing with ${address}, url`, async ({ page }) => {
-        await expect(page).toHaveURL('https://www.louiechristie.com/');
-      });
-    });
-  });
+			test(`testing with ${address}, url`, async ({ page }) => {
+				await expect(page).toHaveURL('https://www.louiechristie.com/');
+			});
+		});
+	});
 }

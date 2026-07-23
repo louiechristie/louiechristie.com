@@ -1,13 +1,11 @@
 <ul class="nav top-nav">
     <li>
-        {% if page.url === '/' %}<h1 class="image-heading">{% endif %}
-            <a href="/">
-                <img class="logo"
-                     src="/images/handwritten_louie_christie_600x220.jpg"
-                     alt="Louie Christie"
-                     title="Louie Christie (handwritten logo)" />
-            </a>
-            {% if page.url === '/' %}</h1>{% endif %}
+        <a href="/">
+            <img class="logo"
+                 src="/images/handwritten_louie_christie_600x220.jpg"
+                 alt="Louie Christie"
+                 title="Louie Christie (handwritten logo)" />
+        </a>
     </li>
     {%- for entry in collections.all | eleventyNavigation %}
         {%- set isHome = entry.title == "Home" %}

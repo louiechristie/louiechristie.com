@@ -34,8 +34,6 @@ export default defineConfig({
 		trace: 'on-first-retry',
 	},
 
-	testIgnore: ['/tests//hosting/**/*.spec.ts'],
-
 	/* Run your local server before starting the tests */
 	webServer: {
 		command: 'npm run build && npm run serve',

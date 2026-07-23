@@ -63,9 +63,7 @@ if (isProduction) {
 				baseURL + '/tech/' || 'https://www.louiechristie.com' + '/tech/'
 			);
 
-			const comedyLink = page
-				.getByRole('link', { name: 'Comedy' })
-				.first();
+			const comedyLink = page.getByRole('link', { name: 'Comedy' }).first();
 
 			await expect(comedyLink).toBeVisible();
 
