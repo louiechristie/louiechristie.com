@@ -19,7 +19,7 @@ const homepageAddresses = [
 
 const title =
 	'Quirky Travel Guide to South London - Newcrossities - new Curiosities';
-const heading = 'Quirky Travel Guide';
+const heading = 'Quirky Travel Guide - Newcrossities';
 const url = 'https://comedy.louiechristie.com/travel/';
 
 homepageAddresses.forEach((address) => {
