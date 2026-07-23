@@ -82,7 +82,7 @@ I also noticed [The Great British Toilet Map](https://www.toiletmap.org.uk/) and
 
 Anyway, I was also scouting out local places where I can work from, the local libraries, cafes, co-working spaces and hipster hang-outs. Of which there are many; New Cross and Deptford are up-and-coming areas with a local art-student scene from Goldsmiths University.
 
-<iframe title="VideoPress Video Player" aria-label="VideoPress Video Player" width="500" height="281" src="https://video.wordpress.com/embed/xROIzdpM?cover=1&amp;preloadContent=metadata&amp;hd=0" frameborder="0" allowfullscreen="" data-resize-to-parent="true" allow="clipboard-write"></iframe>
+<iframe title="VideoPress Video Player" aria-label="VideoPress Video Player" width="500" height="281" src="https://video.wordpress.com/embed/xROIzdpM?cover=1&amp;preloadContent=metadata&amp;hd=0" frameborder="0" allowfullscreen="" data-resize-to-parent="true" allow="clipboard-write; presentation"></iframe>
 
 Please world, don’t make me go back to a grey office.
 
