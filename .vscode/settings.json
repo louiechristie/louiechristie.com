@@ -26,5 +26,7 @@
 	"[nunjucks-xml]": {
 		"editor.formatOnSave": false
 	},
-	"editor.formatOnSave": true
+	"editor.formatOnSave": true,
+	"djlint.noLineAfterYaml": true,
+	"djlint.ignore": ["H006,H021"]
 }
