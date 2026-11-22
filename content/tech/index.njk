@@ -14,60 +14,10 @@ eleventyNavigation:
                     height: auto" />
     </div>
     <h1>Tech</h1>
-    <div class="column">
-        <figure>
-            <lite-youtube videoid="lqHQ-7PWZfs" playlistid="PLKhdPqmp9xC_1DkgQ9iB3qMhTUs51-jqt" params="rel=0&autoplay=1" posterloading="eager" autoload>
-            <div class="uncodebar lite-youtube-fallback">
-                <a href="https://www.youtube.com/watch?v=lqHQ-7PWZfs&list=PLKhdPqmp9xC_1DkgQ9iB3qMhTUs51-jqt&index=1">
-                    <img style="width: 100%;
-                                height: auto"
-                         slot="image"
-                         src="https://i.ytimg.com/vi/psBMnmz1G_Y/hqdefault.jpg"
-                         alt="Louie Christie standing at a microphone and lectern. A screen behind him says 'Uncodebar 10'"
-                         width="375"
-                         height="281">
-                </a>
-            </div>
-            </lite-youtube>
-            <figcaption>
-                <sub>
-                    Tech talk @
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
-                         alt="Google G logo"
-                         width="16.28"
-                         height="20.00"
-                         eleventy:widths="20"
-                         style="width: 16.28px;
-                                height: 24px;
-                                margin-bottom: -7px" />
-                    Google London, Uncodebar, 2024
-                    <div style="text-align: left;">
-                        Notes:
-                        <ol>
-                            <li>Uncodebar is like an improvised TED conference, but with more Warhammer talks.</li>
-                            <li>
-                                Thanks to
-                                <a href="https://codebar.io/">Codebar</a>, Google, and thanks to Gabe Greenberg at
-                                <a href="https://www.g2i.co/about">G2i</a>
-                                for recommending to me the academic paper I was talking
-                                about:
-                                <img style="margin-bottom: -3px"
-                                     width="16"
-                                     height="24"
-                                     alt="Logo of Microsoft Corporation"
-                                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/512px-Microsoft_logo.svg.png?20210729021049">
-                                <a href="https://doi.org/10.1145/3368089.3409712">Microsoft Research / North Carolina State University - Does stress
-                                impact technical interview performance?</a>
-                            </li>
-                        </ol>
-                    </div>
-                </sub>
-            </figcaption>
-        </figure>
-        <p style="text-align: right;">
-            <a href="https://comedy.louiechristie.com/tech-event-host/">More tech talks</a>
-        </p>
-    </div>
+    {% include "tech/tech-talk-video.njk" %}
+    <p style="text-align: right;">
+        <a href="https://comedy.louiechristie.com/tech-event-host/">More tech talks</a>
+    </p>
     <div class="column">
         <p>
             Like a lot of IT consultants I work from home, freelance, but I'd come into an office 9-5 for the right organisation.
@@ -160,7 +110,6 @@ eleventyNavigation:
         </p>
     </div>
 </main>
-<script type="module"
-        src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js"
-        defer="defer"
-        crossorigin="crossorigin"></script>
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.4.0/lite-yt-embed.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.4.0/lite-yt-embed.min.js"></script>
