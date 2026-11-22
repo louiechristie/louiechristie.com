@@ -1,9 +1,8 @@
 <div class="headlines">
     <div class="headline box-shadow padding">
-        <figure class="image-container">
+        <figure id="surf" class="image-container">
             <a href="adventure/">
-                <img id="surf-image"
-                     class="lqip surf"
+                <img class="lqip surf"
                      src="/images/louie_christie_surfs_perrenporth_2005_fl4t07_c_scale,w_1920.jpg"
                      alt="A surfer on a wave. He's crouching, touching the wave with his hand as the wave breaks. The wave is chest high, blue-green color. There are brown-green hills in the background on the land."
                      title="Louie Christie surfing photo"
@@ -48,9 +47,8 @@
         <div class="headline-title">
             <h2>
                 <a class="comedy-link sketchy"
-                   href="https://www.louiechristie.com/comedy/">Alternative
-                    <br />
-                    Comedian
+                   href="https://www.louiechristie.com/comedy/">
+                    Alternative Comedian
                     <br>
                 </a><a class="comedy-link sketchy"
    style="text-decoration: none"
@@ -60,9 +58,6 @@
     </div>
 </div>
 <script eleventy:ignore>
-  (function () {
-    const surfImg = document.getElementById("surf-image");
-    const surfCaption = document.getElementById("surf-caption");
 
     const now = new Date();
     const month = now.getMonth() + 1; // 1–12
@@ -72,11 +67,17 @@
       (month === 11 && day >= 21) ||
       (month === 12 && day <= 25);
 
-    if (surfImg && surfCaption && isChristmasSeason) {
-      surfImg.src = "/images/santa-surf.jpg";
-      surfImg.alt = "Louie Christie dressed as Father Christmas in a Santa suit surfing";
-      surfImg.title = "After this, sadly Santa was mauled to death in a shark attack.";
-      surfCaption.textContent = "Christmas Day, Bondi Beach, 2020";
+    if (surf && isChristmasSeason) {
+      document.getElementById("surf").innerHTML = 
+      [
+        `<figure class="image-container">`,
+        `    <a href="adventure/">`,
+        `       <img `, `           src="/images/santa-surf.jpg"`, `           alt="Louie Christie dressed as Father Christmas in a Santa suit surfing"`, `           title="After this, sadly Santa was mauled to death in a shark attack."`, `           style="aspect-ratio: 16 / 9" />`,
+        `</a>`,
+        `    <figcaption style="text-decoration: none;">`,
+        `        <small id="surf-caption">Surfing, Christmas Day 2020 @ Bondi Beach</small>`,
+        `    </figcaption>`,
+        `</figure>`
+      ].join("");
     }
-  })();
 </script>
