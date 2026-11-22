@@ -40,6 +40,9 @@ export default async function (eleventyConfig) {
 		.addPassthroughCopy({
 			'./public/': '/',
 		})
+		.addPassthroughCopy({
+			'./content/images/santa-surf.jpg': '/images/santa-surf.jpg',
+		})
 		.addPassthroughCopy('./content/feed/pretty-atom-feed.xsl');
 
 	// Run Eleventy when these files change:
