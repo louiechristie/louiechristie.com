@@ -12,7 +12,10 @@ test('shows the Santa surfing image during Christmas season', async ({
 	const surfImage = page.locator('#surf-image');
 
 	await expect(page.locator('#adventure-link').locator('> *')).toHaveCount(1);
-	await expect(surfImage).toHaveAttribute('src', '/images/santa-surf.jpg');
+	await expect(surfImage).toHaveAttribute(
+		'src',
+		'/images/louie_christie_surfing_as_father_christmas.JPG'
+	);
 	await expect(surfImage).toHaveAttribute(
 		'alt',
 		'Louie Christie dressed as Father Christmas in a Santa suit surfing'

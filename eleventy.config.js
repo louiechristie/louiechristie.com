@@ -41,7 +41,8 @@ export default async function (eleventyConfig) {
 			'./public/': '/',
 		})
 		.addPassthroughCopy({
-			'./content/images/santa-surf.jpg': '/images/santa-surf.jpg',
+			'./content/images/louie_christie_surfing_as_father_christmas.JPG':
+				'/images/louie_christie_surfing_as_father_christmas.JPG',
 		})
 		.addPassthroughCopy('./content/feed/pretty-atom-feed.xsl');
 
