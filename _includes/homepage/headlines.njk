@@ -65,7 +65,7 @@
 
     const isChristmasSeason =
       (month === 11 && day >= 21) ||
-      (month === 12 && day <= 25);
+      (month === 12) || (month === 1 && day <= 5);
 
     if (surf && isChristmasSeason) {
       document.getElementById("surf").innerHTML = 
