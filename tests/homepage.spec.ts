@@ -11,12 +11,13 @@ test('shows the Santa surfing image during Christmas season', async ({
 
 	const surfImage = page.locator('#surf-image');
 
+	await expect(page.locator('#adventure-link').locator('> *')).toHaveCount(1);
 	await expect(surfImage).toHaveAttribute('src', '/images/santa-surf.jpg');
 	await expect(surfImage).toHaveAttribute(
 		'alt',
 		'Louie Christie dressed as Father Christmas in a Santa suit surfing'
 	);
 	await expect(page.locator('#surf-caption')).toHaveText(
-		'Christmas Day, Bondi Beach, 2020'
+		'Surfing, Christmas Day 2020 @ Bondi Beach'
 	);
 });
