@@ -7,7 +7,7 @@ eleventyNavigation:
   key: "Home"
   order: 1
 ---
-<main class="center">
+<main class="center homepage">
     <h1 class="title" style="font-size: 1.6em;">
         {{ title }}
         <a style="text-decoration: none;" href="/memes/%F0%9F%98%AC/">😬</a>
@@ -23,59 +23,78 @@ eleventyNavigation:
             and speaking.
         </p>
     </div>
-    {% include "homepage/headlines.njk" %}
-    <div style="max-width: 640px; text-wrap: pretty; padding: 12px">
-        <blockquote class="apple-quote ">
-            <q class="with-quote-marks sketchy">Steve [Jobs'] big thing was, um, he believed that Apple sat at the <a style="text-decoration: none;
-           color: initial"
-    href="https://commons.wikimedia.org/wiki/File:Haight-Ashbury_signs_%28San_Francisco%29_%28TK3%29.JPG#/media/File:Haight-Ashbury_signs_(San_Francisco)_(TK3).JPG">intersection</a> of liberal arts
-            and technology... Meaning he could go out and hire, because he's Apple, the best software coder in the world - but he'd rather hire a great software coder who also did stand-up&nbsp;comedy.</q>
-            <cite>-
-                Former vice president of Apple
-                <br>
-                <a href="https://www.louiechristie.com/memes/steve-jobs-rather-hire-coder-who-did-comedy/">Andy&nbsp;Miller,&nbsp;2020</a>
-            </cite>
-        </blockquote>
-    </div>
     <section>
-        <h3>
-            <a style="text-decoration: none"
-               class="sketchy"
-               href="https://comedy.louiechristie.com/stand-up/#/portal/signup">Watch Stand-up Comedy Videos ⑯ NSFW for £1</a>
-        </h3>
-        <div class="center" style="gap: 12px;">
-            <div class="flex">
-                <a href="https://comedy.louiechristie.com/stand-up/#/portal/signup"
-                   style="text-decoration: none">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Apple_Pay_Acceptance_Mark.svg"
-                         alt="Apple Pay"
-                         width="166"
-                         height="106"
-                         style="width: 55px;
-                                height: 35px">
-                </a>
-                &nbsp;
-                <a href="https://comedy.louiechristie.com/stand-up/#/portal/signup">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Google_Pay_Acceptance_Mark.svg"
-                         alt="Google Pay"
-                         width="200"
-                         height="106"
-                         style="width: 64px;
-                                height: 34px">
-                </a>
-            </div>
-        </div>
+        {% include "homepage/headlines.njk" %}
     </section>
+    <section>
+        <div style="max-width: 640px; text-wrap: pretty; padding: 12px">
+            <blockquote class="apple-quote">
+                <q style="text-align: center;
+                          display: inline"
+                   class="with-quote-marks-before">
+                    Steve [Jobs'] big thing was, um, he believed that Apple sat at the
+                </br>
+                <span class="sketchy" style="text-align: center;">
+                    <a style="text-decoration: none;
+                              color: initial"
+                       href="https://commons.wikimedia.org/wiki/File:Haight-Ashbury_signs_28San_Francisco29_28TK329.JPG/media/File:Haight-Ashbury_signs_San_Francisco_TK3.JPG">intersection</a> of liberal arts and technology...
+                </span>
+            </br>
+        </br>
+        <span>
+            Meaning he could go out and hire, because he's Apple, the best software coder in the world,
+            but he'd rather hire a great software coder,
+        </span>
+        <br>
+        <span class="sketchy with-quote-marks-after">who also did stand-up&nbsp;comedy.</span>
+    </q>
+<cite style="margin-top: 1em;"><span class="sketchy" style="font-size: 2rem">-</span>
+Former vice president of Apple
+<a href="https://www.louiechristie.com/memes/steve-jobs-rather-hire-coder-who-did-comedy/">Andy&nbsp;Miller,&nbsp;2020</a>
+</cite>
+</blockquote>
+</div>
+</section>
+<section>
+    <h3>
+        <a style="text-decoration: none"
+           class="sketchy"
+           href="https://comedy.louiechristie.com/stand-up/#/portal/signup">Watch Stand-up Comedy Videos ⑯ NSFW for £1</a>
+    </h3>
+    <div class="center">
+        <div class="flex">
+            <a href="https://comedy.louiechristie.com/stand-up/#/portal/signup"
+               style="text-decoration: none">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Apple_Pay_Acceptance_Mark.svg"
+                     alt="Apple Pay"
+                     width="166"
+                     height="106"
+                     style="width: 55px;
+                            height: 35px">
+            </a>
+            &nbsp;
+            <a href="https://comedy.louiechristie.com/stand-up/#/portal/signup">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Google_Pay_Acceptance_Mark.svg"
+                     alt="Google Pay"
+                     width="200"
+                     height="106"
+                     style="width: 64px;
+                            height: 34px">
+            </a>
+        </div>
+    </div>
+</section>
+<section>
     <h3>
         Subscribe to hear about <a href="https://comedy.louiechristie.com/live/" class="sketchy">when I'm performing</a> once in a blue moon:
     </h3>
     <div style="min-height: 58px;max-width: 440px;margin: 0 auto;width: 100%">
-        <script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.3/umd/signup-form.min.js"
-                data-label-1="homepage"
+        <script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.4/umd/signup-form.min.js"
                 data-button-color="#db1918"
                 data-button-text-color="#FFFFFF"
                 data-site="https://comedy.louiechristie.com/"
                 data-locale="en"
                 async></script>
     </div>
+</section>
 </main>

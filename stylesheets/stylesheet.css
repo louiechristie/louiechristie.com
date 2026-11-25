@@ -294,6 +294,10 @@ section {
   padding: 10px;
 }
 
+.homepage>section {
+  margin-bottom: 2em;
+}
+
 aside {
   font-size: 0.9em;
 }
@@ -600,7 +604,8 @@ footer nav {
 
 .apple-quote {
   line-height: 2em;
-  margin-top: 26px;
+
+  text-align: center;
 }
 
 blockquote,
@@ -614,12 +619,22 @@ cite {
   margin-top: 0;
 }
 
-.with-quote-marks::before {
+.with-quote-marks-before::before,
+.with-quote-marks-after::after {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Excalifont';
+}
+
+.with-quote-marks-before::before {
   content: open-quote;
+  display: inline;
 }
 
-.with-quote-marks::after {
+.with-quote-marks-after::after {
   content: close-quote;
+  text-align: right;
+  display: inline;
 }
 
-quotes: ' “' ' ”' ' ‘' ' ’';
+quotes: ' ❝' ' ❞' ' ‘' ' ’';
