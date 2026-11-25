@@ -21,6 +21,6 @@ test('shows the Santa surfing image during Christmas season', async ({
 		'Louie Christie dressed as Father Christmas in a Santa suit surfing'
 	);
 	await expect(page.locator('#surf-caption')).toHaveText(
-		'Surfing, Christmas Day 2020 @ Bondi Beach'
+		'Surfing, Christmas Day 2018 @ Bondi Beach'
 	);
 });
